@@ -1,14 +1,16 @@
 @use "../global" as *;
 
 #nav-bar {
-    background-color: bisque;
+    background-color: #ffff;
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 3;
+    box-shadow: 0 4px 5px -5px rgba(0,0,0,.23);
 }
 
 .nav-wrapper {
- padding:1.5rem 0;  
+ padding:2rem 0;  
  margin: 0 4rem; 
  display: flex;
  justify-content: space-between;
