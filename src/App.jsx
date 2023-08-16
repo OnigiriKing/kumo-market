@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className="App">
       <NavBar />
-      <DropMenu />
+      {/* <DropMenu /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
