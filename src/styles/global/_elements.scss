@@ -1,0 +1,45 @@
+@use "./colors" as *;
+
+@mixin button-style {
+    padding: 1rem 1.2rem;
+      color: #fff;
+      background-color: $primColor;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.09);
+      transition: all .2s;
+
+      &:hover {
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.12);
+        background-color: $primDark;
+      }
+}
+
+$navBarWidth: 965px;
+$bigWidth: 1050px;
+$mediumWidth: 920px;
+$smallWidth: 670px;
+
+
+@mixin navBarWidth {
+  @media (max-width: $navBarWidth) {
+    @content;
+  }
+}
+
+@mixin mediumWidth {
+  @media (max-width: $mediumWidth) {
+    @content;
+  }
+}
+
+@mixin smallWidth {
+  @media (max-width: $smallWidth) {
+    @content;
+  }
+}
+@mixin bigWidth {
+  @media (max-width: $bigWidth) {
+    @content;
+  }
+}
+
+

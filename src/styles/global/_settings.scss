@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: all .2s;
+
+  svg {
+  transition: none;
+
+  path {
+        transition: none;
+      }
+
+      g {
+        transition: none;
+      }
+}
+
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
