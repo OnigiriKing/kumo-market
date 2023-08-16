@@ -1,7 +1,7 @@
 export default function Start() {
 
    return (
-     <div className="start-screen">
+     <div id="start-screen">
        <div className="start-wrapper">
          <div>Product 1</div>
          <div>Product 2</div>

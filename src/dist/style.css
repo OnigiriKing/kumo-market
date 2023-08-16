@@ -4,15 +4,6 @@
   scroll-behavior: smooth;
   transition: all 0.2s;
 }
-* svg {
-  transition: none;
-}
-* svg path {
-  transition: none;
-}
-* svg g {
-  transition: none;
-}
 
 body {
   width: 100%;
@@ -93,4 +84,29 @@ a {
 
 #home-page {
   margin-top: 10rem;
+}
+
+.start-screen {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.start-wrapper {
+  padding: 2rem 0;
+  width: 80%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "one two four" "one two four-low";
+}
+.start-wrapper div {
+  background-color: antiquewhite;
+}
+.start-wrapper div:nth-child(1) {
+  grid-area: one;
+}
+.start-wrapper div:nth-child(2) {
+  grid-area: two;
 }/*# sourceMappingURL=style.css.map */
