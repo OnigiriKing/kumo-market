@@ -6,9 +6,9 @@ export default function NavBar() {
   return (
     <nav id="nav-bar">
       <div className="nav-wrapper">
-      <div className="nav-logo">
+      <Link to="/" className="nav-logo">
         Logo
-      </div>
+      </Link>
       <div className="nav-links">
         <Link>Link</Link>
         <Link>Link</Link>

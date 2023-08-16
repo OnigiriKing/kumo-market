@@ -10,8 +10,9 @@ export default function HomePage() {
       <div id="home-page">
         <Start />
         <Products />
-        <Trending />
         <Banner />
+        <Trending />
+        <Banner reverse={true}/>
       </div>
     );
 }
