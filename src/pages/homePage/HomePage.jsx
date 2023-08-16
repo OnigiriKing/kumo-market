@@ -1,11 +1,17 @@
-
+import Start from "./components/Start"
+import Products from "./components/Products";
+import Trending from "./components/Trending"
+import Banner from "./components/Banner"
 
 
 export default function HomePage() {
 
     return (
-        <div id="home-page">
-        hello
-        </div>
-    )
+      <div id="home-page">
+        <Start />
+        <Products />
+        <Trending />
+        <Banner />
+      </div>
+    );
 }
