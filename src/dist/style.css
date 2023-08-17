@@ -241,4 +241,50 @@ a {
 
 .banner-reverse {
   flex-direction: row-reverse;
+}
+
+#trending-screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.trending-wrapper {
+  width: 100%;
+  max-width: 70rem;
+}
+
+.trending-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.trending-items {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+.trending-items a {
+  width: 11.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.2980392157);
+  transition: all 0.2s ease-in-out;
+  padding: 0.5rem;
+}
+.trending-items a:hover {
+  border-color: #000000;
+}
+.trending-items a img {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+.trending-items a h3 {
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
