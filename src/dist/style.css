@@ -86,7 +86,7 @@ a {
 }
 
 #home-page {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .start-screen {
@@ -257,8 +257,12 @@ a {
 .trending-nav {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
+  margin: 2rem 1rem;
+  margin-top: 0rem;
+}
+.trending-nav div {
+  display: flex;
+  gap: 1rem;
 }
 
 .trending-items {

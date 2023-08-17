@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 #home-page {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 //! Start screen
@@ -195,8 +195,13 @@
 .trending-nav {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
+  margin: 2rem 1rem;
+  margin-top: 0rem;
+
+  div {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 .trending-items {
@@ -206,7 +211,6 @@
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  
 
   a {
     width: 11.8rem;
