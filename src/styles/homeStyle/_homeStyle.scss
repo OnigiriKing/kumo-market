@@ -213,25 +213,6 @@
   scroll-behavior: smooth;
 
   a {
-    width: 11.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    border: 2px solid #0000004c;
-    transition: all 0.2s ease-in-out;
-    padding: 0.5rem;
-
-    &:hover {
-      border-color: #000000;
-    }
-
-    img {
-      width: 100%;
-      margin-bottom: 0.4rem;
-    }
-
-    h3 {
-      font-size: $mediumFont;
-    }
+    width: 12rem;
   }
 }

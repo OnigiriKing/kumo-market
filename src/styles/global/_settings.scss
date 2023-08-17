@@ -1,9 +1,10 @@
+@use "./typo" as *;
+
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  transition: all .2s;
-
+  transition: all 0.2s;
 }
 
 body {
@@ -22,6 +23,27 @@ a {
   cursor: pointer;
 }
 
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 2px solid #0000004c;
+  transition: all 0.2s ease-in-out;
+  padding: 0.5rem;
+
+  &:hover {
+    border-color: #000000;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 0.4rem;
+  }
+
+  h3 {
+    font-size: $mediumFont;
+  }
+}
 
 $maxWidth: 70rem;
 $baseMargin: 0 1rem;

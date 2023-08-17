@@ -20,6 +20,25 @@ a {
   cursor: pointer;
 }
 
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.2980392157);
+  transition: all 0.2s ease-in-out;
+  padding: 0.5rem;
+}
+.product:hover {
+  border-color: #000000;
+}
+.product img {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+.product h3 {
+  font-size: 1.5rem;
+}
+
 #nav-bar {
   background-color: white;
   width: 100%;
@@ -274,21 +293,5 @@ a {
   scroll-behavior: smooth;
 }
 .trending-items a {
-  width: 11.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  border: 2px solid rgba(0, 0, 0, 0.2980392157);
-  transition: all 0.2s ease-in-out;
-  padding: 0.5rem;
-}
-.trending-items a:hover {
-  border-color: #000000;
-}
-.trending-items a img {
-  width: 100%;
-  margin-bottom: 0.4rem;
-}
-.trending-items a h3 {
-  font-size: 1.5rem;
+  width: 12rem;
 }/*# sourceMappingURL=style.css.map */
