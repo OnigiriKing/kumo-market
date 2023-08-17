@@ -4,6 +4,8 @@
   margin-top: 10rem;
 }
 
+//! Start screen
+
 .start-screen {
   display: flex;
   width: 100%;
@@ -18,8 +20,9 @@
   justify-content: center;
 
   .start-products {
+    margin: $baseMargin;
     width: 100%;
-    max-width: 70rem;
+    max-width: $maxWidth;
     display: grid;
     gap: 1rem;
     grid-template-columns: 2fr 1fr 1fr;
@@ -30,7 +33,6 @@
       cursor: pointer;
       position: relative;
 
-
       .start-img-cover {
         position: absolute;
         top: 0;
@@ -38,11 +40,11 @@
         background-color: #00000050;
         width: 100%;
         height: 100%;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
-        background-color: #00000068;
-      }
+          background-color: #00000068;
+        }
       }
 
       img {
@@ -58,8 +60,7 @@
         bottom: 1.5rem;
         left: 1rem;
         color: #ffff;
-        font-size: 2rem;
-
+        font-size: $bigFont;
       }
     }
 
@@ -77,3 +78,55 @@
     }
   }
 }
+
+//! Products
+
+#products-screen {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.products-wrapper {
+  width: 100%;
+  max-width: $maxWidth;
+  padding: 2rem 0;
+  margin: $baseMargin;
+
+  h2 {
+    font-size: $mediumFont;
+    margin-bottom: 1.5rem;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      border: 2px solid #0000004c;
+      transition: all 0.2s ease-in-out;
+      padding: 0.5rem;
+
+      &:hover {
+        border-color: #000000;
+      }
+
+      img {
+        width: 100%;
+        margin-bottom: .4rem;
+      }
+
+      h3 {
+        font-size: $mediumFont;
+      }
+
+    }
+  }
+}
+
+//! Trending now

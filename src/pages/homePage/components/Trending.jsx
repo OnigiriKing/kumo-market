@@ -4,7 +4,7 @@ export default function Trending() {
      <div className="trending-screen">
        <div className="trending-wrapper">
          <div className="trending-nav">
-           <h2>Trending Now</h2>
+           <h2>Popilar Picks</h2>
            <div>
              <button></button>
              <button></button>
