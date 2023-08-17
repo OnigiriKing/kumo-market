@@ -171,14 +171,13 @@
       }
     }
   }
-
-  .banner-reverse {
-    flex-direction: column-reverse;
-  }
-
   .banner-image {
     width: 50%;
   }
+}
+
+.banner-reverse {
+  flex-direction: row-reverse;
 }
 
 //! Trending now
