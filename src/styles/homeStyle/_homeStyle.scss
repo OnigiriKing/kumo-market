@@ -13,7 +13,7 @@
 }
 
 .start-wrapper {
-  padding: 2rem 0;
+  padding: $basePadding;
   width: 100%;
   display: flex;
   align-items: center;
@@ -91,7 +91,7 @@
 .products-wrapper {
   width: 100%;
   max-width: $maxWidth;
-  padding: 2rem 0;
+  padding: $basePadding;
   margin: $baseMargin;
 
   h2 {
@@ -107,7 +107,7 @@
     a {
       display: flex;
       flex-direction: column;
-      gap: .5rem;
+      gap: 0.5rem;
       border: 2px solid #0000004c;
       transition: all 0.2s ease-in-out;
       padding: 0.5rem;
@@ -118,14 +118,66 @@
 
       img {
         width: 100%;
-        margin-bottom: .4rem;
+        margin-bottom: 0.4rem;
       }
 
       h3 {
         font-size: $mediumFont;
       }
-
     }
+  }
+}
+
+//! Baner
+#banner-screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-wrapper {
+  width: 100%;
+  max-width: $maxWidth;
+  padding: $basePadding;
+  margin: $baseMargin;
+  display: flex;
+
+  .banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+    gap: 1rem;
+    position: relative;
+    background-color: #e9e9e9;
+
+    a {
+      width: fit-content;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 0.4rem;
+      width: fit-content;
+      font-size: $mediumFont;
+      color: #ffff;
+      background-color: #000000;
+      border-color: #000000;
+      text-transform: uppercase;
+
+      &:hover {
+        color: #000000;
+        background-color: #ffff;
+      }
+    }
+  }
+
+  .banner-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .banner-image {
+    width: 50%;
   }
 }
 

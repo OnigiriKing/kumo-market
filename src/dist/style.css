@@ -10,6 +10,9 @@ body {
   height: 100%;
   position: relative;
 }
+body p {
+  font-size: 1.1rem;
+}
 
 a {
   text-decoration: none;
@@ -191,4 +194,50 @@ a {
 }
 .products-wrapper div a h3 {
   font-size: 1.5rem;
+}
+
+#banner-screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-wrapper {
+  width: 100%;
+  max-width: 70rem;
+  padding: 2rem 0;
+  margin: 0 1rem;
+  display: flex;
+}
+.banner-wrapper .banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+  gap: 1rem;
+  position: relative;
+  background-color: #e9e9e9;
+}
+.banner-wrapper .banner-text a {
+  width: fit-content;
+}
+.banner-wrapper .banner-text button {
+  cursor: pointer;
+  padding: 0.4rem;
+  width: fit-content;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #000000;
+  border-color: #000000;
+  text-transform: uppercase;
+}
+.banner-wrapper .banner-text button:hover {
+  color: #000000;
+  background-color: white;
+}
+.banner-wrapper .banner-reverse {
+  flex-direction: column-reverse;
+}
+.banner-wrapper .banner-image {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */
