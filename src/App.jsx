@@ -5,6 +5,7 @@ import NavBar from "./pages/navBar/NavBar";
 import HomePage from "./pages/homePage/HomePage";
 import FooterPage from "./pages/footerPage/Footer";
 import DropMenu from "./pages/navBar/DropMenu";
+import Categories from "./pages/categories/Categories";
 
 export default function App() {
   
@@ -15,6 +16,7 @@ export default function App() {
       {/* <DropMenu /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
       <FooterPage />
     </div>
