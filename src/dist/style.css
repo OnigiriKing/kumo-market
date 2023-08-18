@@ -294,4 +294,23 @@ a {
 }
 .trending-items a {
   width: 12rem;
+}
+
+#categories-page {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.categories-wrapper {
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 1rem;
+  padding: 2rem 0;
+}
+.categories-wrapper .categories-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
 }/*# sourceMappingURL=style.css.map */

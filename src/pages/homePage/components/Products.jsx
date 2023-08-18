@@ -13,6 +13,26 @@ export function displayProducts() {
       price: 60,
       img: testImg,
     },
+    product3: {
+      name: "test2",
+      price: 60,
+      img: testImg,
+    },
+    product4: {
+      name: "test2",
+      price: 60,
+      img: testImg,
+    },
+    product5: {
+      name: "test2",
+      price: 60,
+      img: testImg,
+    },
+    product6: {
+      name: "test2",
+      price: 60,
+      img: testImg,
+    },
   };
 
   return (

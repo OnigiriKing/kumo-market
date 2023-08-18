@@ -1,0 +1,22 @@
+@use "../global" as *;
+
+#categories-page {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.categories-wrapper {
+  width: 100%;
+  max-width: $maxWidth;
+  margin: $baseMargin;
+  padding: $basePadding;
+  
+
+  .categories-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
