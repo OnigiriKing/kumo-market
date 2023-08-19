@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import testImg from "../../../img/test.png";
 
-export function displayProducts(caregory = "none", newClass = "") {
+export function displayProducts(caregory = "none", newClass = "product-wrapper") {
   const productList = {
     product1: {
       name: "test",
@@ -39,11 +39,22 @@ export function displayProducts(caregory = "none", newClass = "") {
       img: testImg,
       category: "Lamps",
     },
+    product7: {
+      name: "test2",
+      price: 15,
+      img: testImg,
+      category: "Lamps",
+    },
+    product8: {
+      name: "test2",
+      price: 15,
+      img: testImg,
+      category: "Lamps",
+    },
   };
 
-
   return (
-    <div className={`product-wrapper ${newClass}`}>
+    <div className={`${newClass}`}>
       {Object.keys(productList).map((key) => {
         const el = productList[key];
 
@@ -63,7 +74,7 @@ export default function Products() {
   return (
     <div id="products-screen">
       <div className="wrapper products-wrapper">
-        <h2>Our best products</h2> 
+        <h2>Our best products</h2>
         {displayProducts()}
       </div>
     </div>

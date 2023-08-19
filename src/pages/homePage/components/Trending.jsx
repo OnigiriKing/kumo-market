@@ -6,7 +6,7 @@ export default function Trending() {
 
    return (
      <div id="trending-screen">
-       <div className="trending-wrapper wrapper">
+       <div className="wrapper trending-wrapper">
          <div className="trending-nav">
            <h2>Popilar Picks</h2>
            <div>
@@ -14,7 +14,7 @@ export default function Trending() {
              <button>Button</button>
            </div>
          </div>
-         {/* {displayProducts(undefined, "trending-items")} */}
+         {displayProducts(undefined, "trending-items")}
        </div>
      </div>
    );

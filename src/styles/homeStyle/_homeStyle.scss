@@ -178,6 +178,10 @@
   justify-content: center;
 }
 
+.trending-wrapper {
+  overflow: hidden;
+}
+
 
 
 .trending-nav {
@@ -200,7 +204,8 @@
   overflow-y: hidden;
   scroll-behavior: smooth;
 
+
   a {
-    width: 12rem;
+    min-width: 11.9rem;
   }
 }

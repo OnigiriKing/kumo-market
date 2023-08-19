@@ -260,6 +260,10 @@ a {
   justify-content: center;
 }
 
+.trending-wrapper {
+  overflow: hidden;
+}
+
 .trending-nav {
   display: flex;
   justify-content: space-between;
@@ -280,7 +284,7 @@ a {
   scroll-behavior: smooth;
 }
 .trending-items a {
-  width: 12rem;
+  min-width: 11.9rem;
 }
 
 #categories-page {
