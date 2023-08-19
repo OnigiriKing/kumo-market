@@ -1,45 +1,52 @@
 import { Link } from "react-router-dom";
 import testImg from "../../../img/test.png";
 
-export function displayProducts() {
+export function displayProducts(caregory = "none", newClass = "") {
   const productList = {
     product1: {
       name: "test",
       price: 45,
       img: testImg,
+      category: "skinCare",
     },
     product2: {
       name: "test2",
       price: 60,
       img: testImg,
+      category: "skinCare",
     },
     product3: {
       name: "test2",
-      price: 60,
+      price: 50,
       img: testImg,
+      category: "skinCare",
     },
     product4: {
       name: "test2",
-      price: 60,
+      price: 30,
       img: testImg,
+      category: "Lamps",
     },
     product5: {
       name: "test2",
-      price: 60,
+      price: 80,
       img: testImg,
+      category: "Lamps",
     },
     product6: {
       name: "test2",
-      price: 60,
+      price: 15,
       img: testImg,
+      category: "Lamps",
     },
   };
 
+
   return (
-    <>
+    <div className={`product-wrapper ${newClass}`}>
       {Object.keys(productList).map((key) => {
         const el = productList[key];
-        console.log("ok");
+
         return (
           <Link to="/" key={key} className="product">
             <img src={el.img} alt="product" />
@@ -48,23 +55,17 @@ export function displayProducts() {
           </Link>
         );
       })}
-    </>
+    </div>
   );
 }
 
 export default function Products() {
   return (
     <div id="products-screen">
-      <div className="products-wrapper">
-        <h2>Our best products</h2>
-        <div>{displayProducts()}</div>
+      <div className="wrapper products-wrapper">
+        <h2>Our best products</h2> 
+        {displayProducts()}
       </div>
     </div>
   );
 }
-
-<Link to="/" className="product">
-  <img src={testImg} alt="product" />
-  <p>Name</p>
-  <h3>Price</h3>
-</Link>;

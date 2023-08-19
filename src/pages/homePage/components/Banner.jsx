@@ -4,7 +4,7 @@ import testImg from "../../../img/test2.png"
 export default function Banner({reverse = false}) {
   const content = !reverse ? (
     <div id="banner-screen">
-      <div className="banner-wrapper">
+      <div className="banner-wrapper wrapper">
         <div className="banner-text">
           <h2>Creative harmonious living</h2>
           <p>
