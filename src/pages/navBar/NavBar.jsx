@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { navSvg } from "../../svg/navSvg";
-import { changeClass } from "../../scripts/scripts";
+import { changeClass } from "../../scripts/changeClass";
 
 export default function NavBar() {
   return (

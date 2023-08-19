@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import testImg from "../../../img/test.png";
-import { displayProducts } from "./Products";
+import { displayProducts } from "../../../scripts/displayProudcts";
 
 export default function Trending() {
 

@@ -1,5 +1,4 @@
 
-
 export function changeClass(baseClass, newClass, check=true) {
     const classList = document.querySelector(baseClass).classList;
     check

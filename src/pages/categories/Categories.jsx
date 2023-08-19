@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { displayProducts } from "../homePage/components/Products";
+import { displayProducts } from "../../scripts/displayProudcts";
 
 export default function Categories(category = "none") {
 
