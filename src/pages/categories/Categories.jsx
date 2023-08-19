@@ -31,7 +31,9 @@ export default function Categories() {
          </div>
          <Routes>
            <Route path="/all" element={<Category />} />
+           <Route path="/furniture" element={<Category type="furniture" />} />
            <Route path="/skin-care" element={<Category type="skinCare" />} />
+           <Route path="/kitchen" element={<Category type="kitchen" />} />
            <Route path="/lamps" element={<Category type="lamps" />} />
          </Routes>
        </div>
