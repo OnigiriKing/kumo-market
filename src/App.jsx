@@ -16,7 +16,7 @@ export default function App() {
       {/* <DropMenu /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/categories" element={<Categories />} />
+        <Route path="/categories/*" element={<Categories />} />
       </Routes>
       <FooterPage />
     </div>

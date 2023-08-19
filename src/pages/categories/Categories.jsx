@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { displayProducts } from "../../scripts/displayProudcts";
+import Categorie from "./components/Categorie";
+import { Route, Routes } from "react-router-dom";
 
-export default function Categories(category = "none") {
+export default function Categories() {
 
    return (
      <div id="categories-page">
@@ -10,14 +12,30 @@ export default function Categories(category = "none") {
            <Link to="/">Home</Link>
            <h2>All</h2>
            <div className="categories-btns">
-             <button>Furniture</button>
-             <button>Skin care</button>
-             <button>Kitchen</button>
-             <button>Lamps</button>
+             <Link to={"all"}>
+               <button>All</button>
+             </Link>
+             <Link to={"furniture"}>
+               <button>Furniture</button>
+             </Link>
+             <Link to={"skin-care"}>
+               <button>Skin care</button>
+             </Link>
+             <Link to={"kitchen"}>
+               <button>Kitchen</button>
+             </Link>
+             <Link to={"lamps"}>
+               <button>Lamps</button>
+             </Link>
            </div>
          </div>
-         {displayProducts(category)}
+         <Routes>
+           <Route path="/all" element={<Categorie />} />
+           <Route path="/skin-care" element={<Categorie type="skinCare"/>} />
+           <Route path="/lamps" element={<Categorie type="lamps"/>} />
+         </Routes>
        </div>
      </div>
    );
 }
+
