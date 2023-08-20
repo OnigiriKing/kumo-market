@@ -33,8 +33,8 @@ export default function Categories() {
             <Link to={"kitchen"}>
               <button onClick={() => setCategory("kitchen")}>Kitchen</button>
             </Link>
-            <Link to={"lamps"}>
-              <button onClick={() => setCategory("lamps")}>Lamps</button>
+            <Link to={"chairs"}>
+              <button onClick={() => setCategory("chairs")}>Chairs</button>
             </Link>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function Categories() {
           <Route path="/furniture" element={<Category type={category} />} />
           <Route path="/skin-care" element={<Category type={category} />} />
           <Route path="/kitchen" element={<Category type={category} />} />
-          <Route path="/lamps" element={<Category type={category} />} />
+          <Route path="/chairs" element={<Category type={category} />} />
         </Routes>
       </div>
     </div>

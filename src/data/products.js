@@ -1,4 +1,4 @@
-import acure from "./img/Acure.png"
+import acure from "./img/Acure.png";
 import astercook from "./img/Astercook.png";
 import caracole from "./img/Caracole.png";
 import carote from "./img/Carote.png";
@@ -15,63 +15,63 @@ const productList = {
   product1: {
     name: "Caracole Pretty Little Thing Chair",
     price: 45,
-    img:  caracole ,
-    type: "chair",
+    img: caracole,
+    type: "chairs",
     des: "",
   },
   product2: {
     name: "Roda Zania Chair",
     price: 60,
-    img:  roda ,
-    type: "chair",
+    img: roda,
+    type: "chairs",
     des: "",
   },
   product3: {
     name: "Living and More High Back Sofa Chair",
     price: 135,
-    img:  living ,
-    type: "chair",
+    img: living,
+    type: "chairs",
     des: "",
   },
   product4: {
     name: "EKNITEY 2 Tier End Table",
     price: 50,
-    img:  eknitey ,
+    img: eknitey,
     type: "furniture",
     des: "Perfect in any room! can be used as a side tables bedroom, coffee table in the living room, nightstand in the bedroom, casual table in the garden or patio, even an outdoor table or plant stand.",
   },
   product5: {
     name: "WLIVE Dresser for Bedroom with 4 Drawers",
     price: 89,
-    img:  wlive ,
+    img: wlive,
     type: "furniture",
     des: "",
   },
   product6: {
     name: "CAROTE 11pcs Pots and Pans Set",
     price: 20,
-    img:  carote ,
+    img: carote,
     type: "kitchen",
     des: "",
   },
   product7: {
     name: "Astercook Knife Set",
     price: 49,
-    img:  astercook ,
+    img: astercook,
     type: "kitchen",
     des: "",
   },
   product8: {
     name: "Rae Dunn Kitchen Scissors- Stainless Steel Kitchen Shears",
     price: 11,
-    img:  rae ,
+    img: rae,
     type: "kitchen",
     des: "",
   },
   product9: {
     name: "Neutrogena Acne Proofing",
     price: 75,
-    img:  neutrogena ,
+    img: neutrogena,
     type: "skin care",
     des: "Acne-fighting formula is oil-free and from Neutrogena, the #1 dermatologist recommended acne brand",
   },

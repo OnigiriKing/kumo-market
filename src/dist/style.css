@@ -27,12 +27,15 @@ a {
   border: 1.5px solid rgba(0, 0, 0, 0.2980392157);
   transition: all 0.2s ease-in-out;
   padding: 0.5rem;
+  height: 20rem;
+  align-items: center;
 }
 .product:hover {
   border-color: #000000;
 }
 .product img {
-  width: 100%;
+  width: 75%;
+  height: 70%;
   margin-bottom: 0.4rem;
 }
 .product h3 {
