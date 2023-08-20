@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { navSvg } from "../../svg/navSvg";
+import { allSvg } from "../../svg/allSvg";
 import { changeClass } from "../../scripts/changeClass";
 
 export default function NavBar() {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { navSvg } from "../../svg/navSvg";
+import { allSvg } from "../../svg/allSvg";
 import { changeClass } from "../../scripts/changeClass";
 
 export default function DropMenu() {
@@ -14,7 +14,7 @@ export default function DropMenu() {
   return (
     <div className="drop-menu">
       <div className="menu-close-button" {...closeMenu()}>
-        {navSvg(40).closeBtn}
+        {allSvg(40).closeBtn}
       </div>
       <Link></Link>
     </div>

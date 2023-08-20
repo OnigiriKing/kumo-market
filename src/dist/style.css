@@ -24,7 +24,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border: 2px solid rgba(0, 0, 0, 0.2980392157);
+  border: 1.5px solid rgba(0, 0, 0, 0.2980392157);
   transition: all 0.2s ease-in-out;
   padding: 0.5rem;
 }
@@ -44,6 +44,12 @@ a {
   max-width: 70rem;
   padding: 2rem 0;
   margin: 0 1rem;
+}
+
+.product-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
 #nav-bar {
@@ -295,13 +301,42 @@ a {
 }
 
 .categories-wrapper {
-  width: 100%;
-  max-width: 70rem;
-  margin: 0 1rem;
-  padding: 2rem 0;
-}
-.categories-wrapper .product-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+}
+.categories-wrapper .categories-des {
+  display: flex;
+  flex-direction: column;
+}
+.categories-wrapper .categories-des .categories-nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+.categories-wrapper .categories-des .categories-nav a {
+  display: flex;
+  align-items: center;
+}
+.categories-wrapper .categories-des .categories-nav h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+.categories-wrapper .categories-des .categories-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.categories-wrapper .categories-des .categories-btns button {
+  border: none;
+  font-size: 0.7rem;
+  padding: 0.3rem 1rem;
+  background-color: #fff;
+  border: 1.5px solid rgba(0, 0, 0, 0.2980392157);
+  transition: all 0.2s ease-in-out;
+}
+.categories-wrapper .categories-des .categories-btns button:hover {
+  border-color: #000;
 }/*# sourceMappingURL=style.css.map */
