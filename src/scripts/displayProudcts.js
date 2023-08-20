@@ -6,19 +6,19 @@ const productList = {
     name: "test",
     price: 45,
     img: testImg,
-    type: "skinCare",
+    type: "skin care",
   },
   product2: {
     name: "test2",
     price: 60,
     img: testImg,
-    type: "skinCare",
+    type: "skin care",
   },
   product3: {
     name: "test2",
     price: 50,
     img: testImg,
-    type: "skinCare",
+    type: "skin care",
   },
   product4: {
     name: "test2",
