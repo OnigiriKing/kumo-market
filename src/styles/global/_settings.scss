@@ -31,7 +31,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border: 2px solid #0000004c;
+  border: 1.5px solid #0000004c;
   transition: all 0.2s ease-in-out;
   padding: 0.5rem;
 
@@ -55,3 +55,9 @@ a {
   padding: $basePadding;
   margin: $baseMargin;
 }
+
+  .product-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
