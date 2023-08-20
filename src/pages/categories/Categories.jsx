@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { displayProducts } from "../../scripts/displayProudcts";
 import Category from "./components/Category";
 import { Route, Routes } from "react-router-dom";
+import React from "react";
+
 
 export default function Categories() {
 
@@ -9,8 +11,10 @@ export default function Categories() {
      <div id="categories-page">
        <div className="wrapper categories-wrapper">
          <div className="categories-des">
-           <Link to="/">Home</Link>
-           <h2>All</h2>
+           <div className="categories-nav">
+             <Link to="/">Home</Link>
+             <h2>All</h2>
+           </div>
            <div className="categories-btns">
              <Link to={"all"}>
                <button>All</button>

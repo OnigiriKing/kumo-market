@@ -11,7 +11,7 @@ export default function Banner({reverse = false}) {
             Our Products are all made to standard sizes so that you can mix and
             match them freely.
           </p>
-          <Link to={"/123"}>
+          <Link to={"/"}>
             <button>Shop now</button>
           </Link>
         </div>
@@ -27,7 +27,7 @@ export default function Banner({reverse = false}) {
             Our Products are all made to standard sizes so that you can mix and
             match them freely.
           </p>
-          <Link to={"/123"}>
+          <Link to={"/"}>
             <button>Shop now</button>
           </Link>
         </div>

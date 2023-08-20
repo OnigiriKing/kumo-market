@@ -10,7 +10,7 @@ export default function NavBar() {
           Logo
         </Link>
         <div className="nav-links">
-          <Link to="/categories">CATEGORIES</Link>
+          <Link to="/categories/all">CATEGORIES</Link>
           <Link>PRODUCT PAGE</Link>
           <div className="nav-basket">Basket</div>
         </div>
