@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import testImg from "../../../img/test.png"
 
 export default function Start() {
 
@@ -10,7 +9,7 @@ export default function Start() {
            <div>
              <Link to="/">
                <div className="start-img-cover"></div>
-               <img src={testImg}></img>
+               <img></img>
                <p>Product</p>
              </Link>
            </div>
@@ -18,21 +17,21 @@ export default function Start() {
            <div>
              <Link to="/">
                <div className="start-img-cover"></div>
-               <img src={testImg}></img>
+               <img></img>
                <p>Product</p>
              </Link>
            </div>
            <div>
              <Link to="/">
                <div className="start-img-cover"></div>
-               <img src={testImg}></img>
+               <img ></img>
                <p>Product</p>
              </Link>
            </div>
            <div>
              <Link to="/">
                <div className="start-img-cover"></div>
-               <img src={testImg}></img>
+               <img ></img>
                <p>Product</p>
              </Link>
            </div>

@@ -20,7 +20,7 @@ export default function Banner({reverse = false}) {
     </div>
   ) : (
     <div id="banner-screen">
-      <div className="banner-wrapper banner-reverse">
+      <div className=" wrapper banner-wrapper banner-reverse">
         <div className="banner-text">
           <h2>Cozy & Elegant Lifestyle</h2>
           <p>

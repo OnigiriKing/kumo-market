@@ -30,4 +30,14 @@
 .nav-links {
     display: flex;
     gap: 1rem;
+    align-items: center;
+
+    a {
+        border-bottom: 1px solid #ffff;
+    }
+
+    a:hover {
+        border-bottom: 1px solid black;
+        transition: all 0s;
+    }
 }

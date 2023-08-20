@@ -78,6 +78,14 @@ a {
 .nav-links {
   display: flex;
   gap: 1rem;
+  align-items: center;
+}
+.nav-links a {
+  border-bottom: 1px solid white;
+}
+.nav-links a:hover {
+  border-bottom: 1px solid black;
+  transition: all 0s;
 }
 
 #footer-page {
@@ -124,7 +132,7 @@ a {
 }
 
 #home-page {
-  margin-top: 6rem;
+  margin-top: 6.5rem;
 }
 
 .start-screen {

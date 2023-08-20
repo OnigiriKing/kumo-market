@@ -1,56 +1,6 @@
 import { Link } from "react-router-dom";
-import testImg from "../img/test.png";
+import productList from "../data/products";
 
-const productList = {
-  product1: {
-    name: "test",
-    price: 45,
-    img: testImg,
-    type: "skin care",
-  },
-  product2: {
-    name: "test2",
-    price: 60,
-    img: testImg,
-    type: "skin care",
-  },
-  product3: {
-    name: "test2",
-    price: 50,
-    img: testImg,
-    type: "skin care",
-  },
-  product4: {
-    name: "test2",
-    price: 30,
-    img: testImg,
-    type: "Lamps",
-  },
-  product5: {
-    name: "test2",
-    price: 80,
-    img: testImg,
-    type: "lamps",
-  },
-  product6: {
-    name: "test2",
-    price: 15,
-    img: testImg,
-    type: "lamps",
-  },
-  product7: {
-    name: "test2",
-    price: 15,
-    img: testImg,
-    type: "lamps",
-  },
-  product8: {
-    name: "test2",
-    price: 15,
-    img: testImg,
-    type: "lamps",
-  },
-};
 
 export function displayProducts(
   type = "all",
