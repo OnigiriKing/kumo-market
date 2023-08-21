@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import testImg from "../../../img/test2.png"
+import banner1 from "../../../img/banner1.png";
+import banner2 from "../../../img/banner2.png";
 
 export default function Banner({reverse = false}) {
   const content = !reverse ? (
@@ -15,7 +16,7 @@ export default function Banner({reverse = false}) {
             <button>Shop now</button>
           </Link>
         </div>
-        <img src={testImg} className="banner-image"></img>
+        <img src={banner1} className="banner-image"></img>
       </div>
     </div>
   ) : (
@@ -31,7 +32,7 @@ export default function Banner({reverse = false}) {
             <button>Shop now</button>
           </Link>
         </div>
-        <img src={testImg} className="banner-image"></img>
+        <img src={banner2} className="banner-image"></img>
       </div>
     </div>
   );
