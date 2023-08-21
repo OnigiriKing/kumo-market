@@ -34,22 +34,20 @@ a {
   border: 1.5px solid #0000004c;
   transition: all 0.2s ease-in-out;
   padding: 0.5rem;
-  height: 20rem;
-  align-items: center;
+  
 
   &:hover {
     border-color: #000000;
   }
 
   img {
-    width: 75%;
-    height: 70%;
+    width: 100%;
     margin-bottom: 0.4rem;
+    align-self: center;
   }
 
   h3 {
     font-size: $mediumFont;
-    
   }
 }
 
