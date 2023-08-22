@@ -3,10 +3,14 @@ import { displayProducts } from "../../scripts/displayProudcts";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { allSvg } from "../../svg/allSvg";
+import { useHistory } from "react-router-dom";
 
 export default function Categories() {
 
     const [category, setCategory] = React.useState("ALL");
+    let test = window.location.pathname.split("/")[2];
+
+
 
   
   return (
@@ -36,20 +40,23 @@ export default function Categories() {
           </div>
         </div>
         <Routes>
-          <Route path="/all" element={<div>{displayProducts("all")}</div>} />
+          <Route path="all" element={<div>{displayProducts("all")}</div>} />
           <Route
-            path="/furniture"
+            path="furniture"
             element={<div>{displayProducts("furniture")}</div>}
           />
           <Route
-            path="/skin-care"
+            path="skin-care"
             element={<div>{displayProducts("skin care")}</div>}
           />
           <Route
-            path="/kitchen"
+            path="kitchen"
             element={<div>{displayProducts("kitchen")}</div>}
           />
-          <Route path="/chairs" element={<div>{displayProducts("chairs")}</div>} />
+          <Route
+            path="chairs"
+            element={<div>{displayProducts("chairs")}</div>}
+          />
         </Routes>
       </div>
     </div>
