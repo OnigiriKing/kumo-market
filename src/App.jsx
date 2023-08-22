@@ -8,15 +8,22 @@ import DropMenu from "./pages/navBar/DropMenu";
 import Categories from "./pages/categories/Categories";
 
 export default function App() {
-  
 
+
+  
   return (
     <div className="App">
       <NavBar />
       {/* <DropMenu /> */}
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/categories/*" element={<Categories />} />
+        <Route
+          path="/"
+          element={<HomePage/>}
+        />
+        <Route
+          path="/categories/*"
+          element={<Categories/>}
+        />
       </Routes>
       <FooterPage />
     </div>

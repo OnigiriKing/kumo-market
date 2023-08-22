@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { displayProducts } from "../../scripts/displayProudcts";
-import Category from "./components/Category";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { allSvg } from "../../svg/allSvg";
 
 export default function Categories() {
 
-  const [category, setCategory] = React.useState("ALL")
+    const [category, setCategory] = React.useState("ALL");
+
+  
   return (
     <div id="categories-page">
       <div className="wrapper categories-wrapper">
@@ -18,32 +19,37 @@ export default function Categories() {
           </div>
           <div className="categories-btns">
             <Link to={"all"}>
-              <button onClick={() => setCategory("all")}>All</button>
+              <button>All</button>
             </Link>
             <Link to={"furniture"}>
-              <button onClick={() => setCategory("furniture")}>
-                Furniture
-              </button>
+              <button>Furniture</button>
             </Link>
             <Link to={"skin-care"}>
-              <button onClick={() => setCategory("skin care")}>
-                Skin Care
-              </button>
+              <button>Skin Care</button>
             </Link>
             <Link to={"kitchen"}>
-              <button onClick={() => setCategory("kitchen")}>Kitchen</button>
+              <button>Kitchen</button>
             </Link>
             <Link to={"chairs"}>
-              <button onClick={() => setCategory("chairs")}>Chairs</button>
+              <button>Chairs</button>
             </Link>
           </div>
         </div>
         <Routes>
-          <Route path="/all" element={<Category />} />
-          <Route path="/furniture" element={<Category type={category} />} />
-          <Route path="/skin-care" element={<Category type={category} />} />
-          <Route path="/kitchen" element={<Category type={category} />} />
-          <Route path="/chairs" element={<Category type={category} />} />
+          <Route path="/all" element={<div>{displayProducts("all")}</div>} />
+          <Route
+            path="/furniture"
+            element={<div>{displayProducts("furniture")}</div>}
+          />
+          <Route
+            path="/skin-care"
+            element={<div>{displayProducts("skin care")}</div>}
+          />
+          <Route
+            path="/kitchen"
+            element={<div>{displayProducts("kitchen")}</div>}
+          />
+          <Route path="/chairs" element={<div>{displayProducts("chairs")}</div>} />
         </Routes>
       </div>
     </div>
