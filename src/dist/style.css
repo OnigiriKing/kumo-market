@@ -354,4 +354,8 @@ a {
 }
 .categories-wrapper .categories-des .categories-btns button:hover {
   border-color: #000;
+}
+
+#product-page {
+  margin-top: 6.5rem;
 }/*# sourceMappingURL=style.css.map */
