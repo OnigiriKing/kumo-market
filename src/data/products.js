@@ -1,16 +1,15 @@
-import chairs1 from "./img/chairs1.png"
-import chairs2 from "./img/chairs2.png"
-import chairs3 from "./img/chairs3.png"
-import furniture1 from "./img/furniture1.png"
-import furniture2 from "./img/furniture2.png"
-import kitchen1 from "./img/kitchen1.png"
-import kitchen2 from "./img/kitchen2.png"
-import kitchen3 from "./img/kitchen3.png"
-import skinCare1 from "./img/skinCare1.png"
-import skinCare2 from "./img/skinCare2.png"
-import skinCare3 from "./img/skinCare3.png"
-import skinCare4 from "./img/skinCare4.png"
-
+import chairs1 from "./img/chairs1.png";
+import chairs2 from "./img/chairs2.png";
+import chairs3 from "./img/chairs3.png";
+import furniture1 from "./img/furniture1.png";
+import furniture2 from "./img/furniture2.png";
+import kitchen1 from "./img/kitchen1.png";
+import kitchen2 from "./img/kitchen2.png";
+import kitchen3 from "./img/kitchen3.png";
+import skinCare1 from "./img/skinCare1.png";
+import skinCare2 from "./img/skinCare2.png";
+import skinCare3 from "./img/skinCare3.png";
+import skinCare4 from "./img/skinCare4.png";
 
 const productList = {
   product1: {

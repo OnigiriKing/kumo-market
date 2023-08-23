@@ -3,10 +3,32 @@ import { displayProducts } from "../../scripts/displayProudcts";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { allSvg } from "../../svg/allSvg";
-import { useHistory } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 
 export default function Categories({ cat, setCat }) {
+  const pages = {
+    all: {
+      link: "all",
+      state: "All",
+    },
+    furniture: {
+      link: "furniture",
+      state: "Furniture",
+    },
+    skinCare: {
+      link: "skin-care",
+      state: "Skin Care",
+    },
+    kitchen: {
+      link: "kitchen",
+      state: "Kitchen",
+    },
+    chairs: {
+      link: "chairs",
+      state: "Chairs",
+    },
+  };
+
   return (
     <div id="categories-page">
       <div className="wrapper categories-wrapper">
@@ -16,21 +38,15 @@ export default function Categories({ cat, setCat }) {
             <h2>{cat.toUpperCase()}</h2>
           </div>
           <div className="categories-btns">
-            <Link to={"all"}>
-              <button onClick={() => setCat("All")}>All</button>
-            </Link>
-            <Link to={"furniture"}>
-              <button onClick={() => setCat("furniture")}>Furniture</button>
-            </Link>
-            <Link to={"skin-care"}>
-              <button onClick={() => setCat("skin care")}>Skin Care</button>
-            </Link>
-            <Link to={"kitchen"}>
-              <button onClick={() => setCat("kitchen")}>Kitchen</button>
-            </Link>
-            <Link to={"chairs"}>
-              <button onClick={() => setCat("chairs")}>Chairs</button>
-            </Link>
+            {Object.keys(pages).map((key) => {
+              const el = pages[key];
+              console.log(el.link);
+              return (
+                <Link to={el.link}>
+                  <button onClick={() => setCat(el.state)}>{el.state}</button>
+                </Link>
+              );
+            })}
           </div>
         </div>
         <Routes>
