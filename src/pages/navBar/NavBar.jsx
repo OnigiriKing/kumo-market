@@ -12,7 +12,7 @@ export default function NavBar() {
         </Link>
         <div className="nav-links">
           <Link to="/categories/all">CATEGORIES</Link>
-          <Link>PRODUCT PAGE</Link>
+          <Link to="/product">PRODUCT PAGE</Link>
           <div className="nav-basket">{allSvg(30).basket}</div>
         </div>
       </div>

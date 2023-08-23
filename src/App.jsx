@@ -6,6 +6,7 @@ import HomePage from "./pages/homePage/HomePage";
 import FooterPage from "./pages/footerPage/Footer";
 import DropMenu from "./pages/navBar/DropMenu";
 import Categories from "./pages/categories/Categories";
+import Product from "./pages/productPage/Product";
 
 export default function App() {
 
@@ -23,6 +24,10 @@ export default function App() {
         <Route
           path="/categories/*"
           element={<Categories cat={category} setCat={setCategory} />}
+        />
+        <Route
+          path="/product"
+          element={<Product />}
         />
       </Routes>
       <FooterPage />
