@@ -9,7 +9,7 @@ import Categories from "./pages/categories/Categories";
 
 export default function App() {
 
-
+  const [category, setCategory] = React.useState("ALL");
   
   return (
     <div className="App">
@@ -18,11 +18,11 @@ export default function App() {
       <Routes>
         <Route
           path="/"
-          element={<HomePage/>}
+          element={<HomePage cat={category} setCat={setCategory} />}
         />
         <Route
           path="/categories/*"
-          element={<Categories/>}
+          element={<Categories cat={category} setCat={setCategory} />}
         />
       </Routes>
       <FooterPage />

@@ -5,37 +5,31 @@ import React from "react";
 import { allSvg } from "../../svg/allSvg";
 import { useHistory } from "react-router-dom";
 
-export default function Categories() {
 
-    const [category, setCategory] = React.useState("ALL");
-    let test = window.location.pathname.split("/")[2];
-
-
-
-  
+export default function Categories({ cat, setCat }) {
   return (
     <div id="categories-page">
       <div className="wrapper categories-wrapper">
         <div className="categories-des">
           <div className="categories-nav">
             <Link to="/">{allSvg(15).arrowLeft}Home</Link>
-            <h2>{category.toUpperCase()}</h2>
+            <h2>{cat.toUpperCase()}</h2>
           </div>
           <div className="categories-btns">
             <Link to={"all"}>
-              <button>All</button>
+              <button onClick={() => setCat("All")}>All</button>
             </Link>
             <Link to={"furniture"}>
-              <button>Furniture</button>
+              <button onClick={() => setCat("furniture")}>Furniture</button>
             </Link>
             <Link to={"skin-care"}>
-              <button>Skin Care</button>
+              <button onClick={() => setCat("skin care")}>Skin Care</button>
             </Link>
             <Link to={"kitchen"}>
-              <button>Kitchen</button>
+              <button onClick={() => setCat("kitchen")}>Kitchen</button>
             </Link>
             <Link to={"chairs"}>
-              <button>Chairs</button>
+              <button onClick={() => setCat("chairs")}>Chairs</button>
             </Link>
           </div>
         </div>
