@@ -16,13 +16,36 @@
 .product-info-all {
   display: flex;
   gap: 4rem;
+  align-items: center;
 }
 
 .product-info-images {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5rem;
 
   img {
+    width: 85%;
+  }
+
+  .product-info-img-list {
+    display: flex;
     width: 100%;
+    padding: 1.5rem;
+    gap: 1rem;
+    justify-content: center;
+    img {
+        width: 28%;
+        cursor: pointer;
+        border: 1px solid #ffff;
+
+        &:hover {
+            border-color: #000;
+        }
+    }
   }
 }
 
@@ -32,11 +55,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem;
   gap: 2rem;
+  text-align: center;
 
   .product-info-name {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   .product-info-price {
@@ -63,7 +87,13 @@
   }
 
   .product-info-cart {
+    display: flex;
+    gap: 1rem;
     
+    button {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+    }
   }
 }
 

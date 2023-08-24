@@ -18,11 +18,8 @@ export default function ProductInfo({id = "1"}) {
              <img src={product.img} />
              <div className="product-info-img-list">
                <img src={product.img} />
+               <img src={product.addImg[0]} />
                <img src={product.addImg[1]} />
-               <img src={product.addImg[1]} />
-               <h1>Test</h1>
-               <h1>Test</h1>
-               <h1>Test</h1>
              </div>
            </div>
            <div className="product-info-des">
