@@ -5,9 +5,16 @@ export default function ProductInfo({id = "1"}) {
 
     const [amount, changeAmount] = React.useState(1)
 
+    const [imgType, changeType] = React.useState("img")
+
+    console.log(imgType)
+
 
 
     const product = productList[`product${id}`];
+
+    console.log(imgType);
+    console.log(product[imgType]);
 
 
    return (
@@ -15,11 +22,20 @@ export default function ProductInfo({id = "1"}) {
        <div className="wrapper product-info-wrapper">
          <div className="product-info-all">
            <div className="product-info-images">
-             <img src={product.img} />
+             <img src={imgType} />
              <div className="product-info-img-list">
-               <img src={product.img} />
-               <img src={product.addImg[0]} />
-               <img src={product.addImg[1]} />
+               <img
+                 src={product.img}
+                 onMouseEnter={() => changeType(product.img)}
+               />
+               <img
+                 src={product.addImg[0]}
+                 onMouseEnter={() => changeType(product.addImg[0])}
+               />
+               <img
+                 src={product.addImg[1]}
+                 onMouseEnter={() => changeType(product.addImg[1])}
+               />
              </div>
            </div>
            <div className="product-info-des">
