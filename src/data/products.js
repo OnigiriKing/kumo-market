@@ -1,15 +1,30 @@
-import chairs1 from "./img/chairs1.png";
-import chairs2 from "./img/chairs2.png";
-import chairs3 from "./img/chairs3.png";
-import furniture1 from "./img/furniture1.png";
-import furniture2 from "./img/furniture2.png";
-import kitchen1 from "./img/kitchen1.png";
-import kitchen2 from "./img/kitchen2.png";
-import kitchen3 from "./img/kitchen3.png";
-import skinCare1 from "./img/skinCare1.png";
-import skinCare2 from "./img/skinCare2.png";
-import skinCare3 from "./img/skinCare3.png";
-import skinCare4 from "./img/skinCare4.png";
+// chairs IMG
+
+// chairs1
+import chairs1 from "./img/chairs/chairs1/chairs1.png"
+import chairs1_1 from "./img/chairs/chairs1/chairs1_1.png"
+import chairs1_2 from "./img/chairs/chairs1/chairs1_2.png"
+
+// chairs2
+import chairs2 from "./img/chairs/chairs2/chairs2.png";
+
+// chairs3
+import chairs3 from "./img/chairs/chairs3/chairs3.png";
+
+// furniture IMG
+import furniture1 from "./img/furniture/furniture1/furniture1.png";
+import furniture2 from "./img/furniture/furniture2/furniture2.png";
+
+// kitchen IMG
+import kitchen1 from "./img/kitchen/kitchen1/kitchen1.png";
+import kitchen2 from "./img/kitchen/kitchen2/kitchen2.png";
+import kitchen3 from "./img/kitchen/kitchen3/kitchen3.png";
+
+// skinCare IMG
+import skinCare1 from "./img/skinCare/skinCare1/skinCare1.png";
+import skinCare2 from "./img/skinCare/skinCare2/skinCare2.png";
+import skinCare3 from "./img/skinCare/skinCare3/skinCare3.png";
+import skinCare4 from "./img/skinCare/skinCare4/skinCare4.png";
 
 const productList = {
   product1: {
