@@ -441,4 +441,22 @@ a {
 .product-info-des .product-info-cart button {
   padding: 1rem 3rem;
   font-size: 1.2rem;
+}
+.product-info-des .product-info-cart button:nth-child(1) {
+  background-color: transparent;
+  border: 1.5px solid #000;
+}
+.product-info-des .product-info-cart button:nth-child(1):hover {
+  background-color: #000;
+  color: #fff;
+}
+.product-info-des .product-info-cart button:nth-child(2) {
+  background-color: rgb(195, 67, 67);
+  border: none;
+  color: #fff;
+  border: 1.5px solid rgb(195, 67, 67);
+}
+.product-info-des .product-info-cart button:nth-child(2):hover {
+  background-color: transparent;
+  color: rgb(195, 67, 67);
 }/*# sourceMappingURL=style.css.map */
