@@ -1,6 +1,9 @@
 import productList from "../../../data/products";
+import React from "react";
 
 export default function ProductInfo({id = "1"}) {
+
+    const [amount, changeAmount] = React.useState(1)
 
 
     const product = productList[`product${id}`];
@@ -21,12 +24,16 @@ export default function ProductInfo({id = "1"}) {
              <p>{product.des}</p>
              <div>
                <h1>Quantiti</h1>
-               <div></div>
-               <h1>{product.price}</h1>
+               <div>
+                <button></button>
+                <h1>{amount}</h1>
+                <button></button>
+               </div>
+               <h1>${product.price*amount}</h1>
              </div>
              <div>
-               <button></button>
-               <button></button>
+               <button>Add to cart</button>
+               <button>Buy now</button>
              </div>
            </div>
          </div>
