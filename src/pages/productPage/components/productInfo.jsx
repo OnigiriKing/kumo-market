@@ -3,18 +3,19 @@ import React from "react";
 
 export default function ProductInfo({id = "1"}) {
 
-    const [amount, changeAmount] = React.useState(1)
+  const product = productList[`product${id}`];
 
-    const [imgType, changeType] = React.useState("img")
+    const [amount, setAmount] = React.useState(1)
 
-    console.log(imgType)
+    const [imgType, changeType] = React.useState(product.img);
+
+    function changeAmount(type) {
+      return type=="add"&& amount<10?setAmount(amount+1):type=="sub"&& amount>1?setAmount(amount-1):""
+    }
 
 
 
-    const product = productList[`product${id}`];
 
-    console.log(imgType);
-    console.log(product[imgType]);
 
 
    return (
@@ -44,11 +45,11 @@ export default function ProductInfo({id = "1"}) {
              <div className="product-info-price">
                <h1>Quantity</h1>
                <div className="product-info-btns">
-                 <button>
+                 <button onClick={() => changeAmount("sub")}>
                    <h2>-</h2>
                  </button>
                  <h1>{amount}</h1>
-                 <button>
+                 <button onClick={() => changeAmount("add")}>
                    <h2>+</h2>
                  </button>
                </div>
