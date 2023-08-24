@@ -26,7 +26,7 @@ export default function App() {
           element={<Categories cat={category} setCat={setCategory} />}
         />
         <Route
-          path="/product"
+          path="/product/:id"
           element={<Product />}
         />
       </Routes>
