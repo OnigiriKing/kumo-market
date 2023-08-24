@@ -1,5 +1,70 @@
 @use "../global" as *;
 
 #product-page {
-    margin-top: $topMargin;
+  margin-top: $topMargin;
 }
+
+.product-info-screen {
+  display: flex;
+  justify-content: center;
+}
+
+.product-info-wrapper {
+  display: flex;
+}
+
+.product-info-all {
+  display: flex;
+  gap: 4rem;
+}
+
+.product-info-images {
+  width: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.product-info-des {
+  background-color: #e5e5e5;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+
+  .product-info-name {
+    margin-bottom: 2rem;
+  }
+
+  .product-info-price {
+    display: flex;
+    gap: .5rem;
+    width: 90%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+
+  .product-info-btns {
+    display: flex;
+
+    h1,
+    button {
+      padding: 0.8rem;
+    }
+
+    h1 {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .product-info-cart {
+    
+  }
+}
+
+

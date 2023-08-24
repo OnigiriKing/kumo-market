@@ -1,9 +1,9 @@
 // chairs IMG
 
 // chairs1
-import chairs1 from "./img/chairs/chairs1/chairs1.png"
-import chairs1_1 from "./img/chairs/chairs1/chairs1_1.png"
-import chairs1_2 from "./img/chairs/chairs1/chairs1_2.png"
+import chairs1 from "./img/chairs/chairs1/chairs1.png";
+import chairs1_1 from "./img/chairs/chairs1/chairs1_1.png";
+import chairs1_2 from "./img/chairs/chairs1/chairs1_2.png";
 
 // chairs2
 import chairs2 from "./img/chairs/chairs2/chairs2.png";
@@ -31,6 +31,7 @@ const productList = {
     name: "Nature Series Cream Beige DSW",
     price: 68,
     img: chairs1,
+    addImg: [chairs1_1, chairs1_2],
     type: "chairs",
     link: "product/1",
     texture: "wood",

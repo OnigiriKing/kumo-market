@@ -12,7 +12,7 @@ export default function Product() {
 
    return (
      <div id="product-page">
-       <div className="product-wrapper">
+       <div className="product-element">
        <ProductInfo id={id} />
        </div>
        <Trending />
