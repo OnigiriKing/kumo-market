@@ -1,7 +1,7 @@
 import productList from "../../../data/products";
 import React from "react";
 
-export default function ProductInfo({id = "1"}) {
+export default function ProductInfo({id}) {
 
   const product = productList[`product${id}`];
 
@@ -12,10 +12,6 @@ export default function ProductInfo({id = "1"}) {
     function changeAmount(type) {
       return type=="add"&& amount<10?setAmount(amount+1):type=="sub"&& amount>1?setAmount(amount-1):""
     }
-
-
-
-
 
 
    return (

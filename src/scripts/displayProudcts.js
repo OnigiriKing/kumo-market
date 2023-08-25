@@ -14,7 +14,7 @@ export function displayProducts(
 
         if (type !== "all" && el.type === type) {
           return (
-            <Link to="/" key={key} className="product">
+            <Link to={el.Link} key={key} className="product">
               <img src={el.img} alt="product" />
               <p>{el.name}</p>
               <h3>${el.price}</h3>
@@ -22,7 +22,7 @@ export function displayProducts(
           );
         } if (type === "all") {
           return (
-            <Link to="/" key={key} className="product">
+            <Link to={el.Link} key={key} className="product">
               <img src={el.img} alt="product" />
               <p>{el.name}</p>
               <h3>${el.price}</h3>
