@@ -446,6 +446,7 @@ a {
 .product-info-des .product-info-cart button {
   padding: 1rem 3rem;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 .product-info-des .product-info-cart button:nth-child(1) {
   background-color: transparent;
