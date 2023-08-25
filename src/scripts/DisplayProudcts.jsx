@@ -9,12 +9,16 @@ export function DisplayProducts({
   type = "all",
   newClass = "product-wrapper",
   limit = Object.keys(productList).length,
+  shuffle = false,
 }) {
   let number = 0;
 
+
+  const list = shuffle?Object.keys(productList).sort(() => Math.random() - 0.5):Object.keys(productList);
+
   return (
     <div className={`${newClass}`}>
-      {Object.keys(productList).map((key) => {
+      {list.map((key) => {
         const el = productList[key];
 
         if (type !== "all" && el.type === type && number < limit) {
