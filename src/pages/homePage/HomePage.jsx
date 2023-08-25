@@ -8,6 +8,9 @@ import React from "react";
 
 export default function HomePage({ cat, setCat }) {
 
+
+
+
   return (
     <div id="home-page">
       <Start cat={cat} setCat={setCat} />

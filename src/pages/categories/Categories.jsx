@@ -40,7 +40,6 @@ export default function Categories({ cat, setCat }) {
           <div className="categories-btns">
             {Object.keys(pages).map((key) => {
               const el = pages[key];
-              console.log(el.link);
               return (
                 <Link to={el.link}>
                   <button onClick={() => setCat(el.state)}>{el.state}</button>
