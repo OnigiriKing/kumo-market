@@ -64,11 +64,6 @@ export default function ProductInfo({ id }) {
             </div>
           </div>
         </div>
-        <div className="product-info-add">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { DisplayProducts } from "../../../scripts/DisplayProudcts";
+import { allSvg } from "../../../svg/allSvg";
 
 export default function Trending() {
 
@@ -8,9 +9,9 @@ export default function Trending() {
        <div className="wrapper trending-wrapper">
          <div className="trending-nav">
            <h2>Popilar Picks</h2>
-           <div>
-             <button>Button</button>
-             <button>Button</button>
+           <div className="trending-btns">
+             <button>{allSvg(20).arrowSides}</button>
+             <button>{allSvg(20).arrowSides}</button>
            </div>
          </div>
          <DisplayProducts newClass="trending-items" />

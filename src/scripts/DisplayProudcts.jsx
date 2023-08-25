@@ -3,7 +3,7 @@ import productList from "../data/products";
 
 // type is for the type of product
 // newClass is for the additional class for the component to regulate css
-// limit is for the limit of the products 
+// limit is for the limit of the products
 
 export function DisplayProducts({
   type = "all",
@@ -13,8 +13,9 @@ export function DisplayProducts({
 }) {
   let number = 0;
 
-
-  const list = shuffle?Object.keys(productList).sort(() => Math.random() - 0.5):Object.keys(productList);
+  const list = shuffle
+    ? Object.keys(productList).sort(() => Math.random() - 0.5)
+    : Object.keys(productList);
 
   return (
     <div className={`${newClass}`}>

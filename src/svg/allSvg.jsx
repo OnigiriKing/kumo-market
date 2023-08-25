@@ -1,7 +1,7 @@
 
 
 export function allSvg(width) {
-  const navSvg = {
+  const allSvg = {
     menuBtn: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,26 @@ export function allSvg(width) {
         <circle cx="17.5" cy="19.5" r="1.5" fill="currentColor" />
       </svg>
     ),
+    arrowSides: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={width}
+        viewBox="0 0 512 512"
+      >
+        <g transform="rotate(90 256 256)">
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="48"
+            d="m112 244l144-144l144 144M256 120v292"
+          />
+        </g>
+      </svg>
+    ),
   };
 
-  return navSvg;
+  return allSvg;
 }

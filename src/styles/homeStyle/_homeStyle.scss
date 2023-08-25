@@ -192,7 +192,28 @@
 
   div {
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
+  }
+}
+
+.trending-btns {
+
+  button:nth-child(1) {
+    transform: rotate(180deg);
+  }
+
+  button {
+    padding: .5rem .5rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    border: none;
+    background-color: #000000c0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #000000;
+    }
   }
 }
 
