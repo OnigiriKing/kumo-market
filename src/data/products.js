@@ -7,24 +7,59 @@ import chairs1_2 from "./img/chairs/chairs1/chairs1_2.png";
 
 // chairs2
 import chairs2 from "./img/chairs/chairs2/chairs2.png";
+import chairs2_1 from "./img/chairs/chairs2/chairs2_1.png";
+import chairs2_2 from "./img/chairs/chairs2/chairs2_2.png";
 
 // chairs3
 import chairs3 from "./img/chairs/chairs3/chairs3.png";
+import chairs3_1 from "./img/chairs/chairs3/chairs3_1.png";
+import chairs3_2 from "./img/chairs/chairs3/chairs3_2.png";
 
 // furniture IMG
+// furniture1
 import furniture1 from "./img/furniture/furniture1/furniture1.png";
+import furniture1_1 from "./img/furniture/furniture1/furniture1_1.png";
+import furniture1_2 from "./img/furniture/furniture1/furniture1_2.png";
+
+// furniture2
 import furniture2 from "./img/furniture/furniture2/furniture2.png";
+import furniture2_1 from "./img/furniture/furniture2/furniture2_1.png";
+import furniture2_2 from "./img/furniture/furniture2/furniture2_2.png";
 
 // kitchen IMG
+// kitchen1
 import kitchen1 from "./img/kitchen/kitchen1/kitchen1.png";
+import kitchen1_1 from "./img/kitchen/kitchen1/kitchen1_1.png";
+import kitchen1_2 from "./img/kitchen/kitchen1/kitchen1_2.png";
+// kitchen2
 import kitchen2 from "./img/kitchen/kitchen2/kitchen2.png";
+import kitchen2_1 from "./img/kitchen/kitchen2/kitchen2_1.png";
+import kitchen2_2 from "./img/kitchen/kitchen2/kitchen2_2.png";
+// kitchen3
 import kitchen3 from "./img/kitchen/kitchen3/kitchen3.png";
+import kitchen3_1 from "./img/kitchen/kitchen3/kitchen3_1.png";
+import kitchen3_2 from "./img/kitchen/kitchen3/kitchen3_2.png";
 
 // skinCare IMG
+// skinCare1
 import skinCare1 from "./img/skinCare/skinCare1/skinCare1.png";
+import skinCare1_1 from "./img/skinCare/skinCare1/skinCare1_1.png";
+import skinCare1_2 from "./img/skinCare/skinCare1/skinCare1_2.png";
+
+// skinCare2
 import skinCare2 from "./img/skinCare/skinCare2/skinCare2.png";
+import skinCare2_1 from "./img/skinCare/skinCare2/skinCare2_1.png";
+import skinCare2_2 from "./img/skinCare/skinCare2/skinCare2_2.png";
+
+// skinCare3
 import skinCare3 from "./img/skinCare/skinCare3/skinCare3.png";
+import skinCare3_1 from "./img/skinCare/skinCare3/skinCare3_1.png";
+import skinCare3_2 from "./img/skinCare/skinCare3/skinCare3_2.png";
+
+// skinCare4
 import skinCare4 from "./img/skinCare/skinCare4/skinCare4.png";
+import skinCare4_1 from "./img/skinCare/skinCare4/skinCare4_1.png";
+import skinCare4_2 from "./img/skinCare/skinCare4/skinCare4_2.png";
 
 const productList = {
   product1: {
@@ -41,6 +76,7 @@ const productList = {
     name: "Strandmon High Back Chair",
     price: 120,
     img: chairs2,
+    addImg: [chairs2_1, chairs2_2],
     type: "chairs",
     link: "product/2",
     texture: "wood",
@@ -50,6 +86,7 @@ const productList = {
     name: "Halmar Armchairs SOFT",
     price: 135,
     img: chairs3,
+    addImg: [chairs3_1, chairs3_2],
     type: "chairs",
     link: "product/3",
     texture: "wood",
@@ -59,6 +96,7 @@ const productList = {
     name: "Polytrends Laguna 47'",
     price: 800,
     img: furniture1,
+    addImg: [furniture1_1, furniture1_2],
     type: "furniture",
     link: "product/4",
     texture: "polyethylene",
@@ -68,6 +106,7 @@ const productList = {
     name: "FÖRHÖJA Kitchen cart",
     price: 200,
     img: furniture2,
+    addImg: [furniture2_1, furniture2_2],
     type: "furniture",
     link: "product/5",
     texture: "wood",
@@ -77,6 +116,7 @@ const productList = {
     name: "Philips HR 3652/00",
     price: 20,
     img: kitchen1,
+    addImg: [kitchen1_1, kitchen1_2],
     type: "kitchen",
     link: "product/6",
     texture: "metal",
@@ -86,6 +126,7 @@ const productList = {
     name: "KitchenAid Artisan KSM15",
     price: 59,
     img: kitchen2,
+    addImg: [kitchen2_1, kitchen2_2],
     type: "kitchen",
     link: "product/7",
     texture: "metal",
@@ -95,6 +136,7 @@ const productList = {
     name: "Bialetti Moka Express",
     price: 70,
     img: kitchen3,
+    addImg: [kitchen3_1, kitchen3_2],
     type: "kitchen",
     link: "product/8",
     texture: "metal",
@@ -104,6 +146,7 @@ const productList = {
     name: "The Ordinary Glycolic Acid 7%",
     price: 23,
     img: skinCare1,
+    addImg: [skinCare1_1, skinCare1_2],
     type: "skin care",
     link: "product/9",
     texture: "liquid",
@@ -113,6 +156,7 @@ const productList = {
     name: "iS Clinical Super Serum Advance+",
     price: 68,
     img: skinCare2,
+    addImg: [skinCare2_1, skinCare2_2],
     type: "skin care",
     link: "product/10",
     texture: "liquid",
@@ -122,6 +166,7 @@ const productList = {
     name: "La Roche-Posay Lipikar Fluide",
     price: 45,
     img: skinCare3,
+    addImg: [skinCare3_1, skinCare3_2],
     type: "skin care",
     link: "product/11",
     texture: "liquid",
@@ -131,6 +176,7 @@ const productList = {
     name: "Chanel La Mousse",
     price: 77,
     img: skinCare4,
+    addImg: [skinCare4_1, skinCare4_2],
     type: "skin care",
     link: "product/12",
     texture: "creame",
