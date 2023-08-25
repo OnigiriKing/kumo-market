@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { displayProducts } from "../../../scripts/displayProudcts";
+import { DisplayProducts } from "../../../scripts/DisplayProudcts";
 
 export default function Trending() {
 
@@ -13,7 +13,7 @@ export default function Trending() {
              <button>Button</button>
            </div>
          </div>
-         {displayProducts(undefined, "trending-items")}
+         <DisplayProducts newClass="trending-items" />
        </div>
      </div>
    );

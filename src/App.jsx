@@ -7,8 +7,15 @@ import FooterPage from "./pages/footerPage/Footer";
 import DropMenu from "./pages/navBar/DropMenu";
 import Categories from "./pages/categories/Categories";
 import Product from "./pages/productPage/Product";
+import { useLocation } from "react-router-dom";
 
 export default function App() {
+
+  const html = useLocation().pathname;
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [html]);
 
   const [category, setCategory] = React.useState("ALL");
   

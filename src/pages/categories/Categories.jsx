@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { displayProducts } from "../../scripts/displayProudcts";
+import { DisplayProducts } from "../../scripts/DisplayProudcts";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { allSvg } from "../../svg/allSvg";
@@ -49,22 +49,45 @@ export default function Categories({ cat, setCat }) {
           </div>
         </div>
         <Routes>
-          <Route path="all" element={<div>{displayProducts("all")}</div>} />
+          <Route
+            path="all"
+            element={
+              <div>
+                <DisplayProducts type="all" />
+              </div>
+            }
+          />
           <Route
             path="furniture"
-            element={<div>{displayProducts("furniture")}</div>}
+            element={
+              <div>
+                <DisplayProducts type="furniture" />
+              </div>
+            }
           />
           <Route
             path="skin-care"
-            element={<div>{displayProducts("skin care")}</div>}
+            element={
+              <div>
+                <DisplayProducts type="skin care" />
+              </div>
+            }
           />
           <Route
             path="kitchen"
-            element={<div>{displayProducts("kitchen")}</div>}
+            element={
+              <div>
+                <DisplayProducts type="kitchen" />
+              </div>
+            }
           />
           <Route
             path="chairs"
-            element={<div>{displayProducts("chairs")}</div>}
+            element={
+              <div>
+                <DisplayProducts type="chairs" />
+              </div>
+            }
           />
         </Routes>
       </div>

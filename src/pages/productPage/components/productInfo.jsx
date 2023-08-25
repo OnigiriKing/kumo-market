@@ -1,8 +1,8 @@
 import productList from "../../../data/products";
 import React from "react";
-import { useLocation } from "react-router-dom";
 
 export default function ProductInfo({ id }) {
+
   const product = productList[`product${id}`];
 
   const [amount, setAmount] = React.useState(1);
