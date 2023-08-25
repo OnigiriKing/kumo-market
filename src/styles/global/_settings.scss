@@ -1,9 +1,5 @@
 @use "./typo" as *;
-
-$maxWidth: 70rem;
-$baseMargin: 0 1rem;
-$basePadding: 2rem 0;
-$topMargin: 6.5rem;
+@use "./elements" as *;
 
 * {
   margin: 0;
@@ -35,7 +31,6 @@ a {
   border: 1.5px solid #0000004c;
   transition: all 0.2s ease-in-out;
   padding: 0.5rem;
-  
 
   &:hover {
     border-color: #000000;
@@ -59,8 +54,8 @@ a {
   margin: $baseMargin;
 }
 
-  .product-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-  }
+.product-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
