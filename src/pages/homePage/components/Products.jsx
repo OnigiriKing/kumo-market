@@ -5,7 +5,7 @@ export default function Products() {
     <div id="products-screen">
       <div className="wrapper products-wrapper">
         <h2>Our best products</h2>
-        <DisplayProducts number={8} />
+        <DisplayProducts limit={8} />
       </div>
     </div>
   );

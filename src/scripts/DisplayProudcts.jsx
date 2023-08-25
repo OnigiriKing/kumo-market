@@ -1,23 +1,24 @@
 import { Link } from "react-router-dom";
 import productList from "../data/products";
-import React from "react";
 
-
+// type is for the type of product
+// newClass is for the additional class for the component to regulate css
+// limit is for the limit of the products 
 
 export function DisplayProducts({
   type = "all",
   newClass = "product-wrapper",
-  number = Object.keys(productList).length,
+  limit = Object.keys(productList).length,
 }) {
-  let limit = 0;
+  let number = 0;
 
   return (
     <div className={`${newClass}`}>
       {Object.keys(productList).map((key) => {
         const el = productList[key];
 
-        if (type !== "all" && el.type === type && limit < number) {
-          limit++;
+        if (type !== "all" && el.type === type && number < limit) {
+          number++;
           return (
             <Link to={el.link} key={key} className="product">
               <img src={el.img} alt="product" />
@@ -26,8 +27,8 @@ export function DisplayProducts({
             </Link>
           );
         }
-        if (type === "all" && limit < number) {
-          limit++;
+        if (type === "all" && number < limit) {
+          number++;
           return (
             <Link to={el.link} key={key} className="product">
               <img src={el.img} alt="product" />
