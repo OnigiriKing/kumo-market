@@ -7,6 +7,7 @@ export function displayProducts(
   newClass = "product-wrapper",
   number = "all"
 ) {
+  
   return (
     <div className={`${newClass}`}>
       {Object.keys(productList).map((key) => {

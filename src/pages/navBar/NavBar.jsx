@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import { allSvg } from "../../svg/allSvg";
-import { changeClass } from "../../scripts/changeClass";
 import logo from "../../img/logo.png"
-import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import React from "react";
 
 export default function NavBar() {
-
- const html = window.location.pathname.includes("product/")?"Yes":"no"; 
 
   const [link, setLink] = React.useState("1");
 
@@ -20,7 +16,6 @@ export default function NavBar() {
     } else {
       setLink(Math.floor(Math.random() * 12) + 1);
     }
-    console.log(link)
   }, [location]);
 
   
