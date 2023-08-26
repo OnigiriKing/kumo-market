@@ -89,6 +89,9 @@ a {
   border-bottom: 1px solid black;
   transition: all 0s;
 }
+.nav-links .nav-basket {
+  cursor: pointer;
+}
 
 #footer-page {
   background-color: rgba(145, 130, 130, 0.831372549);
@@ -503,4 +506,60 @@ a {
 .product-info-des .product-info-cart button:nth-child(2):hover {
   background-color: transparent;
   color: #e13c3c;
+}
+
+.full-overlay,
+.drop-menu,
+.cart-menu {
+  display: none;
+}
+
+.full-overlay {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3137254902);
+}
+
+.drop-menu {
+  position: absolute;
+}
+
+.cart-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 6;
+  background-color: #fff;
+  right: 0;
+  top: 0;
+  padding: 3rem 2.5rem 1.5rem;
+  height: 100vh;
+  width: 25rem;
+}
+.cart-menu .cart-menu-des {
+  display: flex;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.cart-menu .cart-menu-container {
+  display: flex;
+  height: 100vh;
+}
+.cart-menu .cart-menu-products {
+  overflow-y: scroll;
+}
+
+.cart-open {
+  display: flex;
+}
+
+.overlay-active {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
