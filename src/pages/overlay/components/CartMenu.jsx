@@ -15,6 +15,26 @@ export default function DropMenu() {
 
   const el = products.product1
 
+  const testEl = (<div className="cart-product">
+            <div className="cart-product-img">
+              <img src={el.img} />
+            </div>
+              <div className="cart-product-des">
+                <div className="cart-product-price">
+                  <p>{el.name}</p>
+                  <h3>34$</h3>
+                </div>
+                <div className="cart-product-quantity">
+                  <div className="cart-product-btns">
+                    <button>-</button>
+                    <h2>1</h2>
+                    <button>+</button>
+                  </div>
+                  <div className="cart-delete-btn">{allSvg(25).closeBtn}</div>
+                </div>
+              </div>
+            </div>);
+
   return (
     <>
       <div className="full-overlay overlay-active" {...closeMenu()} />
@@ -28,10 +48,12 @@ export default function DropMenu() {
         <div className="cart-menu-container">
           <div className="cart-menu-products">
             <div className="cart-product">
-              <img src={el.img}/>
+            <div className="cart-product-img">
+              <img src={el.img} />
+            </div>
               <div className="cart-product-des">
                 <div className="cart-product-price">
-                  <p>Description</p>
+                  <p>{el.name}</p>
                   <h3>34$</h3>
                 </div>
                 <div className="cart-product-quantity">
@@ -40,7 +62,7 @@ export default function DropMenu() {
                     <h2>1</h2>
                     <button>+</button>
                   </div>
-                  {allSvg(25).closeBtn}
+                  <div className="cart-delete-btn">{allSvg(25).closeBtn}</div>
                 </div>
               </div>
             </div>
