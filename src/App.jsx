@@ -4,13 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import NavBar from "./pages/navBar/NavBar";
 import HomePage from "./pages/homePage/HomePage";
 import FooterPage from "./pages/footerPage/Footer";
-import DropMenu from "./pages/navBar/DropMenu";
 import Categories from "./pages/categories/Categories";
 import Product from "./pages/productPage/Product";
+import Overlay from "./pages/overlay/Overlay";
 import { useLocation } from "react-router-dom";
 
 export default function App() {
-
   const html = useLocation().pathname;
 
   React.useEffect(() => {
@@ -18,11 +17,11 @@ export default function App() {
   }, [html]);
 
   const [category, setCategory] = React.useState("ALL");
-  
+
   return (
     <div className="App">
+    <Overlay />
       <NavBar />
-      {/* <DropMenu /> */}
       <Routes>
         <Route
           path="/"
@@ -32,10 +31,7 @@ export default function App() {
           path="/categories/*"
           element={<Categories cat={category} setCat={setCategory} />}
         />
-        <Route
-          path="/product/:id"
-          element={<Product />}
-        />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
       <FooterPage />
     </div>
