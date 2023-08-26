@@ -14,6 +14,7 @@ export function closeCart() {
     onClick: function () {
       changeClass(".cart-menu", "cart-open");
       changeClass(".full-overlay", "overlay-active");
+      changeClass(".body", "no-scroll");
     },
   };
 }

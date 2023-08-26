@@ -19,7 +19,7 @@ export default function App() {
   const [category, setCategory] = React.useState("ALL");
 
   return (
-    <div className="App">
+    <div className="app">
     <Overlay />
       <NavBar />
       <Routes>

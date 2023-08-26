@@ -45,6 +45,8 @@ export default function DropMenu() {
           {testEl}
           {testEl}
           {testEl}
+          {testEl}
+          {testEl}
           </div>
           <div className="cart-menu-checkout">
             <div>
