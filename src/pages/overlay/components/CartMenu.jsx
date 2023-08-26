@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { allSvg } from "../../../svg/allSvg";
 import { changeClass } from "../../../scripts/changeClass";
+import products from "../../../data/products"
+
 
 export default function DropMenu() {
   function closeMenu() {
@@ -10,6 +12,8 @@ export default function DropMenu() {
       },
     };
   }
+
+  const el = products.product1
 
   return (
     <>
@@ -24,7 +28,7 @@ export default function DropMenu() {
         <div className="cart-menu-container">
           <div className="cart-menu-products">
             <div className="cart-product">
-              <h1>Image</h1>
+              <img src={el.img}/>
               <div className="cart-product-des">
                 <div className="cart-product-price">
                   <p>Description</p>
