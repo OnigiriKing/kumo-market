@@ -22,7 +22,7 @@ export default function FooterNav() {
            <a href="#">Contact Us</a>
          </li>
        </ul>
-       <div>All rights reserver</div>
+       <div>All rights reserved</div>
      </div>
    );
 }
