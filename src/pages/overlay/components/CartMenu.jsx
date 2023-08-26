@@ -1,17 +1,12 @@
-import { Link } from "react-router-dom";
+
 import { allSvg } from "../../../svg/allSvg";
-import { changeClass } from "../../../scripts/changeClass";
 import products from "../../../data/products"
+import { closeCart } from "../../../scripts/changeClass";
+
+
 
 
 export default function DropMenu() {
-  function closeMenu() {
-    return {
-      onClick: function () {
-        changeClass(".cart-menu", "cart-open");
-      },
-    };
-  }
 
   const el = products.product1
 
@@ -37,11 +32,11 @@ export default function DropMenu() {
 
   return (
     <>
-      <div className="full-overlay overlay-active" {...closeMenu()} />
-      <div className="cart-menu cart-open">
+      <div className="full-overlay" {...closeCart()} />
+      <div className="cart-menu">
         <div className="cart-menu-des">
           <h3>Your Shopping Cart (8)</h3>
-          <div className="cart-close-button" {...closeMenu()}>
+          <div className="cart-close-button" {...closeCart()}>
             {allSvg(30).closeBtn}
           </div>
         </div>

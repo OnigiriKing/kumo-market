@@ -1,15 +1,9 @@
 import { Link } from "react-router-dom";
 import { allSvg } from "../../../svg/allSvg";
-import { changeClass } from "../../../scripts/changeClass";
+import {closeMenu} from "../../../scripts/changeClass"
 
 export default function CartMenu() {
-  function closeMenu() {
-    return {
-      onClick: function () {
-        changeClass(".drop-menu", "menu-open");
-      },
-    };
-  }
+
 
   return (
     <div className="drop-menu">

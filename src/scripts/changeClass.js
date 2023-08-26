@@ -7,3 +7,21 @@ export function changeClass(baseClass, newClass, check=true) {
         : classList.add(newClass)
       : classList.add(newClass);
   };
+
+
+export function closeCart() {
+  return {
+    onClick: function () {
+      changeClass(".cart-menu", "cart-open");
+      changeClass(".full-overlay", "overlay-active");
+    },
+  };
+}
+
+  export function closeMenu() {
+    return {
+      onClick: function () {
+        changeClass(".drop-menu", "menu-open");
+      },
+    };
+  }

@@ -3,6 +3,7 @@ import { allSvg } from "../../svg/allSvg";
 import logo from "../../img/logo.png"
 import { useLocation } from "react-router-dom";
 import React from "react";
+import { closeCart } from "../../scripts/changeClass";
 
 export default function NavBar() {
 
@@ -29,7 +30,9 @@ export default function NavBar() {
         <div className="nav-links">
           <Link to="/categories/all">CATEGORIES</Link>
           <Link to={`/product/${link}`}>PRODUCT PAGE</Link>
-          <div className="nav-basket">{allSvg(30).basket}</div>
+          <div className="nav-basket" {...closeCart()}>
+            {allSvg(30).basket}
+          </div>
         </div>
       </div>
     </nav>
