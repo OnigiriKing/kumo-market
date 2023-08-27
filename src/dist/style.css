@@ -347,6 +347,10 @@ a {
   min-width: 11.9rem;
 }
 
+.trending-items::-webkit-scrollbar {
+  display: none;
+}
+
 #categories-page {
   width: 100%;
   margin-top: 6.5rem;

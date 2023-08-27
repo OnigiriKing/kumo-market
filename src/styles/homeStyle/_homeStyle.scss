@@ -230,3 +230,7 @@
     min-width: 11.9rem;
   }
 }
+
+.trending-items::-webkit-scrollbar {
+    display: none;
+}
