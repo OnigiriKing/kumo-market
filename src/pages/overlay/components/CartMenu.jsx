@@ -2,11 +2,23 @@
 import { allSvg } from "../../../svg/allSvg";
 import products from "../../../data/products"
 import { closeCart } from "../../../scripts/changeClass";
+import React from "react";
 
 
 
 
 export default function CartMenu({ cartItems, setCartItems }) {
+
+  const [subtotal, setSubtotal] = React.useState(0);
+
+  React.useEffect(() => {
+    let result = 0;
+    Object.keys(cartItems).map((key)=> {
+      const el = cartItems[key];
+      return result += el.price * el.amount
+    })
+    setSubtotal(result);
+  }, [cartItems]);
 
 
   const allProducts = (
@@ -65,7 +77,7 @@ export default function CartMenu({ cartItems, setCartItems }) {
           <div className="cart-menu-checkout">
             <div>
               <h3>Subtotal</h3>
-              <h3>720$</h3>
+              <h3>{subtotal}$</h3>
             </div>
             <button>Checkout</button>
           </div>

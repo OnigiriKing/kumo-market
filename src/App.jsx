@@ -29,7 +29,11 @@ export default function App() {
 
   return (
     <div className="app">
-      <Overlay cartItems={cartItems} setCartItems={setCartItems} />
+      <Overlay
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+        cartCount={cartCount}
+      />
       <NavBar cartCount={cartCount} />
       <Routes>
         <Route
