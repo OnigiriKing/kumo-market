@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { allSvg } from "../../../svg/allSvg";
 import {closeMenu} from "../../../scripts/changeClass"
 
-export default function CartMenu() {
+export default function DropMenu() {
 
 
   return (

@@ -1,5 +1,5 @@
-import CartMenu from "./components/DropMenu";
-import DropMenu from "./components/CartMenu";
+import CartMenu from "./components/CartMenu";
+import DropMenu from "./components/DropMenu";
 
 
 export default function Overlay({ cartItems, setCartItems }) {
