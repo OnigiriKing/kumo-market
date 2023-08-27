@@ -29,7 +29,12 @@ export default function App() {
   }, [cartCount, cartItems]);
 
   React.useEffect(() => {
-    setCount(Object.keys(cartItems).length);
+    let count = 0;
+    Object.keys(cartItems).map((key)=> {
+      const el = cartItems[key];
+      count += el.amount
+    });
+    setCount(count);
   }, [cartItems]);
 
   const html = useLocation().pathname;
