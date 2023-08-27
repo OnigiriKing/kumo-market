@@ -6,11 +6,12 @@ import React from "react";
 
 
 
-export default function HomePage({ cat, setCat }) {
+export default function HomePage({ cat, setCat, setCount, cartItems }) {
 
-
-
-
+  React.useEffect(() => {
+    setCount(cartItems.length);
+  }, [cartItems]);
+  
   return (
     <div id="home-page">
       <Start cat={cat} setCat={setCat} />

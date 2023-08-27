@@ -1,8 +1,7 @@
 import productList from "../../../data/products";
 import React from "react";
 
-export default function ProductInfo({ id }) {
-
+export default function ProductInfo({ id, setCartItems, cartItems }) {
   const product = productList[`product${id}`];
 
   const [amount, setAmount] = React.useState(1);
@@ -20,6 +19,33 @@ export default function ProductInfo({ id }) {
   React.useEffect(() => {
     changeType(product.img);
   }, [id]);
+
+
+  function addItem() {
+    if (
+      cartItems.hasOwnProperty(`product${id}`) &&
+      cartItems.hasOwnProperty(`product${id}`.amount < 0)
+    ) {
+      //  setCartItems({
+      //    ...cartItems,
+      //    [`product${id}`]: {...
+      //      amount: amount,
+      //    },
+      //  });
+    } else {
+      setCartItems({
+        ...cartItems,
+        [`product${id}`]: {
+          name: product.name,
+          des: product.des,
+          price: product.price,
+          amount: amount,
+        },
+      });
+      console.log(cartItems);
+      console.log(Object.keys(cartItems).length);
+    }
+  }
 
   return (
     <div className="product-info-screen">
@@ -59,7 +85,7 @@ export default function ProductInfo({ id }) {
               <h1>${product.price * amount}</h1>
             </div>
             <div className="product-info-cart">
-              <button>Add to cart</button>
+              <button onClick={() => addItem()}>Add to cart</button>
               <button>Buy now</button>
             </div>
           </div>

@@ -18,22 +18,36 @@ export default function App() {
 
   const [category, setCategory] = React.useState("ALL");
 
-  const [cartItems, setCartItems] = React.useState(0)
+  const [cartCount, setCount] = React.useState(0)
+
+  const [cartItems, setCartItems] = React.useState({})
 
   return (
     <div className="app">
       <Overlay />
-      <NavBar cartItems={cartItems}/>
+      <NavBar cartCount={cartCount} />
       <Routes>
         <Route
           path="/"
-          element={<HomePage cat={category} setCat={setCategory} />}
+          element={
+            <HomePage
+              cat={category}
+              setCat={setCategory}
+              setCount={setCount}
+              cartItems={cartItems}
+            />
+          }
         />
         <Route
           path="/categories/*"
           element={<Categories cat={category} setCat={setCategory} />}
         />
-        <Route path="/product/:id" element={<Product />} />
+        <Route
+          path="/product/:id"
+          element={
+            <Product setCartItems={setCartItems} cartItems={cartItems} />
+          }
+        />
       </Routes>
       <FooterPage />
     </div>
