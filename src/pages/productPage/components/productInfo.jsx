@@ -20,18 +20,16 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
     changeType(product.img);
   }, [id]);
 
-
   function addItem() {
-    if (
-      cartItems.hasOwnProperty(`product${id}`) &&
-      cartItems.hasOwnProperty(`product${id}`.amount < 0)
-    ) {
-      //  setCartItems({
-      //    ...cartItems,
-      //    [`product${id}`]: {...
-      //      amount: amount,
-      //    },
-      //  });
+    const item = `product${id}`;
+    if (cartItems.hasOwnProperty(item) && cartItems[item].amount <= 10) {
+      const baseObject = { ...cartItems };
+      if (baseObject[item].amount + amount > 10) {
+        baseObject[item].amount = 10;
+      } else {
+        baseObject[item].amount = baseObject[item].amount + amount;
+      }
+      setCartItems(baseObject);
     } else {
       setCartItems({
         ...cartItems,
