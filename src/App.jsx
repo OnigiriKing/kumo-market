@@ -10,21 +10,26 @@ import Overlay from "./pages/overlay/Overlay";
 import { useLocation } from "react-router-dom";
 
 export default function App() {
+
+  const [category, setCategory] = React.useState("ALL");
+
+  const [cartCount, setCount] = React.useState(0);
+
+  const [cartItems, setCartItems] = React.useState({});
+
+  React.useEffect(() => {
+    setCount(Object.keys(cartItems).length);
+  }, [cartItems]);
+
   const html = useLocation().pathname;
 
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
   }, [html]);
 
-  const [category, setCategory] = React.useState("ALL");
-
-  const [cartCount, setCount] = React.useState(0)
-
-  const [cartItems, setCartItems] = React.useState({})
-
   return (
     <div className="app">
-      <Overlay />
+      <Overlay cartItems={cartItems} setCartItems={setCartItems} />
       <NavBar cartCount={cartCount} />
       <Routes>
         <Route
@@ -33,7 +38,6 @@ export default function App() {
             <HomePage
               cat={category}
               setCat={setCategory}
-              setCount={setCount}
               cartItems={cartItems}
             />
           }

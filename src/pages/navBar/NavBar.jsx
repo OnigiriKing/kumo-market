@@ -18,6 +18,8 @@ export default function NavBar({ cartCount }) {
     }
   }, [location]);
 
+  console.log();
+
   return (
     <nav id="nav-bar">
       <div className="wrapper nav-wrapper">

@@ -1,17 +1,11 @@
-import Start from "./components/Start"
+import Start from "./components/Start";
 import Products from "./components/Products";
-import Trending from "./components/Trending"
-import Banner from "./components/Banner"
+import Trending from "./components/Trending";
+import Banner from "./components/Banner";
 import React from "react";
 
+export default function HomePage({ cat, setCat }) {
 
-
-export default function HomePage({ cat, setCat, setCount, cartItems }) {
-
-  React.useEffect(() => {
-    setCount(cartItems.length);
-  }, [cartItems]);
-  
   return (
     <div id="home-page">
       <Start cat={cat} setCat={setCat} />
