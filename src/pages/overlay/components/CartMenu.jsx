@@ -7,17 +7,19 @@ import { closeCart } from "../../../scripts/changeClass";
 
 
 export default function CartMenu({ cartItems, setCartItems }) {
-  const el = products.product1;
+
 
   const allProducts = (
     Object.keys(cartItems).map((key)=> {
 
       function deleteObject(key) {
-        setCartItems(...cartItems, delete cartItems[key]);
+        const updatedCartItems = { ...cartItems };
+        delete updatedCartItems[key];
+        setCartItems(updatedCartItems);
       }
       const el = cartItems[key];
       return (
-        <div className="cart-product">
+        <div className="cart-product" key={key}>
           <div className="cart-product-img">
             <img src={el.img} />
           </div>
@@ -32,7 +34,10 @@ export default function CartMenu({ cartItems, setCartItems }) {
                 <h2>{el.amount}</h2>
                 <button>+</button>
               </div>
-              <div className="cart-delete-btn" onClick={() => deleteObject(el.delete)}>
+              <div
+                className="cart-delete-btn"
+                onClick={() => deleteObject(key)}
+              >
                 {allSvg(25).closeBtn}
               </div>
             </div>

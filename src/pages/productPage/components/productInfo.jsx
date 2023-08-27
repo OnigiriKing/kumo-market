@@ -38,10 +38,8 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
         [`product${id}`]: {
           img: product.img,
           name: product.name,
-          des: product.des,
           price: product.price,
           amount: amount,
-          delete: `product${id}`,
         },
       });
       console.log(cartItems);
