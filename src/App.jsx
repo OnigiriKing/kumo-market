@@ -18,10 +18,12 @@ export default function App() {
 
   const [category, setCategory] = React.useState("ALL");
 
+  const [cartItems, setCartItems] = React.useState(0)
+
   return (
     <div className="app">
-    <Overlay />
-      <NavBar />
+      <Overlay />
+      <NavBar cartItems={cartItems}/>
       <Routes>
         <Route
           path="/"

@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import React from "react";
 import { closeCart } from "../../scripts/changeClass";
 
-export default function NavBar() {
+export default function NavBar({cartItems}) {
 
   const [link, setLink] = React.useState("1");
 
@@ -18,7 +18,7 @@ export default function NavBar() {
       setLink(Math.floor(Math.random() * 12) + 1);
     }
   }, [location]);
-
+  
   
   return (
     <nav id="nav-bar">
@@ -31,7 +31,7 @@ export default function NavBar() {
           <Link to="/categories/all">CATEGORIES</Link>
           <Link to={`/product/${link}`}>PRODUCT PAGE</Link>
           <div className="nav-basket" {...closeCart()}>
-            {allSvg(30).basket}
+            {allSvg(30).basket} {cartItems !== 0 && <h3>{cartItems}</h3>}
           </div>
         </div>
       </div>
