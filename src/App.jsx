@@ -11,11 +11,22 @@ import { useLocation } from "react-router-dom";
 
 export default function App() {
 
+  const local = window.localStorage;
+
   const [category, setCategory] = React.useState("ALL");
 
-  const [cartCount, setCount] = React.useState(0);
+  const [cartCount, setCount] = React.useState(
+    parseInt(localStorage.getItem("cartCount")) || 0
+  );
 
-  const [cartItems, setCartItems] = React.useState({});
+  const [cartItems, setCartItems] = React.useState(
+    JSON.parse(localStorage.getItem("cartItems")) || {}
+  );
+
+  React.useEffect(() => {
+    local.setItem("cartCount", cartCount.toString());
+    local.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartCount, cartItems]);
 
   React.useEffect(() => {
     setCount(Object.keys(cartItems).length);
