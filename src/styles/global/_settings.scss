@@ -47,11 +47,15 @@ a {
   }
 }
 
-.wrapper {
+@mixin wrapperSettings {
   width: 100%;
   max-width: $maxWidth;
   padding: $basePadding;
   margin: $baseMargin;
+}
+
+.wrapper {
+  @include wrapperSettings;
 }
 
 .product-wrapper {
