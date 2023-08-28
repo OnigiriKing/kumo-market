@@ -90,11 +90,6 @@
 }
 
 .products-wrapper {
-  div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-  }
 
   h2 {
     font-size: $mediumFont;
