@@ -200,6 +200,11 @@ a {
   background-color: #000;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #home-page {
   margin-top: 6.5rem;
 }
