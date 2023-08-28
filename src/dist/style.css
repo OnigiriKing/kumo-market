@@ -155,7 +155,9 @@ a {
   color: white;
 }
 
-.footer-wrapper, .newsletter-screen, .footer-nav-screen {
+.footer-wrapper,
+.newsletter-screen,
+.footer-nav-screen {
   display: flex;
   flex-direction: column;
 }
@@ -187,7 +189,8 @@ a {
 .newsletter-screen button:hover {
   opacity: 0.9;
 }
-.newsletter-screen button, .newsletter-screen input {
+.newsletter-screen button,
+.newsletter-screen input {
   padding: 0.5rem 1rem;
   font-size: 1rem;
 }
@@ -198,11 +201,17 @@ a {
   padding: 3rem 0;
   gap: 2rem;
   background-color: #000;
+  display: flex;
 }
-
-.footer-links {
+.footer-nav-screen ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 415px) {
+  .footer-nav-screen ul {
+    padding: 0 1rem;
+  }
 }
 
 #home-page {
