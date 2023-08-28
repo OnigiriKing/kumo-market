@@ -188,7 +188,14 @@ a {
   gap: 1rem;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "one two third" "one two four";
+  grid-template-areas: "one two three" "one two four";
+}
+@media (max-width: 780px) {
+  .start-wrapper .start-products {
+    grid-template-areas: "one two" "three four";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 .start-wrapper .start-products div {
   cursor: pointer;
@@ -227,7 +234,7 @@ a {
   grid-area: two;
 }
 .start-wrapper .start-products div:nth-child(3) {
-  grid-area: third;
+  grid-area: three;
 }
 .start-wrapper .start-products div:nth-child(4) {
   grid-area: four;

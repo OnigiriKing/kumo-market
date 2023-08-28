@@ -5,3 +5,16 @@ $baseMargin: 0 1rem;
 $basePadding: 2rem 0;
 $topMargin: 6.5rem;
 
+
+// width
+
+$mediumWidth: 780px;
+
+@mixin mediumWidth {
+  @media (max-width: $mediumWidth) {
+    @content;
+  }
+}
+
+
+
