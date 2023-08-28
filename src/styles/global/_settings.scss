@@ -58,8 +58,12 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
+  
 
   @include mediumWidth {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include smallWidth {
+    grid-template-columns: 1fr 1fr;
   }
 }

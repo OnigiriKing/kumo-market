@@ -57,6 +57,11 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+@media (max-width: 572px) {
+  .product-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 #nav-bar {
   background-color: white;
