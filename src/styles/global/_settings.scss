@@ -60,7 +60,7 @@ a {
   gap: 1rem;
   
 
-  @include mediumWidth {
+  @include bigWidth {
     grid-template-columns: 1fr 1fr 1fr;
   }
   @include smallWidth {

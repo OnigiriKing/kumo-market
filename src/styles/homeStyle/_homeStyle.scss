@@ -137,6 +137,12 @@
     position: relative;
     background-color: $mainGrey;
 
+    @include mediumWidth {
+    align-items: center;
+    padding: 3rem 4rem;
+    text-align: center;
+  }
+
     a {
       width: fit-content;
     }
@@ -159,6 +165,10 @@
   }
   .banner-image {
     width: 50%;
+
+    @include mediumWidth {
+    display: none;
+  }
   }
 }
 

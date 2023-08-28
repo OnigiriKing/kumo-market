@@ -8,7 +8,15 @@ $topMargin: 6.5rem;
 
 // width
 
-$mediumWidth: 780px;
+$bigWidth: 780px;
+
+@mixin bigWidth {
+  @media (max-width: $bigWidth) {
+    @content;
+  }
+}
+
+$mediumWidth: 700px;
 
 @mixin mediumWidth {
   @media (max-width: $mediumWidth) {
