@@ -30,6 +30,13 @@ $smallWidth: 572px;
     @content;
   }
 }
+$phoneWidth: 415px;
+
+@mixin phoneWidth {
+  @media (max-width: $phoneWidth) {
+    @content;
+  }
+}
 
 
 

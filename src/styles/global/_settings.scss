@@ -66,4 +66,7 @@ a {
   @include smallWidth {
     grid-template-columns: 1fr 1fr;
   }
+  @include phoneWidth {
+    grid-template-columns: 1fr;
+  }
 }
