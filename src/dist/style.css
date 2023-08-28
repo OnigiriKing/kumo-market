@@ -585,11 +585,33 @@ a {
 }
 
 .drop-menu {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 6;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out;
+}
+
+.menu-close-button {
   position: absolute;
+  top: 2.2rem;
+  right: 1.7rem;
+  cursor: pointer;
 }
 
 .menu-open {
-  display: flex;
+  transform: translateY(0%);
+  transition: 0.5s ease-in-out;
 }
 
 .cart-menu {
@@ -695,7 +717,8 @@ a {
   gap: 1rem;
   font-size: 1.3rem;
 }
-.cart-menu .checkout-btn, .cart-menu .no-items-btn {
+.cart-menu .checkout-btn,
+.cart-menu .no-items-btn {
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
@@ -705,7 +728,8 @@ a {
   background-color: white;
   border-color: #000;
 }
-.cart-menu .checkout-btn:hover, .cart-menu .no-items-btn:hover {
+.cart-menu .checkout-btn:hover,
+.cart-menu .no-items-btn:hover {
   color: white;
   background-color: #000000;
 }

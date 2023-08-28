@@ -15,13 +15,33 @@
 }
 
 .drop-menu {
-  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 6;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out;
+}
 
-  
+.menu-close-button {
+    position: absolute;
+    top: 2.2rem;
+    right: 1.7rem;
+    cursor: pointer;
 }
 
 .menu-open {
-  display: flex;
+  transform: translateY(0%);
+    transition: 0.5s ease-in-out;
 }
 
 .cart-menu {
@@ -139,24 +159,24 @@
       gap: 1rem;
       font-size: 1.3rem;
     }
-
   }
 
-  .checkout-btn, .no-items-btn {
-      font-size: $smallFont;
-      text-align: center;
-      cursor: pointer;
-      padding: 0rem 3rem;
-      height: 2.5rem;
-      color: #000;
-      background-color: #ffff;
-      border-color: #000;
+  .checkout-btn,
+  .no-items-btn {
+    font-size: $smallFont;
+    text-align: center;
+    cursor: pointer;
+    padding: 0rem 3rem;
+    height: 2.5rem;
+    color: #000;
+    background-color: #ffff;
+    border-color: #000;
 
-      &:hover {
-        color: #ffff;
-        background-color: #000000;
-      }
+    &:hover {
+      color: #ffff;
+      background-color: #000000;
     }
+  }
 }
 
 .cart-open {
@@ -182,5 +202,4 @@
   img {
     width: 10rem;
   }
-
 }

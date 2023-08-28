@@ -4,6 +4,7 @@ import logo from "../../img/logo.png"
 import { useLocation } from "react-router-dom";
 import React from "react";
 import { closeCart, closeMenu } from "../../scripts/changeClass";
+import DropMenu from "../overlay/components/DropMenu";
 
 export default function NavBar({ cartCount }) {
   const [link, setLink] = React.useState("1");
@@ -37,6 +38,7 @@ export default function NavBar({ cartCount }) {
           </div>
         </div>
       </div>
+      <DropMenu link={link}/>
     </nav>
   );
 }
