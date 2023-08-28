@@ -22,6 +22,8 @@
       align-items: center;
       margin-bottom: 2rem;
       font-weight: 600;
+      text-align: center;
+
 
       a {
         display: flex;
@@ -29,8 +31,12 @@
       }
 
       h2 {
-        text-align: center;
+        display: flex;
         margin: 0 auto;
+
+        @include phoneWidth {
+          transform: translateX(-70%);
+        }
       }
     }
 
@@ -38,6 +44,7 @@
       display: flex;
       justify-content: center;
       gap: 1rem;
+      flex-wrap: wrap;
 
       button {
         border: none;

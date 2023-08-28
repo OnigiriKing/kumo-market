@@ -62,7 +62,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
-  
+
 
   @include bigWidth {
     grid-template-columns: 1fr 1fr 1fr;
@@ -72,5 +72,6 @@ a {
   }
   @include phoneWidth {
     grid-template-columns: 1fr;
+     padding: 1rem;
   }
 }
