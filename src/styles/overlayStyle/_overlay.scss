@@ -56,6 +56,10 @@
   width: 30rem;
   transition: all 0.4s ease;
 
+  @include mediumWidth {
+    width: 95%;
+  }
+
   .cart-menu-des {
     display: flex;
     position: relative;

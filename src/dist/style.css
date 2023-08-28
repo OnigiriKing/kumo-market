@@ -647,6 +647,11 @@ a {
   width: 30rem;
   transition: all 0.4s ease;
 }
+@media (max-width: 700px) {
+  .cart-menu {
+    width: 95%;
+  }
+}
 .cart-menu .cart-menu-des {
   display: flex;
   position: relative;
