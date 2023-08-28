@@ -10,6 +10,8 @@ export default function DropMenu() {
       <div className="menu-close-button" {...closeMenu()}>
         {allSvg(40).closeBtn}
       </div>
+      <Link>HOME</Link>
+      <Link>CATEGORIES</Link>
       <Link></Link>
     </div>
   );

@@ -3,7 +3,7 @@ import { allSvg } from "../../svg/allSvg";
 import logo from "../../img/logo.png"
 import { useLocation } from "react-router-dom";
 import React from "react";
-import { closeCart } from "../../scripts/changeClass";
+import { closeCart, closeMenu } from "../../scripts/changeClass";
 
 export default function NavBar({ cartCount }) {
   const [link, setLink] = React.useState("1");
@@ -18,7 +18,6 @@ export default function NavBar({ cartCount }) {
     }
   }, [location]);
 
-  console.log();
 
   return (
     <nav id="nav-bar">
@@ -32,6 +31,9 @@ export default function NavBar({ cartCount }) {
           <Link to={`/product/${link}`}>PRODUCT PAGE</Link>
           <div className="nav-basket" {...closeCart()}>
             {allSvg(30).basket} {cartCount !== 0 && <h3>{cartCount}</h3>}
+          </div>
+          <div className="nav-menu" {...closeMenu()}>
+            {allSvg(30).menuBtn}
           </div>
         </div>
       </div>

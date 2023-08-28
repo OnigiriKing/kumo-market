@@ -37,6 +37,10 @@
 
     a {
         border-bottom: 1px solid #ffff;
+
+        @include smallWidth {
+            display: none;
+        }
     }
 
     a:hover {
@@ -61,4 +65,14 @@
 
         }
     }
+}
+
+.nav-menu {
+    display: none;
+    cursor: pointer;
+    margin-right: 1rem;
+
+    @include smallWidth {
+            display: flex;
+        }
 }
