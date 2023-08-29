@@ -40,8 +40,6 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
           amount: amount,
         },
       });
-      console.log(cartItems);
-      console.log(Object.keys(cartItems).length);
     }
   }
 

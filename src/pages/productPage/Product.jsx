@@ -1,4 +1,3 @@
-import { Route, Router } from "react-router-dom";
 import Trending from "../homePage/components/Trending";
 import React from "react";
 import { useParams } from "react-router-dom";
