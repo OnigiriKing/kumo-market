@@ -26,13 +26,17 @@
 
     @include mediumWidth {
       grid-template-areas: "one two" "three four";
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(2,1fr);
     }
 
     div {
       cursor: pointer;
       position: relative;
+
+      @include mediumWidth {
+        height: 15rem;
+    }
 
       .start-img-cover {
         position: absolute;
@@ -53,6 +57,7 @@
         height: 100%;
         position: relative;
         z-index: 1;
+        object-fit: cover;
       }
 
       p {

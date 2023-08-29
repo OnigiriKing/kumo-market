@@ -240,13 +240,18 @@ a {
 @media (max-width: 700px) {
   .start-wrapper .start-products {
     grid-template-areas: "one two" "three four";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 .start-wrapper .start-products div {
   cursor: pointer;
   position: relative;
+}
+@media (max-width: 700px) {
+  .start-wrapper .start-products div {
+    height: 15rem;
+  }
 }
 .start-wrapper .start-products div .start-img-cover {
   position: absolute;
@@ -265,6 +270,7 @@ a {
   height: 100%;
   position: relative;
   z-index: 1;
+  object-fit: cover;
 }
 .start-wrapper .start-products div p {
   position: absolute;
