@@ -18,7 +18,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
 
   React.useEffect(() => {
     changeType(product.img);
-  }, [id]);
+  }, [id, product.img]);
 
   function addItem() {
     const item = `product${id}`;

@@ -26,15 +26,15 @@ export default function App() {
   React.useEffect(() => {
     local.setItem("cartCount", cartCount.toString());
     local.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartCount, cartItems]);
+  }, [cartCount, cartItems, local]);
 
   React.useEffect(() => {
     let count = 0;
     Object.keys(cartItems).map((key)=> {
       const el = cartItems[key];
-      count += el.amount
+      return count += el.amount
     });
-    return setCount(count);
+    setCount(count);
   }, [cartItems]);
 
   const html = useLocation().pathname;
