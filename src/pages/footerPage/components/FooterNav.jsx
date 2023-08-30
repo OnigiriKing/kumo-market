@@ -4,22 +4,22 @@ export default function FooterNav() {
      <div className="footer-nav-screen">
        <ul>
          <li>
-           <a href="#">About</a>
+           <a href="/">About</a>
          </li>
          <li>
-           <a href="#">Locations</a>
+           <a href="/">Locations</a>
          </li>
          <li>
-           <a href="#">FAQ</a>
+           <a href="/">FAQ</a>
          </li>
          <li>
-           <a href="#">News</a>
+           <a href="/">News</a>
          </li>
          <li>
-           <a href="#">Careers</a>
+           <a href="/">Careers</a>
          </li>
          <li>
-           <a href="#">Contact Us</a>
+           <a href="/">Contact Us</a>
          </li>
        </ul>
        <div>All rights reserved</div>

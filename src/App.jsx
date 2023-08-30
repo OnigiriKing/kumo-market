@@ -34,7 +34,7 @@ export default function App() {
       const el = cartItems[key];
       count += el.amount
     });
-    setCount(count);
+    return setCount(count);
   }, [cartItems]);
 
   const html = useLocation().pathname;

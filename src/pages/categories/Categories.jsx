@@ -3,7 +3,6 @@ import { DisplayProducts } from "../../scripts/DisplayProudcts";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { allSvg } from "../../svg/allSvg";
-import { useParams } from "react-router-dom";
 
 export default function Categories({ cat, setCat }) {
   const pages = {

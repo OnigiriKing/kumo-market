@@ -21,7 +21,6 @@ export function DisplayProducts({
     <div className={`${newClass}`}>
       {list.map((key) => {
         const el = productList[key];
-
         if (type !== "all" && el.type === type && number < limit) {
           number++;
           return (
@@ -41,7 +40,7 @@ export function DisplayProducts({
               <h3>${el.price}</h3>
             </Link>
           );
-        }
+        } else { return ""}
       })}
     </div>
   );
