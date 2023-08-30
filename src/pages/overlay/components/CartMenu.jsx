@@ -45,7 +45,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
     return (
       <div className="cart-product" key={key}>
         <div className="cart-product-img">
-          <img src={el.img} alt={key}/>
+          <img src={el.img} alt="cart"/>
         </div>
         <div className=" cart-product-des">
           <div className="cart-product-price">
@@ -79,7 +79,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
         </div>
         {cartCount < 1 && (
           <div className="cart-no-items">
-            <img src={emptyCart} alt={key}></img>
+            <img src={emptyCart} alt="empty"></img>
             <h2>Your cart is empty</h2>
             <button className="no-items-btn" {...closeCart()}>
               Keep Browsing
