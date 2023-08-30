@@ -6,7 +6,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
 
   const [amount, setAmount] = React.useState(1);
 
-  const [imgType, changeType] = React.useState(product.img);
+  const [imgType, changeType] = React.useState("");
 
   function changeAmount(type) {
     return type === "add" && amount < 10

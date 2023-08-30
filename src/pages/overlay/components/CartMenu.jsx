@@ -26,12 +26,12 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
   // To change amount of product
   function changeAmount(type, key) {
     const baseObject = { ...cartItems };
-    if (type == "plus") {
+    if (type === "plus") {
       if (baseObject[key].amount < 10) {
         baseObject[key].amount++;
       }
     }
-    if (type == "minus") {
+    if (type === "minus") {
       if (baseObject[key].amount > 1) {
         baseObject[key].amount--;
       }
@@ -45,7 +45,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
     return (
       <div className="cart-product" key={key}>
         <div className="cart-product-img">
-          <img src={el.img} />
+          <img src={el.img} alt={key}/>
         </div>
         <div className=" cart-product-des">
           <div className="cart-product-price">
@@ -79,7 +79,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
         </div>
         {cartCount < 1 && (
           <div className="cart-no-items">
-            <img src={emptyCart}></img>
+            <img src={emptyCart} alt={key}></img>
             <h2>Your cart is empty</h2>
             <button className="no-items-btn" {...closeCart()}>
               Keep Browsing

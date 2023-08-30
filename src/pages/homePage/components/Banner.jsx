@@ -16,7 +16,7 @@ export default function Banner({reverse = false}) {
             <button>Shop now</button>
           </Link>
         </div>
-        <img src={banner1} className="banner-image"></img>
+        <img src={banner1} className="banner-image" alt="banner"></img>
       </div>
     </div>
   ) : (
@@ -32,7 +32,7 @@ export default function Banner({reverse = false}) {
             <button>Shop now</button>
           </Link>
         </div>
-        <img src={banner2} className="banner-image"></img>
+        <img src={banner2} className="banner-image" alt="banner"></img>
       </div>
     </div>
   );
