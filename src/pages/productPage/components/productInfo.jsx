@@ -9,9 +9,9 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
   const [imgType, changeType] = React.useState(product.img);
 
   function changeAmount(type) {
-    return type == "add" && amount < 10
+    return type === "add" && amount < 10
       ? setAmount(amount + 1)
-      : type == "sub" && amount > 1
+      : type === "sub" && amount > 1
       ? setAmount(amount - 1)
       : "";
   }
@@ -48,18 +48,21 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
       <div className="wrapper product-info-wrapper">
         <div className="product-info-all">
           <div className="product-info-images">
-            <img src={imgType} />
+            <img src={imgType} alt={product.name} />
             <div className="product-info-img-list">
               <img
                 src={product.img}
+                alt={product.name}
                 onMouseEnter={() => changeType(product.img)}
               />
               <img
                 src={product.addImg[0]}
+                alt={product.name}
                 onMouseEnter={() => changeType(product.addImg[0])}
               />
               <img
                 src={product.addImg[1]}
+                alt={product.name}
                 onMouseEnter={() => changeType(product.addImg[1])}
               />
             </div>
