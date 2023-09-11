@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { DisplayProducts } from "../../scripts/DisplayProudcts";
+import { DisplayProducts } from "/src/scripts/DisplayProudcts.jsx";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
-import { allSvg } from "../../svg/allSvg";
+import { allSvg } from "/src/svg/allSvg.jsx";
 
 export default function Categories({ cat, setCat }) {
-  const pages = {
+  const links = {
     all: {
       link: "all",
       state: "All",
@@ -37,8 +37,8 @@ export default function Categories({ cat, setCat }) {
             <h2>{cat.toUpperCase()}</h2>
           </div>
           <div className="categories-btns">
-            {Object.keys(pages).map((key) => {
-              const el = pages[key];
+            {Object.keys(links).map((key) => {
+              const el = links[key];
               return (
                 <Link to={el.link}>
                   <button onClick={() => setCat(el.state)}>{el.state}</button>

@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import NavBar from "./pages/navBar/NavBar";
 import HomePage from "./pages/homePage/HomePage";
 import FooterPage from "./pages/footerPage/Footer";
-import Categories from "./pages/categories/Categories";
+import CategoriesPage from "src/pages/categoriesPage/CategoriesPage.jsx";
 import Product from "./pages/productPage/Product";
 import Overlay from "./pages/overlay/Overlay";
 import { useLocation } from "react-router-dom";
@@ -64,7 +64,7 @@ export default function App() {
         />
         <Route
           path="/categories/*"
-          element={<Categories cat={category} setCat={setCategory} />}
+          element={<CategoriesPage cat={category} setCat={setCategory} />}
         />
         <Route
           path="/product/:id"
