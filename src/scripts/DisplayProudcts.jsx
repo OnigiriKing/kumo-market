@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import productList from "../data/products";
+import productList from "common/products";
 
 // type is for the type of product
 // newClass is for the additional class for the component to regulate css

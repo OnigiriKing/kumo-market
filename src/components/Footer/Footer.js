@@ -1,5 +1,5 @@
-import FooterNav from "/src/components/Footer/Footer.Nav/FooterNav.js";
-import NewsLetter from "/src/components/Footer/Footer.Nav/FooterNav.js";
+import FooterNav from "./Footer.Nav/FooterNav";
+import NewsLetter from "./Footer.NewsLetter/NewsLetter";
 
 export default function Footer() {
   return (

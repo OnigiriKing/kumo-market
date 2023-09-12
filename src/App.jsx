@@ -1,12 +1,12 @@
 import React from "react";
 import "./dist/style.css";
 import { Route, Routes } from "react-router-dom";
-import NavBar from "./pages/navBar/NavBar";
-import HomePage from "./pages/homePage/HomePage";
-import FooterPage from "./pages/footerPage/Footer";
-import CategoriesPage from "src/pages/categoriesPage/CategoriesPage.jsx";
-import Product from "./pages/productPage/Product";
-import Overlay from "./pages/overlay/Overlay";
+import NavBar from "pages/navBar/NavBar";
+import HomePage from "pages/homePage/HomePage";
+import FooterPage from "pages/footerPage/FooterPage";
+import CategoriesPage from "pages/categoriesPage/CategoriesPage";
+import Product from "pages/productPage/Product";
+import Overlay from "pages/overlay/Overlay";
 import { useLocation } from "react-router-dom";
 
 export default function App() {
