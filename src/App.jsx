@@ -1,7 +1,7 @@
 import React from "react";
 import "./dist/style.css";
 import { Route, Routes } from "react-router-dom";
-import NavBar from "pages/navBar/NavBar";
+import NavPage from "pages/navPage/navPage";
 import HomePage from "pages/homePage/HomePage";
 import FooterPage from "pages/footerPage/FooterPage";
 import CategoriesPage from "pages/categoriesPage/CategoriesPage";
@@ -10,7 +10,6 @@ import Overlay from "pages/overlay/Overlay";
 import { useLocation } from "react-router-dom";
 
 export default function App() {
-
   const local = window.localStorage;
 
   const [category, setCategory] = React.useState("ALL");
@@ -30,9 +29,9 @@ export default function App() {
 
   React.useEffect(() => {
     let count = 0;
-    Object.keys(cartItems).map((key)=> {
+    Object.keys(cartItems).map((key) => {
       const el = cartItems[key];
-      return count += el.amount
+      return (count += el.amount);
     });
     setCount(count);
   }, [cartItems]);
@@ -50,7 +49,7 @@ export default function App() {
         setCartItems={setCartItems}
         cartCount={cartCount}
       />
-      <NavBar cartCount={cartCount} />
+      <NavPage cartCount={cartCount} />
       <Routes>
         <Route
           path="/"

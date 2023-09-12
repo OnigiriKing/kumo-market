@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { allSvg } from "../../svg/allSvg";
-import logo from "../../img/logo.png"
+import { allSvg } from "svg/allSvg";
+import logo from "img/logo.png";
 import { useLocation } from "react-router-dom";
 import React from "react";
 import { closeCart, closeMenu } from "../../scripts/changeClass";
-import DropMenu from "../overlay/components/DropMenu";
+import DropMenu from "../../pages/overlay/components/DropMenu";
 
 export default function NavBar({ cartCount }) {
   const [link, setLink] = React.useState("1");
@@ -18,7 +18,6 @@ export default function NavBar({ cartCount }) {
       setLink(Math.floor(Math.random() * 12) + 1);
     }
   }, [location]);
-
 
   return (
     <nav id="nav-bar">
