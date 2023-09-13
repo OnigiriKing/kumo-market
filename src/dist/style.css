@@ -139,6 +139,36 @@ a {
   }
 }
 
+.drop-menu {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 6;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out;
+}
+
+.menu-close-button {
+  position: absolute;
+  top: 2.2rem;
+  right: 1.7rem;
+  cursor: pointer;
+}
+
+.menu-open {
+  transform: translateY(0%);
+  transition: 0.5s ease-in-out;
+}
+
 #footer-page {
   background-color: rgba(145, 130, 130, 0.831372549);
   display: flex;
@@ -632,36 +662,6 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3137254902);
-}
-
-.drop-menu {
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 6;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  font-weight: 600;
-  transform: translateY(-100%);
-  transition: 0.5s ease-in-out;
-}
-
-.menu-close-button {
-  position: absolute;
-  top: 2.2rem;
-  right: 1.7rem;
-  cursor: pointer;
-}
-
-.menu-open {
-  transform: translateY(0%);
-  transition: 0.5s ease-in-out;
 }
 
 .cart-menu {
