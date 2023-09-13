@@ -1,16 +1,8 @@
 import { DisplayProducts } from "../../../scripts/DisplayProudcts";
 import { allSvg } from "../../../svg/allSvg";
+import scroll from "./Trending.scroll";
 
 export default function Trending() {
-
-  function scroll(direction) {
-    if (direction === "right") {
-      document.querySelector(".trending-items").scrollBy(225, 0);
-    } else {
-      document.querySelector(".trending-items").scrollBy(-225, 0);
-    }
-  }
-
    return (
      <div id="trending-screen">
        <div className="wrapper trending-wrapper">
