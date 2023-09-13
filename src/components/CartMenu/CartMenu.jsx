@@ -1,7 +1,9 @@
-import { allSvg } from "../../../svg/allSvg";
-import { closeCart } from "../../../scripts/changeClass";
+import { allSvg } from "../../svg/allSvg";
+import { closeCart } from "../../scripts/changeClass";
 import React from "react";
-import emptyCart from "../../../img/emptyCart.png"
+import emptyCart from "../../../img/emptyCart.png";
+import deleteObject from "./CartMenu.deleteObject";
+import changeAmount from "./CartMenu.changeAmount";
 
 export default function CartMenu({ cartItems, setCartItems, cartCount }) {
   const [subtotal, setSubtotal] = React.useState(0);
@@ -16,36 +18,13 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
     setSubtotal(result);
   }, [cartItems]);
 
-  // function to delete product
-  function deleteObject(key) {
-    const updatedCartItems = { ...cartItems };
-    delete updatedCartItems[key];
-    setCartItems(updatedCartItems);
-  }
-
-  // To change amount of product
-  function changeAmount(type, key) {
-    const baseObject = { ...cartItems };
-    if (type === "plus") {
-      if (baseObject[key].amount < 10) {
-        baseObject[key].amount++;
-      }
-    }
-    if (type === "minus") {
-      if (baseObject[key].amount > 1) {
-        baseObject[key].amount--;
-      }
-    }
-    setCartItems(baseObject);
-  }
-
   // creates a product from state
   const allProducts = Object.keys(cartItems).map((key) => {
     const el = cartItems[key];
     return (
       <div className="cart-product" key={key}>
         <div className="cart-product-img">
-          <img src={el.img} alt="cart"/>
+          <img src={el.img} alt="cart" />
         </div>
         <div className=" cart-product-des">
           <div className="cart-product-price">
@@ -54,9 +33,13 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
           </div>
           <div className="cart-product-quantity">
             <div className="cart-product-btns">
-              <button onClick={() => changeAmount("minus", key)}>-</button>
+              <button onClick={() => changeAmount("minus", key, setCartItems)}>
+                -
+              </button>
               <h2>{el.amount}</h2>
-              <button onClick={() => changeAmount("plus", key)}>+</button>
+              <button onClick={() => changeAmount("plus", key, setCartItems)}>
+                +
+              </button>
             </div>
             <div className="cart-delete-btn" onClick={() => deleteObject(key)}>
               {allSvg(25).closeBtn}

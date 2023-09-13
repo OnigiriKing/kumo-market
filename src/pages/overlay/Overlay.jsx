@@ -1,7 +1,6 @@
-import CartMenu from "./components/CartMenu";
+import CartMenu from "components/CartMenu";
 
-
-export default function Overlay({ cartItems, setCartItems, cartCount }) {
+export default function Cart({ cartItems, setCartItems, cartCount }) {
   return (
     <>
       <CartMenu
