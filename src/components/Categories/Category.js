@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { DisplayProducts } from "scripts/DisplayProudcts";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
-import { allSvg } from "/src/svg/allSvg.jsx";
+import { allSvg } from "svg/allSvg.jsx";
 
 export default function Categories({ cat, setCat }) {
   const links = {

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import room from "../../../img/room.png"
-import kitchen from "../../../img/kitchen.png"
-import skinCare from "../../../img/skinCare.png"
-import chairs from "../../../img/chairs.png"
+import room from "img/homePage/room.png"
+import kitchen from "img/homePage/kitchen.png"
+import skinCare from "img/homePage/skinCare.png"
+import chairs from "img/homePage/chairs.png"
 
 export default function Start({cat, setCat}) {
   return (

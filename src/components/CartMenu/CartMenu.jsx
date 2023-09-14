@@ -1,7 +1,7 @@
 import { allSvg } from "../../svg/allSvg";
 import { closeCart } from "../../scripts/changeClass";
 import React from "react";
-import emptyCart from "../../../img/emptyCart.png";
+import emptyCart from "img/navBar/emptyCart.png";
 import deleteObject from "./CartMenu.deleteObject";
 import changeAmount from "./CartMenu.changeAmount";
 
