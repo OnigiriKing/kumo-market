@@ -1,4 +1,4 @@
-import Trending from "../homePage/components/Trending";
+import Trending from "components/HomeComp/HomeComp.Trending/Trending.jsx";
 import React from "react";
 import { useParams } from "react-router-dom";
 import ProductInfo from "./Product.Info/ProducInfo";

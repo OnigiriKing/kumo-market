@@ -4,7 +4,7 @@ export default function HomePage({ cat, setCat }) {
 
   return (
     <>
-      <HomeComp cat={category} setCat={setCategory} />
+      <HomeComp cat={cat} setCat={setCat} />
     </>
   );
 }

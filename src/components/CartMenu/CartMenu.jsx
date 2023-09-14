@@ -33,15 +33,26 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
           </div>
           <div className="cart-product-quantity">
             <div className="cart-product-btns">
-              <button onClick={() => changeAmount("minus", key, setCartItems)}>
+              <button
+                onClick={() =>
+                  changeAmount("minus", key, cartItems, setCartItems)
+                }
+              >
                 -
               </button>
               <h2>{el.amount}</h2>
-              <button onClick={() => changeAmount("plus", key, setCartItems)}>
+              <button
+                onClick={() =>
+                  changeAmount("plus", key, cartItems, setCartItems)
+                }
+              >
                 +
               </button>
             </div>
-            <div className="cart-delete-btn" onClick={() => deleteObject(key)}>
+            <div
+              className="cart-delete-btn"
+              onClick={() => deleteObject(key, cartItems, setCartItems)}
+            >
               {allSvg(25).closeBtn}
             </div>
           </div>

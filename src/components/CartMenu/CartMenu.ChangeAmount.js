@@ -1,6 +1,6 @@
 // To change amount of product
-export default function changeAmount(type, key, set) {
-  const baseObject = { ...cartItems };
+export default function changeAmount(type, key,state, set) {
+  const baseObject = { ...state };
   if (type === "plus") {
     if (baseObject[key].amount < 10) {
       baseObject[key].amount++;

@@ -1,4 +1,4 @@
-import productList from "../../../data/products";
+import productList from "common/products";
 import React from "react";
 
 export default function ProductInfo({ id, setCartItems, cartItems }) {
