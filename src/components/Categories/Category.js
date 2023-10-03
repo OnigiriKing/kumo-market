@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { DisplayProducts } from "scripts/DisplayProudcts";
+import { DisplayProducts } from "common/utils/DisplayProudcts";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { allSvg } from "svg/allSvg.jsx";

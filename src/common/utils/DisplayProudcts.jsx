@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import productList from "common/products";
+import productList from "common/utils/products";
 
 // type is for the type of product
 // newClass is for the additional class for the component to regulate css
@@ -40,7 +40,9 @@ export function DisplayProducts({
               <h3>${el.price}</h3>
             </Link>
           );
-        } else { return ""}
+        } else {
+          return "";
+        }
       })}
     </div>
   );

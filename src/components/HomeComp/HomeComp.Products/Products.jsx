@@ -1,4 +1,4 @@
-import { DisplayProducts } from "scripts/DisplayProudcts";
+import { DisplayProducts } from "common/utils/DisplayProudcts";
 
 export default function Products() {
   return (

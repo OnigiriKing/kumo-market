@@ -1,5 +1,5 @@
-import { allSvg } from "../../svg/allSvg";
-import { closeCart } from "../../scripts/changeClass";
+import { allSvg } from "svg/allSvg";
+import { handleCartClick } from "common/utils/changeClass";
 import React from "react";
 import emptyCart from "img/navBar/emptyCart.png";
 import deleteObject from "./CartMenu.deleteObject";
@@ -7,6 +7,8 @@ import changeAmount from "./CartMenu.changeAmount";
 
 export default function CartMenu({ cartItems, setCartItems, cartCount }) {
   const [subtotal, setSubtotal] = React.useState(0);
+
+  const commonProps = { handleCartClick };
 
   // updates subtotal
   React.useEffect(() => {
@@ -63,11 +65,11 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
 
   return (
     <>
-      <div className="full-overlay" {...closeCart()} />
+      <div className="full-overlay" {...commonProps} />
       <div className="cart-menu">
         <div className="cart-menu-des">
           <h3>Your Shopping Cart ({cartCount})</h3>
-          <div className="cart-close-button" {...closeCart()}>
+          <div className="cart-close-button" {...commonProps}>
             {allSvg(30).closeBtn}
           </div>
         </div>
@@ -75,7 +77,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
           <div className="cart-no-items">
             <img src={emptyCart} alt="empty"></img>
             <h2>Your cart is empty</h2>
-            <button className="no-items-btn" {...closeCart()}>
+            <button className="no-items-btn" {...commonProps}>
               Keep Browsing
             </button>
           </div>
