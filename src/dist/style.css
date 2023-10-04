@@ -650,8 +650,7 @@ a {
   color: #e13c3c;
 }
 
-.full-overlay,
-.drop-menu {
+.full-overlay {
   display: none;
 }
 
