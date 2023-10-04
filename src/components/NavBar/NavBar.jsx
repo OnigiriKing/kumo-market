@@ -21,6 +21,7 @@ export default function NavBar({ cartCount }) {
 
   return (
     <nav id="nav-bar">
+      <DropMenu link={link} />
       <div className="wrapper nav-wrapper">
         <Link to="/" className="nav-logo">
           <img src={logo} alt="logo" />
@@ -37,7 +38,6 @@ export default function NavBar({ cartCount }) {
           </div>
         </div>
       </div>
-      <DropMenu link={link} />
     </nav>
   );
 }

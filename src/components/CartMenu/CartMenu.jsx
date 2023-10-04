@@ -8,8 +8,6 @@ import changeAmount from "./CartMenu.changeAmount";
 export default function CartMenu({ cartItems, setCartItems, cartCount }) {
   const [subtotal, setSubtotal] = React.useState(0);
 
-  const commonProps = { handleCartClick };
-
   // updates subtotal
   React.useEffect(() => {
     let result = 0;
@@ -65,11 +63,11 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
 
   return (
     <>
-      <div className="full-overlay" {...commonProps} />
+      <div className="full-overlay" onClick={() => handleCartClick()} />
       <div className="cart-menu">
         <div className="cart-menu-des">
           <h3>Your Shopping Cart ({cartCount})</h3>
-          <div className="cart-close-button" {...commonProps}>
+          <div className="cart-close-button" onClick={() => handleCartClick()}>
             {allSvg(30).closeBtn}
           </div>
         </div>
@@ -77,7 +75,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
           <div className="cart-no-items">
             <img src={emptyCart} alt="empty"></img>
             <h2>Your cart is empty</h2>
-            <button className="no-items-btn" {...commonProps}>
+            <button className="no-items-btn" onClick={() => handleCartClick()}>
               Keep Browsing
             </button>
           </div>
