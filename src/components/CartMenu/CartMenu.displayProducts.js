@@ -1,4 +1,4 @@
-export default function(list) {
+export default function displayProducts(list) {
     const allProducts = Object.keys(list).map((key) => {
       const el = list[key];
       return (
