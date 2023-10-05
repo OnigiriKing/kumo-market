@@ -2,8 +2,8 @@ import { allSvg } from "svg/allSvg";
 import { handleCartClick } from "common/utils/changeClass";
 import React from "react";
 import emptyCart from "img/navBar/emptyCart.png";
-import deleteObject from "components/CartMenu/CartMenu.deleteObject.js";
-import changeAmount from "components/CartMenu/CartMenu.changeAmount.js";
+import deleteObject from "src/components/CartMenu/CartMenu.deleteObject.js";
+import changeAmount from "src/components/CartMenu/CartMenu.changeAmount.js";
 
 
 export default function CartMenu({ cartItems, setCartItems, cartCount }) {
