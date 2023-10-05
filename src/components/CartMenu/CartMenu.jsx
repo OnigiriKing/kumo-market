@@ -2,7 +2,7 @@ import { allSvg } from "svg/allSvg";
 import { handleCartClick } from "common/utils/changeClass";
 import React from "react";
 import emptyCart from "img/navBar/emptyCart.png";
-import deleteObject from "CartMenu/CartMenu.deleteObject.js";
+import deleteObject from "CartMenu/CartMenu.deleteObject";
 import changeAmount from "CartMenu/CartMenu.changeAmount";
 
 
