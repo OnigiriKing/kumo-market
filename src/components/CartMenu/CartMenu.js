@@ -2,8 +2,8 @@ import { allSvg } from "svg/allSvg";
 import { handleCartClick } from "common/utils/changeClass";
 import React from "react";
 import emptyCart from "img/navBar/emptyCart.png";
-import {deleteObject} from "./CartMenu.deleteObj";
-import changeAmount from "./utils/changeAmount";
+import deleteObj from "./CartMenu.deleteObject";
+import changeAm from "./CartMenu.changeAmount";
 
 
 export default function CartMenu({ cartItems, setCartItems, cartCount }) {
@@ -36,7 +36,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
             <div className="cart-product-btns">
               <button
                 onClick={() =>
-                  changeAmount("minus", key, cartItems, setCartItems)
+                  changeAm("minus", key, cartItems, setCartItems)
                 }
               >
                 -
@@ -44,7 +44,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
               <h2>{el.amount}</h2>
               <button
                 onClick={() =>
-                  changeAmount("plus", key, cartItems, setCartItems)
+                  changeAm("plus", key, cartItems, setCartItems)
                 }
               >
                 +
@@ -52,7 +52,7 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
             </div>
             <div
               className="cart-delete-btn"
-              onClick={() => deleteObject(key, cartItems, setCartItems)}
+              onClick={() => deleteObj(key, cartItems, setCartItems)}
             >
               {allSvg(25).closeBtn}
             </div>
