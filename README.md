@@ -8,7 +8,7 @@ Discover a carefully curated selection of products in a clean and user-friendly 
 
 <p>Credits for the design goes to <a href='https://github.com/Abderraouf-Rahmani'>Abderraouf</a></p>
 
-Live Demo: <a href='https://kumo-market.netlify.app'>Ecommerce Demo</a>
+Live Demo: <a href='https://kumo-market.netlify.app'>Kumo Market</a>
 
 <h3>Build with:</h3>
 
