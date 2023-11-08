@@ -20,7 +20,7 @@ Live Demo: <a href='https://kumo-market.netlify.app'>Ecommerce Demo</a>
 <h3 align='center'>Home Page</h3>
 
 <div align='center'>
-<img src='https://github.com/OnigiriKing/my-new-portfolio/blob/main/src/pages/MyWorks/data/img/kumoMarket.png'/>
+<img src='https://github.com/OnigiriKing/my-new-portfolio/blob/main/src/pages/MyWorks/data/img/kumoMarket/kumoMarket.png'/>
 </div>
 
 <br><br>
