@@ -22,7 +22,7 @@ export default function NavBar({ cartCount }) {
   }, [location]);
 
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
 
 

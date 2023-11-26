@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { allSvg } from "svg/allSvg";
 
 export default function FooterNav() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const switchLanguage = (lng) => {
     i18n.changeLanguage(lng);
