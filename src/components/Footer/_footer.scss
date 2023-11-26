@@ -81,3 +81,12 @@
   }
   }
 }
+
+.language-change {
+  display: flex;
+  gap: 1rem;
+
+  div {
+    cursor: pointer;
+  }
+}
