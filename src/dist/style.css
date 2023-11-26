@@ -245,6 +245,14 @@ a {
   }
 }
 
+.language-change {
+  display: flex;
+  gap: 1rem;
+}
+.language-change div {
+  cursor: pointer;
+}
+
 #home-page {
   margin-top: 6.5rem;
 }
