@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 export default function Banner({reverse = false}) {
 
   const { t } = useTranslation();
-
   
 
 
