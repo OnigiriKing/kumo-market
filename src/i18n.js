@@ -10,6 +10,21 @@ i18n
   .init({
     fallbackLng: "en",
     debug: true,
+    interpolation: {
+      escapeValue: false,
+    },
+    resources: {
+      en: {
+        translation: {
+          CATEGORIES: "Categories",
+        },
+      },
+      jp: {
+        translation: {
+          CATEGORIES: "カテゴリー",
+        },
+      },
+    },
   });
 
 export default i18n;
