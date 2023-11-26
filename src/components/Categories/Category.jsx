@@ -3,8 +3,10 @@ import { DisplayProducts } from "common/utils/DisplayProudcts";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { allSvg } from "svg/allSvg.jsx";
+import { useTranslation } from "react-i18next";
 
 export default function Categories({ cat, setCat }) {
+  const { t } = useTranslation();
   const links = {
     all: {
       link: "all",
@@ -16,7 +18,7 @@ export default function Categories({ cat, setCat }) {
     },
     skinCare: {
       link: "skin-care",
-      state: "Skin Care",
+      state: "SkinCare",
     },
     kitchen: {
       link: "kitchen",
@@ -33,8 +35,11 @@ export default function Categories({ cat, setCat }) {
       <div className="wrapper categories-wrapper">
         <div className="categories-des">
           <div className="categories-nav">
-            <Link to="/">{allSvg(15).arrowLeft}Home</Link>
-            <h2>{cat.toUpperCase()}</h2>
+            <Link to="/">
+              {allSvg(15).arrowLeft}
+              {t("HOME")}
+            </Link>
+            <h2>{t(cat.toUpperCase())}</h2>
           </div>
           <div className="categories-btns">
             {Object.keys(links).map((key) => {
