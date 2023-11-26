@@ -1,7 +1,10 @@
 import productList from "common/utils/products";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ProductInfo({ id, setCartItems, cartItems }) {
+
+   const { t } = useTranslation();
   const product = productList[`product${id}`];
 
   const [amount, setAmount] = React.useState(1);
@@ -71,7 +74,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
             <h1 className="product-info-name">{product.name}</h1>
             <p>{product.des}</p>
             <div className="product-info-price">
-              <h1>Quantity</h1>
+              <h1>{t("QUANTITY")}</h1>
               <div className="product-info-btns">
                 <button onClick={() => changeAmount("sub")}>
                   <h2>-</h2>
@@ -84,8 +87,8 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
               <h1>${product.price * amount}</h1>
             </div>
             <div className="product-info-cart">
-              <button onClick={() => addItem()}>Add to cart</button>
-              <button>Buy now</button>
+              <button onClick={() => addItem()}>{t("ADDCART")}</button>
+              <button>{t("BUYNOW")}</button>
             </div>
           </div>
         </div>
