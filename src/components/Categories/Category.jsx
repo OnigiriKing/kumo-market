@@ -46,7 +46,7 @@ export default function Categories({ cat, setCat }) {
               const el = links[key];
               return (
                 <Link to={el.link}>
-                  <button onClick={() => setCat(el.state)}>{el.state}</button>
+                  <button onClick={() => setCat(el.state)}>{t(el.state.toUpperCase())}</button>
                 </Link>
               );
             })}

@@ -36,7 +36,7 @@ i18n
           SKINCARE: "Skin Care",
           KITCHEN: "Kitchen",
           CHAIRS: "Chairs",
-          FURNITURE: "FURNITURE",
+          FURNITURE: "Furniture",
           POPULARPICKS: "Popilar Picks",
           HOME: "Home",
           YOURCART: "Your Shopping Cart",
