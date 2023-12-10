@@ -23,6 +23,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
     changeType(product.img);
   }, [id, product.img]);
 
+  
   function addItem() {
     const item = `product${id}`;
     if (cartItems.hasOwnProperty(item) && cartItems[item].amount <= 10) {
@@ -45,6 +46,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
       });
     }
   }
+
 
   return (
     <div className="product-info-screen">
