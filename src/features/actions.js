@@ -6,3 +6,10 @@ export const addInCart = (id, product, amount) => {
     payload: { id, product, amount },
   };
 };
+
+export const changeAmount = (type) => {
+  return {
+    type: types.CHANGE_AMOUNT,
+    payload: { type },
+  };
+};

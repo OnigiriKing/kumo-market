@@ -3,7 +3,7 @@ import cartReducer from "./reducers/cartReducer";
 // import caregoryReducer from "./reducers/caregoryReducer";
 // import itemsReducer from "./reducers/itemsReducer";
 // import subtotalReducer from "./reducers/subtotalReducer";
-// import amountReducer from "./reducers/amountReducer";
+import amountReducer from "./reducers/amountReducer";
 // import linkReducer from "./reducers/linkReducer";
 // import imgTypeReducer from "./reducers/imgTypeReducer";
 
@@ -13,7 +13,7 @@ const store = configureStore({
     // category: caregoryReducer,
     // items: itemsReducer,
     // subtotal: subtotalReducer,
-    // amount: amountReducer,
+    amount: amountReducer,
     // link: linkReducer,
     // imgType: imgTypeReducer,
   },

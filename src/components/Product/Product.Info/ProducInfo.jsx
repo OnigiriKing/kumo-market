@@ -51,6 +51,10 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
+  const amountTest = useSelector((state) => state.amount);
+
+
+
   return (
     <div className="product-info-screen">
       <div className="wrapper product-info-wrapper">
