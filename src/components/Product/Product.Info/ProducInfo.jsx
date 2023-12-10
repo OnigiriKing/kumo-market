@@ -1,10 +1,11 @@
 import productList from "common/utils/products";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from "features/actions";
 
 export default function ProductInfo({ id, setCartItems, cartItems }) {
-
-   const { t } = useTranslation();
+  const { t } = useTranslation();
   const product = productList[`product${id}`];
 
   const [amount, setAmount] = React.useState(1);
@@ -23,7 +24,6 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
     changeType(product.img);
   }, [id, product.img]);
 
-  
   function addItem() {
     const item = `product${id}`;
     if (cartItems.hasOwnProperty(item) && cartItems[item].amount <= 10) {
@@ -47,6 +47,9 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
     }
   }
 
+  // Test
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
 
   return (
     <div className="product-info-screen">
@@ -90,7 +93,12 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
             </div>
             <div className="product-info-cart">
               <button onClick={() => addItem()}>{t("ADDCART")}</button>
-              <button>{t("BUYNOW")}</button>
+              <button onClick={() => {
+                dispatch(actions.addInCart(id, product, amount))
+                console.log(cart);}
+                }>
+                {t("BUYNOW")}
+              </button>
             </div>
           </div>
         </div>
