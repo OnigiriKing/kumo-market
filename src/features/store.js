@@ -5,7 +5,7 @@ import cartReducer from "./reducers/cartReducer";
 // import subtotalReducer from "./reducers/subtotalReducer";
 import amountReducer from "./reducers/amountReducer";
 // import linkReducer from "./reducers/linkReducer";
-// import imgTypeReducer from "./reducers/imgTypeReducer";
+import imgTypeReducer from "./reducers/imgTypeReducer";
 
 const store = configureStore({
   reducer: {
@@ -15,7 +15,7 @@ const store = configureStore({
     // subtotal: subtotalReducer,
     amount: amountReducer,
     // link: linkReducer,
-    // imgType: imgTypeReducer,
+    imgType: imgTypeReducer,
   },
 });
 

@@ -8,11 +8,9 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
   const { t } = useTranslation();
   const product = productList[`product${id}`];
 
-  const [imgType, changeType] = React.useState("");
-
 
   React.useEffect(() => {
-    changeType(product.img);
+    dispatch(actions.changeImage(product.img));
   }, [id, product.img]);
 
   function addItem() {
@@ -42,6 +40,8 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
+  const imgType = useSelector((state) => state.imgType);
+
   const amount = useSelector((state) => state.amount);
 
 
@@ -56,17 +56,21 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
               <img
                 src={product.img}
                 alt={product.name}
-                onMouseEnter={() => changeType(product.img)}
+                onMouseEnter={() => dispatch(actions.changeImage(product.img))}
               />
               <img
                 src={product.addImg[0]}
                 alt={product.name}
-                onMouseEnter={() => changeType(product.addImg[0])}
+                onMouseEnter={() =>
+                  dispatch(actions.changeImage(product.addImg[0]))
+                }
               />
               <img
                 src={product.addImg[1]}
                 alt={product.name}
-                onMouseEnter={() => changeType(product.addImg[1])}
+                onMouseEnter={() =>
+                  dispatch(actions.changeImage(product.addImg[1]))
+                }
               />
             </div>
           </div>
