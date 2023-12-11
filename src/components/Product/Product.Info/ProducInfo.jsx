@@ -8,17 +8,8 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
   const { t } = useTranslation();
   const product = productList[`product${id}`];
 
-  const [amount, setAmount] = React.useState(1);
-
   const [imgType, changeType] = React.useState("");
 
-  function changeAmount(type) {
-    return type === "add" && amount < 10
-      ? setAmount(amount + 1)
-      : type === "sub" && amount > 1
-      ? setAmount(amount - 1)
-      : "";
-  }
 
   React.useEffect(() => {
     changeType(product.img);
@@ -51,7 +42,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
-  const amountTest = useSelector((state) => state.amount);
+  const amount = useSelector((state) => state.amount);
 
 
 
@@ -85,11 +76,19 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
             <div className="product-info-price">
               <h1>{t("QUANTITY")}</h1>
               <div className="product-info-btns">
-                <button onClick={() => changeAmount("sub")}>
+                <button
+                  onClick={() => {
+                    dispatch(actions.changeAmount("sub"));
+                  }}
+                >
                   <h2>-</h2>
                 </button>
                 <h1>{amount}</h1>
-                <button onClick={() => changeAmount("add")}>
+                <button
+                  onClick={() => {
+                    dispatch(actions.changeAmount("add"));
+                  }}
+                >
                   <h2>+</h2>
                 </button>
               </div>
@@ -97,10 +96,11 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
             </div>
             <div className="product-info-cart">
               <button onClick={() => addItem()}>{t("ADDCART")}</button>
-              <button onClick={() => {
-                dispatch(actions.addInCart(id, product, amount))
-                console.log(cart);}
-                }>
+              <button
+                onClick={() => {
+                  dispatch(actions.changeAmount("add"));
+                }}
+              >
                 {t("BUYNOW")}
               </button>
             </div>
