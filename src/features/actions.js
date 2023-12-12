@@ -21,3 +21,10 @@ export const changeImage = (img) => {
   };
 };
 
+export const changeSubtotal = (items) => {
+  return {
+    type: actions.CHANGE_SUBTOTAL,
+    payload: { items },
+  };
+};
+
