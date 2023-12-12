@@ -5,20 +5,22 @@ import { useLocation } from "react-router-dom";
 import React from "react";
 import { handleCartClick, handleMenuClick } from "common/utils/changeClass";
 import DropMenu from "./NavBar.DropMenu/DropMenu";
-
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from "features/actions";
 
 export default function NavBar({ cartCount }) {
-  const [link, setLink] = React.useState("1");
+
+
 
   const location = useLocation().pathname;
 
+  // state
+  const dispatch = useDispatch()
+  const link = useSelector((state) => state.link)
+
   React.useEffect(() => {
-    if (location.includes("product/")) {
-      setLink(location.split("/")[2]);
-    } else {
-      setLink(Math.floor(Math.random() * 12) + 1);
-    }
+    dispatch(actions.setLink(location));
   }, [location]);
 
 // Translatiom 

@@ -28,3 +28,10 @@ export const changeSubtotal = (items) => {
   };
 };
 
+export const setLink = (location) => {
+  return {
+    type: actions.SET_LINK,
+    payload: { location },
+  };
+};
+

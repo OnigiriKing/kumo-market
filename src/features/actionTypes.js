@@ -7,3 +7,5 @@ export const CHANGE_AMOUNT = "changeAmount";
 export const CHANGE_IMAGE = "changeImage";
 // change subtotal
 export const CHANGE_SUBTOTAL = "changeSubtotal";
+// set link
+export const SET_LINK = "setLink";
