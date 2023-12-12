@@ -1,10 +1,10 @@
 import Categories from "components/Categories";
 
 
-export default function CategoriesPage({ cat, setCat }) {
+export default function CategoriesPage() {
   return (
     <>
-      <Categories cat={cat} setCat={setCat} />
+      <Categories/>
     </>
   );
 }

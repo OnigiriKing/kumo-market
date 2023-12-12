@@ -1,10 +1,10 @@
 import HomeComp from "components/HomeComp";
 
-export default function HomePage({ cat, setCat }) {
+export default function HomePage() {
 
   return (
     <>
-      <HomeComp cat={cat} setCat={setCat} />
+      <HomeComp/>
     </>
   );
 }

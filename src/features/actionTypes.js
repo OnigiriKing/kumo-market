@@ -11,3 +11,5 @@ export const CHANGE_SUBTOTAL = "changeSubtotal";
 export const SET_LINK = "setLink";
 // cart count
 export const SET_COUNT = "setCount";
+// category
+export const SET_CATEGORY = "setCategory";

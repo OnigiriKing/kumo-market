@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
 
-export default function NavBar({ cartCount }) {
+export default function NavBar() {
 
 
 
@@ -18,6 +18,7 @@ export default function NavBar({ cartCount }) {
   // state
   const dispatch = useDispatch()
   const link = useSelector((state) => state.link)
+  const cartCount = useSelector((store) => store.cartCount);
 
   React.useEffect(() => {
     dispatch(actions.setLink(location));

@@ -4,9 +4,16 @@ import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { allSvg } from "svg/allSvg.jsx";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from "features/actions";
 
-export default function Categories({ cat, setCat }) {
+export default function Categories() {
+  // state
+  const dispatch = useDispatch();
+  const category = useSelector((state) => state.category);
+
   const { t } = useTranslation();
+
   const links = {
     all: {
       link: "all",
@@ -39,14 +46,20 @@ export default function Categories({ cat, setCat }) {
               {allSvg(15).arrowLeft}
               {t("HOME")}
             </Link>
-            <h2>{t(cat.toUpperCase())}</h2>
+            <h2>{t(category.toUpperCase())}</h2>
           </div>
           <div className="categories-btns">
             {Object.keys(links).map((key) => {
               const el = links[key];
               return (
                 <Link to={el.link}>
-                  <button onClick={() => setCat(el.state)}>{t(el.state.toUpperCase())}</button>
+                  <button
+                    onClick={() =>
+                      dispatch(actions.setCategory(el.state))
+                    }
+                  >
+                    {t(el.state.toUpperCase())}
+                  </button>
                 </Link>
               );
             })}

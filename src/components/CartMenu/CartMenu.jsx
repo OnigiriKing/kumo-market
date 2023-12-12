@@ -10,13 +10,14 @@ import * as actions from "features/actions";
 
 
 
-export default function CartMenu({ cartItems, setCartItems, cartCount }) {
+export default function CartMenu({ cartItems, setCartItems }) {
 
     const { t } = useTranslation();
 
     // state
     const dispatch = useDispatch();
     const subtotal = useSelector((state) => state.subtotal);
+    const cartCount = useSelector((store) => store.cartCount);
 
   // updates subtotal
   React.useEffect(() => {

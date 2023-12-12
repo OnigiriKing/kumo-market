@@ -1,12 +1,11 @@
 import CartMenu from "components/CartMenu";
 
-export default function Cart({ cartItems, setCartItems, cartCount }) {
+export default function Cart({ cartItems, setCartItems}) {
   return (
     <>
       <CartMenu
         cartItems={cartItems}
         setCartItems={setCartItems}
-        cartCount={cartCount}
       />
     </>
   );

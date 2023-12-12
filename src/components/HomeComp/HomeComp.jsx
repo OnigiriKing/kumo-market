@@ -4,11 +4,12 @@ import Trending from "./HomeComp.Trending/Trending";
 import Banner from "./HomeComp.Banner/Banner";
 import React from "react";
 
-export default function HomeComp({ cat, setCat }) {
+
+export default function HomeComp() {
 
   return (
     <div id="home-page">
-      <Start cat={cat} setCat={setCat} />
+      <Start/>
       <Products />
       <Banner />
       <Trending />

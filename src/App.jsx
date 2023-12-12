@@ -44,23 +44,20 @@ export default function App() {
       <Overlay
         cartItems={cartItems}
         setCartItems={setCartItems}
-        cartCount={cartCount}
       />
-      <NavPage cartCount={cartCount} />
+      <NavPage/>
       <Routes>
         <Route
           path="/"
           element={
             <HomePage
-              cat={category}
-              setCat={setCategory}
               cartItems={cartItems}
             />
           }
         />
         <Route
           path="/categories/*"
-          element={<CategoriesPage cat={category} setCat={setCategory} />}
+          element={<CategoriesPage/>}
         />
         <Route
           path="/product/:id"
