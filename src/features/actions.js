@@ -35,3 +35,10 @@ export const setLink = (location) => {
   };
 };
 
+export const setCount = (items) => {
+  return {
+    type: actions.SET_COUNT,
+    payload: { items },
+  };
+};
+

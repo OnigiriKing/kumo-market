@@ -9,3 +9,5 @@ export const CHANGE_IMAGE = "changeImage";
 export const CHANGE_SUBTOTAL = "changeSubtotal";
 // set link
 export const SET_LINK = "setLink";
+// cart count
+export const SET_COUNT = "setCount";

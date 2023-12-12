@@ -8,32 +8,29 @@ import CategoriesPage from "pages/categoriesPage/CategoriesPage";
 import ProductPage from "pages/productPage/ProductPage";
 import Overlay from "pages/overlay/Overlay";
 import { useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from "features/actions";
 
 export default function App() {
   const local = window.localStorage;
 
+  // state
+  const dispatch = useDispatch()
+  const cartCount = useSelector((store)=>store.cartCount)
+
   const [category, setCategory] = React.useState("ALL");
 
-  const [cartCount, setCount] = React.useState(
-    parseInt(localStorage.getItem("cartCount")) || 0
-  );
 
   const [cartItems, setCartItems] = React.useState(
     JSON.parse(localStorage.getItem("cartItems")) || {}
   );
 
   React.useEffect(() => {
-    local.setItem("cartCount", cartCount.toString());
     local.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartCount, cartItems, local]);
 
   React.useEffect(() => {
-    let count = 0;
-    Object.keys(cartItems).map((key) => {
-      const el = cartItems[key];
-      return (count += el.amount);
-    });
-    setCount(count);
+    dispatch(actions.setCount(cartItems));
   }, [cartItems]);
 
   const html = useLocation().pathname;

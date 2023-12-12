@@ -38,7 +38,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
 
   // Test
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart);
+  // const cart = useSelector((state) => state.cart);
 
   const imgType = useSelector((state) => state.imgType);
 
@@ -101,9 +101,6 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
             <div className="product-info-cart">
               <button onClick={() => addItem()}>{t("ADDCART")}</button>
               <button
-                onClick={() => {
-                  dispatch(actions.changeAmount("add"));
-                }}
               >
                 {t("BUYNOW")}
               </button>

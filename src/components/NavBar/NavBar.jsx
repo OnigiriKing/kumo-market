@@ -44,7 +44,7 @@ export default function NavBar({ cartCount }) {
           </div>
         </div>
       </div>
-      <DropMenu link={link} />
+      <DropMenu/>
     </nav>
   );
 }

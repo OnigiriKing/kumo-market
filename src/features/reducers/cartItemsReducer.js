@@ -2,8 +2,7 @@ import * as actions from "../actionTypes";
 
 const initialState = {};
 
-
-export default function cartReducer(state = initialState, action) {
+export default function cartItemsReducer(state = initialState, action) {
   switch (action.type) {
     case actions.ADD_TO_CART: {
       const { id, product, amount } = action.payload;

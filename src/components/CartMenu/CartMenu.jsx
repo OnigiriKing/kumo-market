@@ -20,7 +20,6 @@ export default function CartMenu({ cartItems, setCartItems, cartCount }) {
 
   // updates subtotal
   React.useEffect(() => {
-    let result = 0;
     dispatch(actions.changeSubtotal(cartItems));
   }, [cartItems]);
 

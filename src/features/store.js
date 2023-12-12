@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cartReducer from "./reducers/cartReducer";
+import cartCountReducer from "./reducers/cartCountReducer";
 // import caregoryReducer from "./reducers/caregoryReducer";
-// import itemsReducer from "./reducers/itemsReducer";
+import cartItemsReducer from "./reducers/cartItemsReducer";
 import subtotalReducer from "./reducers/subtotalReducer";
 import amountReducer from "./reducers/amountReducer";
 import linkReducer from "./reducers/linkReducer";
@@ -9,9 +9,9 @@ import imgTypeReducer from "./reducers/imgTypeReducer";
 
 const store = configureStore({
   reducer: {
-    cart: cartReducer,
+    cartCount: cartCountReducer,
     // category: caregoryReducer,
-    // items: itemsReducer,
+    cartItems: cartItemsReducer,
     subtotal: subtotalReducer,
     amount: amountReducer,
     link: linkReducer,
