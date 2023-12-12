@@ -42,10 +42,10 @@ export const setCount = (items) => {
   };
 };
 
-export const setCategory = (caregory) => {
+export const setCategory = (category) => {
   return {
     type: actions.SET_CATEGORY,
-    payload: { caregory },
+    payload: { category },
   };
 };
 
