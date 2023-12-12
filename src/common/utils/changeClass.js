@@ -14,7 +14,6 @@ function changeClass(baseClass, newClass, check=true) {
     changeClass(".cart-menu", "cart-open");
     changeClass(".full-overlay", "overlay-active");
     changeClass(".body", "no-scroll");
-    console.log("ok")
   };
 
   export const handleMenuClick = function() {

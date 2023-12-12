@@ -5,21 +5,22 @@ import emptyCart from "img/navBar/emptyCart.png";
 import deleteObj from "./CartMenu.deleteObject";
 import changeAm from "./CartMenu.changeAmount";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from "features/actions";
+
 
 
 export default function CartMenu({ cartItems, setCartItems, cartCount }) {
-  const [subtotal, setSubtotal] = React.useState(0);
 
     const { t } = useTranslation();
+
+    const subtotal = useSelector((state) => state.subtotal);
+      const dispatch = useDispatch();
 
   // updates subtotal
   React.useEffect(() => {
     let result = 0;
-    Object.keys(cartItems).map((key) => {
-      const el = cartItems[key];
-      return (result += el.price * el.amount);
-    });
-    setSubtotal(result);
+    dispatch(actions.changeSubtotal(cartItems));
   }, [cartItems]);
 
   // creates a product from state
