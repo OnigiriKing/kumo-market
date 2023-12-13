@@ -22,7 +22,7 @@ export default function CartMenu({ cartItems, setCartItems }) {
   // updates subtotal
   React.useEffect(() => {
     dispatch(actions.changeSubtotal(cartItems));
-  }, [cartItems]);
+  }, [cartItems, dispatch]);
 
   // creates a product from state
   const allProducts = Object.keys(cartItems).map((key) => {

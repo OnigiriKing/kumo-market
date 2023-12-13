@@ -22,7 +22,7 @@ export default function NavBar() {
 
   React.useEffect(() => {
     dispatch(actions.setLink(location));
-  }, [location]);
+  }, [location, dispatch]);
 
 // Translatiom 
   const { t } = useTranslation();
