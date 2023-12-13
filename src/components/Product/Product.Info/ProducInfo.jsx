@@ -36,7 +36,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
     }
   }
 
-  // Test
+  // state
   const dispatch = useDispatch();
   // const cart = useSelector((state) => state.cart);
 

@@ -15,12 +15,10 @@ export default function App() {
   const local = window.localStorage;
 
   // state
-  const dispatch = useDispatch()
-  const cartCount = useSelector((store)=>store.cartCount)
+  const dispatch = useDispatch();
+  const cartCount = useSelector((store) => store.cartCount);
 
-  const [category, setCategory] = React.useState("ALL");
-
-
+  //! fix this
   const [cartItems, setCartItems] = React.useState(
     JSON.parse(localStorage.getItem("cartItems")) || {}
   );
@@ -31,7 +29,7 @@ export default function App() {
 
   React.useEffect(() => {
     dispatch(actions.setCount(cartItems));
-  }, [cartItems]);
+  }, [cartItems, dispatch]);
 
   const html = useLocation().pathname;
 
@@ -41,24 +39,11 @@ export default function App() {
 
   return (
     <div className="app">
-      <Overlay
-        cartItems={cartItems}
-        setCartItems={setCartItems}
-      />
-      <NavPage/>
+      <Overlay cartItems={cartItems} setCartItems={setCartItems} />
+      <NavPage />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <HomePage
-              cartItems={cartItems}
-            />
-          }
-        />
-        <Route
-          path="/categories/*"
-          element={<CategoriesPage/>}
-        />
+        <Route path="/" element={<HomePage cartItems={cartItems} />} />
+        <Route path="/categories/*" element={<CategoriesPage />} />
         <Route
           path="/product/:id"
           element={

@@ -32,7 +32,7 @@ export default function cartItemsReducer(state = initialState, action) {
 
     case actions.DELETE_FROM_CART: {
       const { name } = action.payload;
-      return state.filter((item) => item.name != name);
+      return state.filter((item) => item.name !== name);
     }
 
     default:
