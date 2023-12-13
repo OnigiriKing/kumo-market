@@ -8,6 +8,9 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
   const { t } = useTranslation();
   const product = productList[`product${id}`];
 
+  // state
+  const dispatch = useDispatch();
+  // const cart = useSelector((state) => state.cart);
 
   React.useEffect(() => {
     dispatch(actions.changeImage(product.img));
@@ -36,15 +39,9 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
     }
   }
 
-  // state
-  const dispatch = useDispatch();
-  // const cart = useSelector((state) => state.cart);
-
   const imgType = useSelector((state) => state.imgType);
 
   const amount = useSelector((state) => state.amount);
-
-
 
   return (
     <div className="product-info-screen">
@@ -100,10 +97,7 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
             </div>
             <div className="product-info-cart">
               <button onClick={() => addItem()}>{t("ADDCART")}</button>
-              <button
-              >
-                {t("BUYNOW")}
-              </button>
+              <button>{t("BUYNOW")}</button>
             </div>
           </div>
         </div>
