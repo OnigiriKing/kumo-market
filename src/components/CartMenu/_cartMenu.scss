@@ -65,7 +65,7 @@
 
   .cart-product {
     display: flex;
-    height: 8rem;
+    height: 10rem;
     margin: 1rem 0.5rem;
     border: 1px solid #000;
 
@@ -75,9 +75,9 @@
       align-items: center;
 
       img {
+        padding: .5rem;
         object-fit: cover;
-        width: 90%;
-        height: 90%;
+        width: 8rem;
       }
     }
 
@@ -89,11 +89,22 @@
       justify-content: space-between;
       background-color: $mainGrey;
 
+
       .cart-product-price,
       .cart-product-quantity {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        p {
+          width: 80%
+        }
+
+        h3 {
+          display: flex;
+          // padding-left: 1rem;
+          align-self: baseline;
+        }
 
         .cart-delete-btn {
           cursor: pointer;
