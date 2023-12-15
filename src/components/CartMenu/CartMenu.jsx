@@ -61,7 +61,7 @@ export default function CartMenu() {
             </div>
             <div
               className="cart-delete-btn"
-              onClick={() => deleteObj(key)}
+              onClick={() => dispatch(actions.deleteFromCart(key))}
             >
               {allSvg(25).closeBtn}
             </div>

@@ -51,8 +51,9 @@ export default function cartItemsReducer(state = initialState, action) {
     }
 
     case actions.DELETE_FROM_CART: {
-      const { name } = action.payload;
-      return state.filter((item) => item.name !== name);
+      const { key } = action.payload;
+      const { [key]: deletedItem, ...newState } = state;
+      return newState;
     }
 
     default:

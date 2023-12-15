@@ -14,6 +14,13 @@ export const changeItemAmount = (type, key) => {
   };
 };
 
+export const deleteFromCart = (key) => {
+  return {
+    type: actions.DELETE_FROM_CART,
+    payload: { key },
+  };
+};
+
 export const changeAmount = (type) => {
   return {
     type: actions.CHANGE_AMOUNT,
