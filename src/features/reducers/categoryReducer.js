@@ -7,7 +7,6 @@ const initialState = "all";
 //   : "all";
 
 export default function categoryReducer(state = initialState, action) {
-  console.log(action);
   switch (action.type) {
     case actions.SET_CATEGORY: {
       localStorage.setItem("categoryName", action.payload.toString());

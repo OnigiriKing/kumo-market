@@ -46,7 +46,7 @@ export default function CartMenu({ setCartItems }) {
             <div className="cart-product-btns">
               <button
                 onClick={() =>
-                  changeAm("minus", key, cartItems, setCartItems)
+                  dispatch(actions.changeItemAmount("minus", key))
                 }
               >
                 -
@@ -54,7 +54,7 @@ export default function CartMenu({ setCartItems }) {
               <h2>{el.amount}</h2>
               <button
                 onClick={() =>
-                  changeAm("plus", key, cartItems, setCartItems)
+                  dispatch(actions.changeItemAmount("plus", key))
                 }
               >
                 +
@@ -104,7 +104,7 @@ export default function CartMenu({ setCartItems }) {
                 <h3>{t("SUBTOTAL")}</h3>
                 <h3>{subtotal}$</h3>
               </div>
-              <button className="checkout-btn">{t("CHECKOUT")}</button>
+              <button className="checkout-btn" onClick={()=>console.log(cartItems)}>{t("CHECKOUT")}</button>
             </div>
           </div>
         )}

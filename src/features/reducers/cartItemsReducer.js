@@ -33,19 +33,21 @@ export default function cartItemsReducer(state = initialState, action) {
 
     case actions.CHANGE_ITEM_AMOUNT: {
       const { type, key } = action.payload;
-      const updatedState = { ...state };
+      let newAmount = state[key].amount;
 
-      if (type === "plus") {
-        if (updatedState[key].amount < 10) {
-          updatedState[key].amount++;
-        }
-      } else if (type === "minus") {
-        if (updatedState[key].amount > 1) {
-          updatedState[key].amount--;
-        }
+      if (type === "plus" && newAmount < 10) {
+        newAmount++;
+      } else if (type === "minus" && newAmount > 1) {
+        newAmount--;
       }
 
-      return updatedState;
+      return {
+        ...state,
+        [key]: {
+          ...state[key],
+          amount: newAmount,
+        },
+      };
     }
 
     case actions.DELETE_FROM_CART: {
@@ -57,5 +59,3 @@ export default function cartItemsReducer(state = initialState, action) {
       return state;
   }
 }
-
-
