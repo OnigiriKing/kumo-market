@@ -17,28 +17,6 @@ export default function ProductInfo({ id}) {
     dispatch(actions.changeImage(product.img));
   }, [id, product.img, dispatch]);
 
-  // function addItem() {
-  //   const item = `product${id}`;
-  //   if (cartItems.hasOwnProperty(item) && cartItems[item].amount <= 10) {
-  //     const baseObject = { ...cartItems };
-  //     if (baseObject[item].amount + amount > 10) {
-  //       baseObject[item].amount = 10;
-  //     } else {
-  //       baseObject[item].amount = baseObject[item].amount + amount;
-  //     }
-  //     setCartItems(baseObject);
-  //   } else {
-  //     setCartItems({
-  //       ...cartItems,
-  //       [`product${id}`]: {
-  //         img: product.img,
-  //         name: product.name,
-  //         price: product.price,
-  //         amount: amount,
-  //       },
-  //     });
-  //   }
-  // }
 
   return (
     <div className="product-info-screen">

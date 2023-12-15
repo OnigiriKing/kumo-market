@@ -3,14 +3,13 @@ import { handleCartClick } from "common/utils/changeClass";
 import React from "react";
 import emptyCart from "img/navBar/emptyCart.png";
 import deleteObj from "./CartMenu.deleteObject";
-import changeAm from "./CartMenu.changeAmount";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
 
 
 
-export default function CartMenu({ setCartItems }) {
+export default function CartMenu() {
 
     const { t } = useTranslation();
 
@@ -62,7 +61,7 @@ export default function CartMenu({ setCartItems }) {
             </div>
             <div
               className="cart-delete-btn"
-              onClick={() => deleteObj(key, cartItems, setCartItems)}
+              onClick={() => deleteObj(key)}
             >
               {allSvg(25).closeBtn}
             </div>

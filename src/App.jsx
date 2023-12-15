@@ -17,11 +17,9 @@ export default function App() {
   // state
   const dispatch = useDispatch();
   const cartCount = useSelector((store) => store.cartCount);
+  const cartItems = useSelector((store) => store.cartItems)
 
-  //! fix this
-  const [cartItems, setCartItems] = React.useState(
-    JSON.parse(localStorage.getItem("cartItems")) || {}
-  );
+
 
   React.useEffect(() => {
     local.setItem("cartItems", JSON.stringify(cartItems));
@@ -39,7 +37,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <Overlay setCartItems={setCartItems} />
+      <Overlay/>
       <NavPage />
       <Routes>
         <Route path="/" element={<HomePage />} />

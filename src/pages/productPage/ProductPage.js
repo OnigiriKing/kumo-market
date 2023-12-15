@@ -4,7 +4,7 @@ export default function ProductPage({ setCartItems, cartItems }) {
 
   return (
     <>
-      <Product setCartItems={setCartItems} cartItems={cartItems} />
+      <Product/>
     </>
   );
 }
