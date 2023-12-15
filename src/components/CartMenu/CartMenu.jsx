@@ -14,6 +14,8 @@ export default function CartMenu({ setCartItems }) {
 
     const { t } = useTranslation();
 
+    //! add change amount into cartItems
+
     // state
     const dispatch = useDispatch();
     const subtotal = useSelector((state) => state.subtotal);

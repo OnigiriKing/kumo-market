@@ -39,10 +39,10 @@ export default function App() {
 
   return (
     <div className="app">
-      <Overlay cartItems={cartItems} setCartItems={setCartItems} />
+      <Overlay setCartItems={setCartItems} />
       <NavPage />
       <Routes>
-        <Route path="/" element={<HomePage cartItems={cartItems} />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/categories/*" element={<CategoriesPage />} />
         <Route
           path="/product/:id"

@@ -7,6 +7,13 @@ export const addInCart = (id, product, amount) => {
   };
 };
 
+export const changeItemAmount = (type, key) => {
+  return {
+    type: actions.CHANGE_ITEM_AMOUNT,
+    payload: { type, key },
+  };
+};
+
 export const changeAmount = (type) => {
   return {
     type: actions.CHANGE_AMOUNT,

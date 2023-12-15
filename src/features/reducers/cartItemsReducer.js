@@ -31,6 +31,23 @@ export default function cartItemsReducer(state = initialState, action) {
       }
     }
 
+    case actions.CHANGE_ITEM_AMOUNT: {
+      const { type, key } = action.payload;
+      const updatedState = { ...state };
+
+      if (type === "plus") {
+        if (updatedState[key].amount < 10) {
+          updatedState[key].amount++;
+        }
+      } else if (type === "minus") {
+        if (updatedState[key].amount > 1) {
+          updatedState[key].amount--;
+        }
+      }
+
+      return updatedState;
+    }
+
     case actions.DELETE_FROM_CART: {
       const { name } = action.payload;
       return state.filter((item) => item.name !== name);

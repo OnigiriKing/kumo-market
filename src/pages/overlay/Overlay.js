@@ -1,10 +1,9 @@
 import CartMenu from "components/CartMenu";
 
-export default function Cart({ cartItems, setCartItems}) {
+export default function Cart({ setCartItems}) {
   return (
     <>
       <CartMenu
-        cartItems={cartItems}
         setCartItems={setCartItems}
       />
     </>
