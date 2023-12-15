@@ -1,6 +1,7 @@
 import * as actions from "../actionTypes";
 
 const initialState = {};
+// JSON.parse(localStorage.getItem("cartItems")) || {};
 
 export default function cartItemsReducer(state = initialState, action) {
   switch (action.type) {
@@ -8,7 +9,7 @@ export default function cartItemsReducer(state = initialState, action) {
       const { id, product, amount } = action.payload;
       const itemId = `product${id}`;
 
-      if (state[itemId] && state[itemId].amount <= 10) {
+      if (state[itemId] != {} && state[itemId] && state[itemId].amount <= 10) {
         const newAmount =
           state[itemId].amount + amount > 10
             ? 10

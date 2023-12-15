@@ -1,5 +1,9 @@
 // To change amount of product
+
 export default function changeAm(type, key,state, set) {
+
+
+
   const baseObject = { ...state };
   if (type === "plus") {
     if (baseObject[key].amount < 10) {

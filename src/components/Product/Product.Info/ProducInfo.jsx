@@ -4,44 +4,41 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
 
-export default function ProductInfo({ id, setCartItems, cartItems }) {
+export default function ProductInfo({ id}) {
   const { t } = useTranslation();
   const product = productList[`product${id}`];
 
   // state
   const dispatch = useDispatch();
-  // const cart = useSelector((state) => state.cart);
+  const imgType = useSelector((state) => state.imgType);
+  const amount = useSelector((state) => state.amount);
 
   React.useEffect(() => {
     dispatch(actions.changeImage(product.img));
   }, [id, product.img, dispatch]);
 
-  function addItem() {
-    const item = `product${id}`;
-    if (cartItems.hasOwnProperty(item) && cartItems[item].amount <= 10) {
-      const baseObject = { ...cartItems };
-      if (baseObject[item].amount + amount > 10) {
-        baseObject[item].amount = 10;
-      } else {
-        baseObject[item].amount = baseObject[item].amount + amount;
-      }
-      setCartItems(baseObject);
-    } else {
-      setCartItems({
-        ...cartItems,
-        [`product${id}`]: {
-          img: product.img,
-          name: product.name,
-          price: product.price,
-          amount: amount,
-        },
-      });
-    }
-  }
-
-  const imgType = useSelector((state) => state.imgType);
-
-  const amount = useSelector((state) => state.amount);
+  // function addItem() {
+  //   const item = `product${id}`;
+  //   if (cartItems.hasOwnProperty(item) && cartItems[item].amount <= 10) {
+  //     const baseObject = { ...cartItems };
+  //     if (baseObject[item].amount + amount > 10) {
+  //       baseObject[item].amount = 10;
+  //     } else {
+  //       baseObject[item].amount = baseObject[item].amount + amount;
+  //     }
+  //     setCartItems(baseObject);
+  //   } else {
+  //     setCartItems({
+  //       ...cartItems,
+  //       [`product${id}`]: {
+  //         img: product.img,
+  //         name: product.name,
+  //         price: product.price,
+  //         amount: amount,
+  //       },
+  //     });
+  //   }
+  // }
 
   return (
     <div className="product-info-screen">
@@ -96,8 +93,17 @@ export default function ProductInfo({ id, setCartItems, cartItems }) {
               <h1>${product.price * amount}</h1>
             </div>
             <div className="product-info-cart">
-              <button onClick={() => addItem()}>{t("ADDCART")}</button>
-              <button>{t("BUYNOW")}</button>
+              <button
+                onClick={() => {
+                  dispatch(actions.addInCart(id, product, amount));
+                }}
+              >
+                {t("ADDCART")}
+              </button>
+              <button
+              >
+                {t("BUYNOW")}
+              </button>
             </div>
           </div>
         </div>

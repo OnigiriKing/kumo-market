@@ -47,7 +47,7 @@ export default function App() {
         <Route
           path="/product/:id"
           element={
-            <ProductPage setCartItems={setCartItems} cartItems={cartItems} />
+            <ProductPage />
           }
         />
       </Routes>
