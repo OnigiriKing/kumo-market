@@ -2,7 +2,6 @@ import { allSvg } from "svg/allSvg";
 import { handleCartClick } from "common/utils/changeClass";
 import React from "react";
 import emptyCart from "img/navBar/emptyCart.png";
-import deleteObj from "./CartMenu.deleteObject";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
@@ -12,8 +11,6 @@ import * as actions from "features/actions";
 export default function CartMenu() {
 
     const { t } = useTranslation();
-
-    //! add change amount into cartItems
 
     // state
     const dispatch = useDispatch();
