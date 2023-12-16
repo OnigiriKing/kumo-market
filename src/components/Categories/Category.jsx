@@ -6,13 +6,15 @@ import { allSvg } from "svg/allSvg.jsx";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
+import { useLocation } from "react-router-dom";
 
 export default function Categories() {
+
+  // translation
+  const { t } = useTranslation();
   // state
   const dispatch = useDispatch();
   const category = useSelector((state) => state.category);
-
-  const { t } = useTranslation();
 
   const links = {
     all: {
@@ -37,6 +39,25 @@ export default function Categories() {
     },
   };
 
+  // Pathnames to category states
+  const location = useLocation();
+  const pathnameToCategory = {
+    "/categories/all": links.all.state,
+    "/categories/furniture": links.furniture.state,
+    "/categories/skin-care": links.skinCare.state,
+    "/categories/kitchen": links.kitchen.state,
+    "/categories/chairs": links.chairs.state,
+  };
+
+  // Update category state
+  React.useEffect(() => {
+    const categoryState = pathnameToCategory[location.pathname];
+    if (categoryState && categoryState !== category) {
+      dispatch(actions.setCategory(categoryState));
+    }
+  }, [location, dispatch, category]);
+
+
   return (
     <div id="categories-page">
       <div className="wrapper categories-wrapper">
@@ -54,9 +75,7 @@ export default function Categories() {
               return (
                 <Link to={el.link}>
                   <button
-                    onClick={() =>
-                      dispatch(actions.setCategory(el.state))
-                    }
+                    onClick={() => dispatch(actions.setCategory(el.state))}
                   >
                     {t(el.state.toUpperCase())}
                   </button>
