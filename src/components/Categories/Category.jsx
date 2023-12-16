@@ -55,7 +55,7 @@ export default function Categories() {
     if (categoryState && categoryState !== category) {
       dispatch(actions.setCategory(categoryState));
     }
-  }, [location, dispatch, category]);
+  }, [location, dispatch, category, pathnameToCategory]);
 
 
   return (

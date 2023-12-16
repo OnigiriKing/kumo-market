@@ -3,8 +3,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
+import { useParams } from "react-router-dom";
 
-export default function ProductInfo({ id}) {
+export default function ProductInfo() {
+
+  const { id } = useParams();
   const { t } = useTranslation();
   const product = productList[`product${id}`];
 
