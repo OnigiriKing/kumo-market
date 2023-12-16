@@ -14,6 +14,7 @@ Live Demo: <a href='https://kumo-market.netlify.app'>Kumo Market</a>
 
 » SCSS <br>
 » React JS<br>
+» Redux <br>
 » i18next
 
 <h2>Screenshots of the Project 📸</h2>
