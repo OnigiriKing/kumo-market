@@ -8,6 +8,30 @@ import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
 import { useLocation } from "react-router-dom";
 
+
+ const links = {
+   all: {
+     link: "all",
+     state: "All",
+   },
+   furniture: {
+     link: "furniture",
+     state: "Furniture",
+   },
+   skinCare: {
+     link: "skin-care",
+     state: "SkinCare",
+   },
+   kitchen: {
+     link: "kitchen",
+     state: "Kitchen",
+   },
+   chairs: {
+     link: "chairs",
+     state: "Chairs",
+   },
+ };
+
 export default function Categories() {
 
   // translation
@@ -16,28 +40,6 @@ export default function Categories() {
   const dispatch = useDispatch();
   const category = useSelector((state) => state.category);
 
-  const links = {
-    all: {
-      link: "all",
-      state: "All",
-    },
-    furniture: {
-      link: "furniture",
-      state: "Furniture",
-    },
-    skinCare: {
-      link: "skin-care",
-      state: "SkinCare",
-    },
-    kitchen: {
-      link: "kitchen",
-      state: "Kitchen",
-    },
-    chairs: {
-      link: "chairs",
-      state: "Chairs",
-    },
-  };
 
   // Pathnames to category states
   const location = useLocation();
