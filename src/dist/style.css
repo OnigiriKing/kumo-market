@@ -750,7 +750,7 @@ a {
 }
 .cart-menu .cart-product .cart-product-des .cart-product-price p,
 .cart-menu .cart-product .cart-product-des .cart-product-quantity p {
-  width: 80%;
+  width: 10rem;
 }
 .cart-menu .cart-product .cart-product-des .cart-product-price h3,
 .cart-menu .cart-product .cart-product-des .cart-product-quantity h3 {
