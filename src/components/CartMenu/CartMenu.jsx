@@ -100,7 +100,7 @@ export default function CartMenu() {
                 <h3>{t("SUBTOTAL")}</h3>
                 <h3>{subtotal}$</h3>
               </div>
-              <button className="checkout-btn" onClick={()=>console.log(cartItems)}>{t("CHECKOUT")}</button>
+              <button className="checkout-btn">{t("CHECKOUT")}</button>
             </div>
           </div>
         )}
