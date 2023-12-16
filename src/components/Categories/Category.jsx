@@ -47,7 +47,7 @@ export default function Categories() {
     "/categories/skin-care": links.skinCare.state,
     "/categories/kitchen": links.kitchen.state,
     "/categories/chairs": links.chairs.state,
-  }));
+  }), []);
 
   // Update category state
   React.useEffect(() => {
