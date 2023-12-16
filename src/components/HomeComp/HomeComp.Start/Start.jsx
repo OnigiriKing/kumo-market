@@ -31,7 +31,7 @@ export default function Start() {
           <div>
             <Link
               to="categories/skin-care"
-              onClick={() => dispatch(actions.setCategory("skin care"))}
+              onClick={() => dispatch(actions.setCategory("skinCare"))}
             >
               <div className="start-img-cover"></div>
               <img src={skinCare} alt="skinCare" />

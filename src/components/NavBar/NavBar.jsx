@@ -35,7 +35,7 @@ export default function NavBar() {
           <h1>{location.pathname}</h1>
         </Link>
         <div className="nav-links">
-          <Link to="/categories/all">{t("CATEGORIES")}</Link>
+          <Link to="/categories/all" onClick={()=> dispatch(actions.setCategory("all"))}>{t("CATEGORIES")}</Link>
           <Link to={`/product/${link}`}>{t("PRODUCTPAGE")}</Link>
           <div className="nav-basket" onClick={() => handleCartClick()}>
             {allSvg(30).basket} {cartCount !== 0 && <h3>{cartCount}</h3>}
