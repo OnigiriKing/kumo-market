@@ -4,23 +4,24 @@ const savedState = JSON.parse(localStorage.getItem("cartItems"));
 const initialState = savedState || {};
 
 export default function cartItemsReducer(state = initialState, action) {
+  let newState = state;
   switch (action.type) {
     case actions.ADD_TO_CART: {
       const { id, product, amount } = action.payload;
       const itemId = `product${id}`;
 
-      if (state[itemId] != {} && state[itemId] && state[itemId].amount <= 10) {
+      if (state[itemId] && state[itemId].amount <= 10) {
         const newAmount =
           state[itemId].amount + amount > 10
             ? 10
             : state[itemId].amount + amount;
-        return {
+        newState= {
           ...state,
           [itemId]: { ...state[itemId], amount: newAmount },
         };
       } else {
 
-        const newState = {
+        newState = {
           ...state,
           [itemId]: {
             img: product.img,
@@ -29,11 +30,10 @@ export default function cartItemsReducer(state = initialState, action) {
             amount: amount,
           },
         };
+        
 
-        localStorage.setItem("cartItems", JSON.stringify(newState));
-
-        return newState
       }
+      break;
     }
 
     case actions.CHANGE_ITEM_AMOUNT: {
@@ -46,30 +46,36 @@ export default function cartItemsReducer(state = initialState, action) {
         newAmount--;
       }
 
-      const newState = {
+      newState = {
         ...state,
         [key]: {
           ...state[key],
           amount: newAmount,
         },
       };
-      
-      localStorage.setItem(
-        "cartItems",
-        JSON.stringify(newState)
-      );
 
-      return newState;
+      break;
+    
+
+
     }
 
     case actions.DELETE_FROM_CART: {
       const { key } = action.payload;
-      const { [key]: deletedItem, ...newState } = state;
-      localStorage.setItem("cartItems", JSON.stringify(newState));
-      return newState;
+      const { [key]: deletedItem, ...updateState } = state;
+
+      newState = updateState;
+      break;
     }
 
     default:
-      return state;
+      break;
   }
+
+  try {
+    localStorage.setItem("cartItems", JSON.stringify(newState));
+  } catch (e) {
+    console.error("Failed to save state to local storage:", e);
+  }
+  return newState;
 }
