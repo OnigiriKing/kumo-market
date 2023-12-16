@@ -41,13 +41,13 @@ export default function Categories() {
 
   // Pathnames to category states
   const location = useLocation();
-  const pathnameToCategory = {
+  const pathnameToCategory = React.useMemo(() => ({
     "/categories/all": links.all.state,
     "/categories/furniture": links.furniture.state,
     "/categories/skin-care": links.skinCare.state,
     "/categories/kitchen": links.kitchen.state,
     "/categories/chairs": links.chairs.state,
-  };
+  }));
 
   // Update category state
   React.useEffect(() => {
