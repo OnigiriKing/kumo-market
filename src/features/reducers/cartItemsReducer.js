@@ -19,7 +19,8 @@ export default function cartItemsReducer(state = initialState, action) {
           [itemId]: { ...state[itemId], amount: newAmount },
         };
       } else {
-        return {
+
+        const newState = {
           ...state,
           [itemId]: {
             img: product.img,
@@ -28,6 +29,10 @@ export default function cartItemsReducer(state = initialState, action) {
             amount: amount,
           },
         };
+
+        localStorage.setItem("cartItems", JSON.stringify(newState));
+
+        return newState
       }
     }
 
@@ -41,18 +46,26 @@ export default function cartItemsReducer(state = initialState, action) {
         newAmount--;
       }
 
-      return {
+      const newState = {
         ...state,
         [key]: {
           ...state[key],
           amount: newAmount,
         },
       };
+      
+      localStorage.setItem(
+        "cartItems",
+        JSON.stringify(newState)
+      );
+
+      return newState;
     }
 
     case actions.DELETE_FROM_CART: {
       const { key } = action.payload;
       const { [key]: deletedItem, ...newState } = state;
+      localStorage.setItem("cartItems", JSON.stringify(newState));
       return newState;
     }
 
