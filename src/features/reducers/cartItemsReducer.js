@@ -1,7 +1,7 @@
 import * as actions from "../actionTypes";
 
-const initialState = {};
-// JSON.parse(localStorage.getItem("cartItems")) || {};
+const savedState = JSON.parse(localStorage.getItem("cartItems"));
+const initialState = savedState || {};
 
 export default function cartItemsReducer(state = initialState, action) {
   switch (action.type) {
