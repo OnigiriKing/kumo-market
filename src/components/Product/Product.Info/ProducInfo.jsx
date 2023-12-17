@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
 import { useParams } from "react-router-dom";
+import { changeAmount } from "features/reducers/itemAmountSlice";
 
 export default function ProductInfo() {
 
@@ -14,7 +15,7 @@ export default function ProductInfo() {
   // state
   const dispatch = useDispatch();
   const imgType = useSelector((state) => state.imgType);
-  const amount = useSelector((state) => state.amount);
+  const amount = useSelector((state) => state.itemAmount);
 
   React.useEffect(() => {
     dispatch(actions.changeImage(product.img));
@@ -57,7 +58,7 @@ export default function ProductInfo() {
               <div className="product-info-btns">
                 <button
                   onClick={() => {
-                    dispatch(actions.changeAmount("sub"));
+                    dispatch(changeAmount({type:"sub"}));
                   }}
                 >
                   <h2>-</h2>
@@ -65,7 +66,7 @@ export default function ProductInfo() {
                 <h1>{amount}</h1>
                 <button
                   onClick={() => {
-                    dispatch(actions.changeAmount("add"));
+                    dispatch(changeAmount({ type: "add" }));
                   }}
                 >
                   <h2>+</h2>
