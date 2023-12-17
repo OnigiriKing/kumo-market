@@ -5,6 +5,7 @@ import emptyCart from "img/navBar/emptyCart.png";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
+import { changeSubtotal } from "features/reducers/subtotalSlice";
 
 
 
@@ -21,7 +22,7 @@ export default function CartMenu() {
 
   // updates subtotal
   React.useEffect(() => {
-    dispatch(actions.changeSubtotal(cartItems));
+    dispatch(changeSubtotal({items: cartItems}));
   }, [cartItems, dispatch]);
 
   // creates a product from state

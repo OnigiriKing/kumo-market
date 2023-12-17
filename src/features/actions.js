@@ -22,21 +22,6 @@ export const deleteFromCart = (key) => {
 };
 
 
-
-export const changeSubtotal = (items) => {
-  return {
-    type: actions.CHANGE_SUBTOTAL,
-    payload: { items },
-  };
-};
-
-export const setLink = (location) => {
-  return {
-    type: actions.SET_LINK,
-    payload: { location },
-  };
-};
-
 export const setCount = (items) => {
   return {
     type: actions.SET_COUNT,

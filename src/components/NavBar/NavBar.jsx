@@ -8,6 +8,7 @@ import DropMenu from "./NavBar.DropMenu/DropMenu";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
+import { setLink } from "features/reducers/linkSlice";
 
 export default function NavBar() {
 
@@ -21,7 +22,7 @@ export default function NavBar() {
   const cartCount = useSelector((store) => store.cartCount);
 
   React.useEffect(() => {
-    dispatch(actions.setLink(location));
+    dispatch(setLink({location: location}));
   }, [location, dispatch]);
 
 // Translatiom 
