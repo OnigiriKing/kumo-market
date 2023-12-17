@@ -9,7 +9,7 @@ import ProductPage from "pages/productPage/ProductPage";
 import Overlay from "pages/overlay/Overlay";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import * as actions from "features/actions";
+import { setCount } from "features/reducers/cartCountSlice";
 
 export default function App() {
   const local = window.localStorage;
@@ -17,16 +17,14 @@ export default function App() {
   // state
   const dispatch = useDispatch();
   const cartCount = useSelector((store) => store.cartCount);
-  const cartItems = useSelector((store) => store.cartItems)
-
-
+  const cartItems = useSelector((store) => store.cartItems);
 
   React.useEffect(() => {
     local.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartCount, cartItems, local]);
 
   React.useEffect(() => {
-    dispatch(actions.setCount(cartItems));
+    dispatch(setCount({items: cartItems}));
   }, [cartItems, dispatch]);
 
   const html = useLocation().pathname;
@@ -37,17 +35,12 @@ export default function App() {
 
   return (
     <div className="app">
-      <Overlay/>
+      <Overlay />
       <NavPage />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/categories/*" element={<CategoriesPage />} />
-        <Route
-          path="/product/:id"
-          element={
-            <ProductPage />
-          }
-        />
+        <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
       <FooterPage />
     </div>
