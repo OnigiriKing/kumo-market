@@ -2,13 +2,12 @@ import productList from "common/utils/products";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import * as actions from "features/actions";
 import { useParams } from "react-router-dom";
 import { changeAmount } from "features/reducers/itemAmountSlice";
 import { changeImage } from "features/reducers/imgTypeSlice";
+import { addToCart} from "features/reducers/cartItemsSlice";
 
 export default function ProductInfo() {
-
   const { id } = useParams();
   const { t } = useTranslation();
   const product = productList[`product${id}`];
@@ -21,7 +20,6 @@ export default function ProductInfo() {
   React.useEffect(() => {
     dispatch(changeImage({ img: product.img }));
   }, [id, product.img, dispatch]);
-
 
   return (
     <div className="product-info-screen">
@@ -78,7 +76,7 @@ export default function ProductInfo() {
             <div className="product-info-cart">
               <button
                 onClick={() => {
-                  dispatch(actions.addInCart(id, product, amount));
+                  dispatch(addToCart({id: id, product: product, amount: amount}));
                 }}
               >
                 {t("ADDCART")}

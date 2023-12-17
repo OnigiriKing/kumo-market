@@ -4,8 +4,11 @@ import React from "react";
 import emptyCart from "img/navBar/emptyCart.png";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import * as actions from "features/actions";
 import { changeSubtotal } from "features/reducers/subtotalSlice";
+import {
+  deleteFromCart,
+  changeItemAmount,
+} from "features/reducers/cartItemsSlice";
 
 
 
@@ -43,7 +46,7 @@ export default function CartMenu() {
             <div className="cart-product-btns">
               <button
                 onClick={() =>
-                  dispatch(actions.changeItemAmount("minus", key))
+                  dispatch(changeItemAmount({ type: "minus", key: key }))
                 }
               >
                 -
@@ -51,7 +54,7 @@ export default function CartMenu() {
               <h2>{el.amount}</h2>
               <button
                 onClick={() =>
-                  dispatch(actions.changeItemAmount("plus", key))
+                  dispatch(changeItemAmount({ type: "plus", key: key }))
                 }
               >
                 +
@@ -59,7 +62,7 @@ export default function CartMenu() {
             </div>
             <div
               className="cart-delete-btn"
-              onClick={() => dispatch(actions.deleteFromCart(key))}
+              onClick={() => dispatch(deleteFromCart({key:key}))}
             >
               {allSvg(25).closeBtn}
             </div>

@@ -12,16 +12,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCount } from "features/reducers/cartCountSlice";
 
 export default function App() {
-  const local = window.localStorage;
 
   // state
   const dispatch = useDispatch();
-  const cartCount = useSelector((store) => store.cartCount);
   const cartItems = useSelector((store) => store.cartItems);
 
-  React.useEffect(() => {
-    local.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartCount, cartItems, local]);
+
+    React.useEffect(() => {
+      try {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      } catch (e) {
+        console.error("Failed to save state to local storage:", e);
+      }
+    }, [cartItems]);
 
   React.useEffect(() => {
     dispatch(setCount({items: cartItems}));
@@ -32,6 +35,7 @@ export default function App() {
   React.useEffect(() => {
     window.scrollTo({ top: 0 });
   }, [html]);
+
 
   return (
     <div className="app">
