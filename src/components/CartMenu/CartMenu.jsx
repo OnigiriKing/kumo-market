@@ -10,22 +10,18 @@ import {
   changeItemAmount,
 } from "features/reducers/cartItemsSlice";
 
-
-
 export default function CartMenu() {
+  const { t } = useTranslation();
 
-    const { t } = useTranslation();
-
-    // state
-    const dispatch = useDispatch();
-    const subtotal = useSelector((state) => state.subtotal);
-    const cartCount = useSelector((store) => store.cartCount);
-    const cartItems = useSelector((state) => state.cartItems);
-
+  // state
+  const dispatch = useDispatch();
+  const subtotal = useSelector((state) => state.subtotal);
+  const cartCount = useSelector((store) => store.cartCount);
+  const cartItems = useSelector((state) => state.cartItems);
 
   // updates subtotal
   React.useEffect(() => {
-    dispatch(changeSubtotal({items: cartItems}));
+    dispatch(changeSubtotal({ items: cartItems }));
   }, [cartItems, dispatch]);
 
   // creates a product from state
@@ -62,7 +58,7 @@ export default function CartMenu() {
             </div>
             <div
               className="cart-delete-btn"
-              onClick={() => dispatch(deleteFromCart({key:key}))}
+              onClick={() => dispatch(deleteFromCart({ key: key }))}
             >
               {allSvg(25).closeBtn}
             </div>

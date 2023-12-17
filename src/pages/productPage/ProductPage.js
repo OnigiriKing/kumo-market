@@ -1,10 +1,9 @@
 import Product from "components/Product/Product";
 
-export default function ProductPage({ setCartItems, cartItems }) {
-
+export default function ProductPage() {
   return (
     <>
-      <Product/>
+      <Product />
     </>
   );
 }

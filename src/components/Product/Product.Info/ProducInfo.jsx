@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { changeAmount } from "features/reducers/itemAmountSlice";
 import { changeImage } from "features/reducers/imgTypeSlice";
-import { addToCart} from "features/reducers/cartItemsSlice";
+import { addToCart } from "features/reducers/cartItemsSlice";
 
 export default function ProductInfo() {
   const { id } = useParams();
@@ -76,7 +76,9 @@ export default function ProductInfo() {
             <div className="product-info-cart">
               <button
                 onClick={() => {
-                  dispatch(addToCart({id: id, product: product, amount: amount}));
+                  dispatch(
+                    addToCart({ id: id, product: product, amount: amount })
+                  );
                 }}
               >
                 {t("ADDCART")}

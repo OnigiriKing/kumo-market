@@ -11,21 +11,18 @@ import { setLink } from "features/reducers/linkSlice";
 import { setCategory } from "features/reducers/categorySlice";
 
 export default function NavBar() {
-
-
-
   const location = useLocation().pathname;
 
   // state
-  const dispatch = useDispatch()
-  const link = useSelector((state) => state.link)
+  const dispatch = useDispatch();
+  const link = useSelector((state) => state.link);
   const cartCount = useSelector((store) => store.cartCount);
 
   React.useEffect(() => {
-    dispatch(setLink({location: location}));
+    dispatch(setLink({ location: location }));
   }, [location, dispatch]);
 
-// Translatiom 
+  // Translatiom
   const { t } = useTranslation();
 
   return (

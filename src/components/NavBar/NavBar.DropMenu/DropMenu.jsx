@@ -3,7 +3,6 @@ import { allSvg } from "svg/allSvg";
 import { handleMenuClick } from "common/utils/changeClass";
 import { useSelector } from "react-redux";
 
-
 export default function DropMenu() {
   const link = useSelector((state) => state.link);
   return (

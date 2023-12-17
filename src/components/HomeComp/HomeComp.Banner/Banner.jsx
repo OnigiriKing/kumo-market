@@ -3,11 +3,8 @@ import banner1 from "img/homePage/banner1.png";
 import banner2 from "img/homePage/banner2.png";
 import { useTranslation } from "react-i18next";
 
-export default function Banner({reverse = false}) {
-
+export default function Banner({ reverse = false }) {
   const { t } = useTranslation();
-  
-
 
   const content = !reverse ? (
     <div id="banner-screen">

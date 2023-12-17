@@ -8,57 +8,56 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { setCategory } from "features/reducers/categorySlice";
 
-
- const links = {
-   all: {
-     link: "all",
-     state: "All",
-   },
-   furniture: {
-     link: "furniture",
-     state: "Furniture",
-   },
-   skinCare: {
-     link: "skin-care",
-     state: "SkinCare",
-   },
-   kitchen: {
-     link: "kitchen",
-     state: "Kitchen",
-   },
-   chairs: {
-     link: "chairs",
-     state: "Chairs",
-   },
- };
+const links = {
+  all: {
+    link: "all",
+    state: "All",
+  },
+  furniture: {
+    link: "furniture",
+    state: "Furniture",
+  },
+  skinCare: {
+    link: "skin-care",
+    state: "SkinCare",
+  },
+  kitchen: {
+    link: "kitchen",
+    state: "Kitchen",
+  },
+  chairs: {
+    link: "chairs",
+    state: "Chairs",
+  },
+};
 
 export default function Categories() {
-
   // translation
   const { t } = useTranslation();
   // state
   const dispatch = useDispatch();
   const category = useSelector((state) => state.category);
 
-
   // Pathnames to category states
   const location = useLocation();
-  const pathnameToCategory = React.useMemo(() => ({
-    "/categories/all": links.all.state,
-    "/categories/furniture": links.furniture.state,
-    "/categories/skin-care": links.skinCare.state,
-    "/categories/kitchen": links.kitchen.state,
-    "/categories/chairs": links.chairs.state,
-  }), []);
+  const pathnameToCategory = React.useMemo(
+    () => ({
+      "/categories/all": links.all.state,
+      "/categories/furniture": links.furniture.state,
+      "/categories/skin-care": links.skinCare.state,
+      "/categories/kitchen": links.kitchen.state,
+      "/categories/chairs": links.chairs.state,
+    }),
+    []
+  );
 
   // Update category state
   React.useEffect(() => {
     const categoryState = pathnameToCategory[location.pathname];
     if (categoryState && categoryState !== category) {
-      dispatch(setCategory({category:categoryState}));
+      dispatch(setCategory({ category: categoryState }));
     }
   }, [location, dispatch, category, pathnameToCategory]);
-
 
   return (
     <div id="categories-page">
@@ -77,8 +76,9 @@ export default function Categories() {
               return (
                 <Link to={el.link}>
                   <button
-                    onClick={() => 
-                    dispatch(setCategory({category:el.state}))}
+                    onClick={() =>
+                      dispatch(setCategory({ category: el.state }))
+                    }
                   >
                     {t(el.state.toUpperCase())}
                   </button>

@@ -9,10 +9,9 @@ const categorySlice = createSlice({
     setCategory: (state, action) => {
       const { category } = action.payload;
       return category;
-    }
-  }
-})
+    },
+  },
+});
 
-export const {setCategory} = categorySlice.actions;
+export const { setCategory } = categorySlice.actions;
 export default categorySlice.reducer;
-

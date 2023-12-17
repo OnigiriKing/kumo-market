@@ -1,4 +1,3 @@
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = 1;
@@ -18,7 +17,6 @@ const itemAmountSlice = createSlice({
     },
   },
 });
-
 
 export const { changeAmount } = itemAmountSlice.actions;
 export default itemAmountSlice.reducer;

@@ -26,8 +26,8 @@
 
     @include mediumWidth {
       grid-template-areas: "one two" "three four";
-      grid-template-columns: repeat(2,1fr);
-      grid-template-rows: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
 
     div {
@@ -36,7 +36,7 @@
 
       @include mediumWidth {
         height: 15rem;
-    }
+      }
 
       .start-img-cover {
         position: absolute;
@@ -143,10 +143,10 @@
     background-color: $mainGrey;
 
     @include mediumWidth {
-    align-items: center;
-    padding: 3rem 4rem;
-    text-align: center;
-  }
+      align-items: center;
+      padding: 3rem 4rem;
+      text-align: center;
+    }
 
     a {
       width: fit-content;
@@ -172,8 +172,8 @@
     width: 50%;
 
     @include mediumWidth {
-    display: none;
-  }
+      display: none;
+    }
   }
 }
 

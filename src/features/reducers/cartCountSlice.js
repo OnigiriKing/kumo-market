@@ -18,5 +18,5 @@ const cartCountSlice = createSlice({
   },
 });
 
-export const {setCount} = cartCountSlice.actions;
+export const { setCount } = cartCountSlice.actions;
 export default cartCountSlice.reducer;

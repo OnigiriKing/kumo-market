@@ -13,9 +13,9 @@ const linkSlice = createSlice({
       } else {
         return Math.floor(Math.random() * 12) + 1;
       }
-    }
-  }
-})
+    },
+  },
+});
 
 export const { setLink } = linkSlice.actions;
 export default linkSlice.reducer;

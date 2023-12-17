@@ -4,7 +4,7 @@ import scroll from "./Trending.scroll";
 import { useTranslation } from "react-i18next";
 
 export default function Trending() {
-   const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div id="trending-screen">
       <div className="wrapper trending-wrapper">

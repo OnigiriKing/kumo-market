@@ -4,7 +4,6 @@ import "./dist/style.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import store from "./features/store";
-
 import "./i18n";
 import { Provider } from "react-redux";
 

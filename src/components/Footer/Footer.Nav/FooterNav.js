@@ -8,8 +8,6 @@ export default function FooterNav() {
     i18n.changeLanguage(lng);
   };
 
-
-
   return (
     <div className="footer-nav-screen">
       <ul>

@@ -2,8 +2,7 @@ import { DisplayProducts } from "common/utils/DisplayProudcts";
 import { useTranslation } from "react-i18next";
 
 export default function Products() {
-
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div id="products-screen">
