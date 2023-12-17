@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as actions from "features/actions";
 import { useParams } from "react-router-dom";
 import { changeAmount } from "features/reducers/itemAmountSlice";
+import { changeImage } from "features/reducers/imgTypeSlice";
 
 export default function ProductInfo() {
 
@@ -18,7 +19,7 @@ export default function ProductInfo() {
   const amount = useSelector((state) => state.itemAmount);
 
   React.useEffect(() => {
-    dispatch(actions.changeImage(product.img));
+    dispatch(changeImage({ img: product.img }));
   }, [id, product.img, dispatch]);
 
 
@@ -32,20 +33,20 @@ export default function ProductInfo() {
               <img
                 src={product.img}
                 alt={product.name}
-                onMouseEnter={() => dispatch(actions.changeImage(product.img))}
+                onMouseEnter={() => dispatch(changeImage({ img: product.img }))}
               />
               <img
                 src={product.addImg[0]}
                 alt={product.name}
                 onMouseEnter={() =>
-                  dispatch(actions.changeImage(product.addImg[0]))
+                  dispatch(changeImage({ img: product.addImg[0] }))
                 }
               />
               <img
                 src={product.addImg[1]}
                 alt={product.name}
                 onMouseEnter={() =>
-                  dispatch(actions.changeImage(product.addImg[1]))
+                  dispatch(changeImage({ img: product.addImg[1] }))
                 }
               />
             </div>
@@ -58,7 +59,7 @@ export default function ProductInfo() {
               <div className="product-info-btns">
                 <button
                   onClick={() => {
-                    dispatch(changeAmount({type:"sub"}));
+                    dispatch(changeAmount({ type: "sub" }));
                   }}
                 >
                   <h2>-</h2>
@@ -82,10 +83,7 @@ export default function ProductInfo() {
               >
                 {t("ADDCART")}
               </button>
-              <button
-              >
-                {t("BUYNOW")}
-              </button>
+              <button>{t("BUYNOW")}</button>
             </div>
           </div>
         </div>

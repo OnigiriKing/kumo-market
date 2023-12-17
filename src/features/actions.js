@@ -22,12 +22,6 @@ export const deleteFromCart = (key) => {
 };
 
 
-export const changeImage = (img) => {
-  return {
-    type: actions.CHANGE_IMAGE,
-    payload: { img },
-  };
-};
 
 export const changeSubtotal = (items) => {
   return {

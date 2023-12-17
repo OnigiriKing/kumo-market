@@ -2,8 +2,6 @@
 export const ADD_TO_CART = "addToCart";
 export const DELETE_FROM_CART = "deleteFromCart";
 export const CHANGE_ITEM_AMOUNT = "changeItemAmount";
-// change image
-export const CHANGE_IMAGE = "changeImage";
 // change subtotal
 export const CHANGE_SUBTOTAL = "changeSubtotal";
 // set link

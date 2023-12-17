@@ -4,11 +4,9 @@ import categoryReducer from "./reducers/categoryReducer";
 import cartItemsReducer from "./reducers/cartItemsReducer";
 import subtotalReducer from "./reducers/subtotalReducer";
 import linkReducer from "./reducers/linkReducer";
-import imgTypeReducer from "./reducers/imgTypeReducer";
 
 import itemAmountSlice from "./reducers/itemAmountSlice";
-
-
+import imgTypeSlice from "./reducers/imgTypeSlice";
 
 const store = configureStore({
   reducer: {
@@ -18,7 +16,7 @@ const store = configureStore({
     subtotal: subtotalReducer,
     itemAmount: itemAmountSlice,
     link: linkReducer,
-    imgType: imgTypeReducer,
+    imgType: imgTypeSlice,
   },
 });
 
