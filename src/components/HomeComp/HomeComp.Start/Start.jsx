@@ -5,7 +5,7 @@ import skinCare from "img/homePage/skinCare.png"
 import chairs from "img/homePage/chairs.png"
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import * as actions from "features/actions";
+import { setCategory } from "features/reducers/categorySlice";
 
 export default function Start() {
   // state
@@ -20,7 +20,7 @@ export default function Start() {
           <div>
             <Link
               to="categories/all"
-              onClick={() => dispatch(actions.setCategory("all"))}
+              onClick={() => dispatch(setCategory({ category: "all" }))}
             >
               <div className="start-img-cover"></div>
               <img src={room} alt="room" />
@@ -31,7 +31,7 @@ export default function Start() {
           <div>
             <Link
               to="categories/skin-care"
-              onClick={() => dispatch(actions.setCategory("skinCare"))}
+              onClick={() => dispatch(setCategory({ category: "skinCare" }))}
             >
               <div className="start-img-cover"></div>
               <img src={skinCare} alt="skinCare" />
@@ -41,7 +41,7 @@ export default function Start() {
           <div>
             <Link
               to="categories/kitchen"
-              onClick={() => dispatch(actions.setCategory("kitchen"))}
+              onClick={() => dispatch(setCategory({ category: "kitchen" }))}
             >
               <div className="start-img-cover"></div>
               <img src={kitchen} alt="kitchen" />
@@ -51,7 +51,7 @@ export default function Start() {
           <div>
             <Link
               to="categories/chairs"
-              onClick={() => dispatch(actions.setCategory("chairs"))}
+              onClick={() => dispatch(setCategory({ category: "chairs" }))}
             >
               <div className="start-img-cover"></div>
               <img src={chairs} alt="chairs" />

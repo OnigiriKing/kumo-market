@@ -21,10 +21,5 @@ export const deleteFromCart = (key) => {
   };
 };
 
-export const setCategory = (category) => {
-  return {
-    type: actions.SET_CATEGORY,
-    payload: { category },
-  };
-};
+
 

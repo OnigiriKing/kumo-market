@@ -7,8 +7,8 @@ import { handleCartClick, handleMenuClick } from "common/utils/changeClass";
 import DropMenu from "./NavBar.DropMenu/DropMenu";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import * as actions from "features/actions";
 import { setLink } from "features/reducers/linkSlice";
+import { setCategory } from "features/reducers/categorySlice";
 
 export default function NavBar() {
 
@@ -36,7 +36,12 @@ export default function NavBar() {
           <h1>{location.pathname}</h1>
         </Link>
         <div className="nav-links">
-          <Link to="/categories/all" onClick={()=> dispatch(actions.setCategory("all"))}>{t("CATEGORIES")}</Link>
+          <Link
+            to="/categories/all"
+            onClick={() => dispatch(setCategory({ category: "all" }))}
+          >
+            {t("CATEGORIES")}
+          </Link>
           <Link to={`/product/${link}`}>{t("PRODUCTPAGE")}</Link>
           <div className="nav-basket" onClick={() => handleCartClick()}>
             {allSvg(30).basket} {cartCount !== 0 && <h3>{cartCount}</h3>}
@@ -46,7 +51,7 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-      <DropMenu/>
+      <DropMenu />
     </nav>
   );
 }

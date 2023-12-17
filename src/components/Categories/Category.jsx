@@ -5,8 +5,8 @@ import React from "react";
 import { allSvg } from "svg/allSvg.jsx";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import * as actions from "features/actions";
 import { useLocation } from "react-router-dom";
+import { setCategory } from "features/reducers/categorySlice";
 
 
  const links = {
@@ -55,7 +55,7 @@ export default function Categories() {
   React.useEffect(() => {
     const categoryState = pathnameToCategory[location.pathname];
     if (categoryState && categoryState !== category) {
-      dispatch(actions.setCategory(categoryState));
+      dispatch(setCategory({category:categoryState}));
     }
   }, [location, dispatch, category, pathnameToCategory]);
 
@@ -77,7 +77,8 @@ export default function Categories() {
               return (
                 <Link to={el.link}>
                   <button
-                    onClick={() => dispatch(actions.setCategory(el.state))}
+                    onClick={() => 
+                    dispatch(setCategory({category:el.state}))}
                   >
                     {t(el.state.toUpperCase())}
                   </button>
