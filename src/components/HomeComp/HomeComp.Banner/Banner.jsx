@@ -16,7 +16,12 @@ export default function Banner({ reverse = false }) {
             <button>{t("SHOPNOW")}</button>
           </Link>
         </div>
-        <img src={banner1} className="banner-image" alt="banner"></img>
+        <img
+          src={banner1}
+          className="banner-image"
+          alt="banner"
+          loading="lazy"
+        />
       </div>
     </div>
   ) : (
@@ -29,7 +34,12 @@ export default function Banner({ reverse = false }) {
             <button>{t("SHOPNOW")}</button>
           </Link>
         </div>
-        <img src={banner2} className="banner-image" alt="banner"></img>
+        <img
+          src={banner2}
+          className="banner-image"
+          alt="banner"
+          loading="lazy"
+        />
       </div>
     </div>
   );

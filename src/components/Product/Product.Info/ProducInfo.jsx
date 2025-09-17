@@ -26,7 +26,7 @@ export default function ProductInfo() {
       <div className="wrapper product-info-wrapper">
         <div className="product-info-all">
           <div className="product-info-images">
-            <img src={imgType} alt={product.name} />
+            <img src={imgType} alt={product.name} loading="lazy" />
             <div className="product-info-img-list">
               <img
                 src={product.img}
@@ -39,6 +39,7 @@ export default function ProductInfo() {
                 onMouseEnter={() =>
                   dispatch(changeImage({ img: product.addImg[0] }))
                 }
+                loading="lazy"
               />
               <img
                 src={product.addImg[1]}
@@ -46,6 +47,7 @@ export default function ProductInfo() {
                 onMouseEnter={() =>
                   dispatch(changeImage({ img: product.addImg[1] }))
                 }
+                loading="lazy"
               />
             </div>
           </div>

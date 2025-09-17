@@ -23,7 +23,7 @@ export default function Start() {
               onClick={() => dispatch(setCategory({ category: "all" }))}
             >
               <div className="start-img-cover"></div>
-              <img src={room} alt="room" />
+              <img src={room} alt="room" loading="lazy" />
               <p>{t("LIVEINCOMFORT")}</p>
             </Link>
           </div>
@@ -34,7 +34,7 @@ export default function Start() {
               onClick={() => dispatch(setCategory({ category: "skinCare" }))}
             >
               <div className="start-img-cover"></div>
-              <img src={skinCare} alt="skinCare" />
+              <img src={skinCare} alt="skinCare" loading="lazy" />
               <p>{t("SKINCARE")}</p>
             </Link>
           </div>
@@ -44,7 +44,7 @@ export default function Start() {
               onClick={() => dispatch(setCategory({ category: "kitchen" }))}
             >
               <div className="start-img-cover"></div>
-              <img src={kitchen} alt="kitchen" />
+              <img src={kitchen} alt="kitchen" loading="lazy" />
               <p>{t("KITCHEN")}</p>
             </Link>
           </div>
@@ -54,7 +54,7 @@ export default function Start() {
               onClick={() => dispatch(setCategory({ category: "chairs" }))}
             >
               <div className="start-img-cover"></div>
-              <img src={chairs} alt="chairs" />
+              <img src={chairs} alt="chairs" loading="lazy" />
               <p>{t("CHAIRS")}</p>
             </Link>
           </div>
