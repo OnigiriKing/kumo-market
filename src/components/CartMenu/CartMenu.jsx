@@ -31,7 +31,7 @@ export default function CartMenu() {
     return (
       <div className="cart-product" key={key}>
         <div className="cart-product-img">
-          <img src={el.img} alt="cart" />
+          <img src={el.img} alt="cart" loading="lazy" />
         </div>
         <div className=" cart-product-des">
           <div className="cart-product-price">
@@ -82,7 +82,7 @@ export default function CartMenu() {
         </div>
         {cartCount < 1 && (
           <div className="cart-no-items">
-            <img src={emptyCart} alt="empty"></img>
+            <img src={emptyCart} alt="empty" loading="lazy" />
             <h2>{t("CARTEMPTY")}</h2>
             <button className="no-items-btn" onClick={() => handleCartClick()}>
               {t("BROWSING")}
