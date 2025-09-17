@@ -32,6 +32,7 @@ export default function ProductInfo() {
                 src={product.img}
                 alt={product.name}
                 onMouseEnter={() => dispatch(changeImage({ img: product.img }))}
+                loading="lazy"
               />
               <img
                 src={product.addImg[0]}
