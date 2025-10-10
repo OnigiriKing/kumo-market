@@ -25,9 +25,7 @@ export default function CartMenu() {
   }, [cartItems, dispatch]);
 
   // creates a product from state
-  const allProducts = Object.keys(cartItems).map((key) => {
-    const el = cartItems[key];
-
+  const allProducts = Object.entries(cartItems).map(([key,el]) => {
     return (
       <div className="cart-product" key={key}>
         <div className="cart-product-img">
@@ -80,7 +78,7 @@ export default function CartMenu() {
             {allSvg(30).closeBtn}
           </div>
         </div>
-        {cartCount < 1 && (
+        {cartCount < 1 ? (
           <div className="cart-no-items">
             <img src={emptyCart} alt="empty" loading="lazy" />
             <h2>{t("CARTEMPTY")}</h2>
@@ -88,11 +86,9 @@ export default function CartMenu() {
               {t("BROWSING")}
             </button>
           </div>
-        )}
-        {cartCount >= 1 && (
+        ) : (
           <div className="cart-menu-container">
             <div className="cart-menu-products">
-              {cartCount < 1 && <div>{t("NOITEMS")}</div>}
               {allProducts}
             </div>
             <div className="cart-menu-checkout">
