@@ -1,7 +1,10 @@
 @forward "./global";
-@forward "/Users/nikitawr/Dev/kumo-market/src/components/NavBar/_navBar.scss";
-@forward "/Users/nikitawr/Dev/kumo-market/src/components/Footer/_footer.scss";
-@forward "/Users/nikitawr/Dev/kumo-market/src/components/HomeComp/_homeComp.scss";
-@forward "/Users/nikitawr/Dev/kumo-market/src/components/Categories/_categories.scss";
-@forward "/Users/nikitawr/Dev/kumo-market/src/components/Product/_product.scss";
-@forward "/Users/nikitawr/Dev/kumo-market/src/components/CartMenu/_cartMenu.scss";
+@forward "../components/NavBar/_navBar.scss";
+@forward "../components/Footer/_footer.scss";
+@forward "../components/HomeComp/_homeComp.scss";
+@forward "../components/Categories/_categories.scss";
+@forward "../components/Product/_product.scss";
+@forward "../components/CartMenu/_cartMenu.scss";
+
+
+
