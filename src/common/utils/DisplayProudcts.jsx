@@ -25,16 +25,15 @@ export function DisplayProducts({
   const products = useMemo(() => {
     let arr = Object.values(productList);
     if (type !== "all") {
-      arr = arr.filter((p)=> p.type === type)
+      arr = arr.filter((p) => p.type === type);
     }
 
     if (shuffle) {
-      arr = fisherYates([...arr])
+      arr = fisherYates([...arr]);
     }
 
-    return arr.slice(0, limit)
+    return arr.slice(0, limit);
   }, [type, limit, shuffle]);
-
 
   return (
     <div className={`${newClass}`}>
