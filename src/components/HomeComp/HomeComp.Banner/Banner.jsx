@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import banner1 from "img/homePage/banner1.png";
-import banner2 from "img/homePage/banner2.png";
+import banner1 from "img/homePage/banner1.webp";
+import banner2 from "img/homePage/banner2.webp";
 import { useTranslation } from "react-i18next";
 
 export default function Banner({ reverse = false }) {

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import room from "img/homePage/room.png";
-import kitchen from "img/homePage/kitchen.png";
-import skinCare from "img/homePage/skinCare.png";
-import chairs from "img/homePage/chairs.png";
+import room from "img/homePage/room.webp";
+import kitchen from "img/homePage/kitchen.webp";
+import skinCare from "img/homePage/skinCare.webp";
+import chairs from "img/homePage/chairs.webp";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { setCategory } from "features/reducers/categorySlice";
