@@ -1,65 +1,65 @@
 // chairs IMG
 
 // chairs1
-import chairs1 from "img/products/chairs/chairs1/chairs1.png";
-import chairs1_1 from "img/products/chairs/chairs1/chairs1_1.png";
-import chairs1_2 from "img/products/chairs/chairs1/chairs1_2.png";
+import chairs1 from "img/products/chairs/chairs1/chairs1.webp";
+import chairs1_1 from "img/products/chairs/chairs1/chairs1_1.webp";
+import chairs1_2 from "img/products/chairs/chairs1/chairs1_2.webp";
 
 // chairs2
-import chairs2 from "img/products/chairs/chairs2/chairs2.png";
-import chairs2_1 from "img/products/chairs/chairs2/chairs2_1.png";
-import chairs2_2 from "img/products/chairs/chairs2/chairs2_2.png";
+import chairs2 from "img/products/chairs/chairs2/chairs2.webp";
+import chairs2_1 from "img/products/chairs/chairs2/chairs2_1.webp";
+import chairs2_2 from "img/products/chairs/chairs2/chairs2_2.webp";
 
 // chairs3
-import chairs3 from "img/products/chairs/chairs3/chairs3.png";
-import chairs3_1 from "img/products/chairs/chairs3/chairs3_1.png";
-import chairs3_2 from "img/products/chairs/chairs3/chairs3_2.png";
+import chairs3 from "img/products/chairs/chairs3/chairs3.webp";
+import chairs3_1 from "img/products/chairs/chairs3/chairs3_1.webp";
+import chairs3_2 from "img/products/chairs/chairs3/chairs3_2.webp";
 
 // furniture IMG
 // furniture1
-import furniture1 from "img/products/furniture/furniture1/furniture1.png";
-import furniture1_1 from "img/products/furniture/furniture1/furniture1_1.png";
-import furniture1_2 from "img/products/furniture/furniture1/furniture1_2.png";
+import furniture1 from "img/products/furniture/furniture1/furniture1.webp";
+import furniture1_1 from "img/products/furniture/furniture1/furniture1_1.webp";
+import furniture1_2 from "img/products/furniture/furniture1/furniture1_2.webp";
 
 // furniture2
-import furniture2 from "img/products/furniture/furniture2/furniture2.png";
-import furniture2_1 from "img/products/furniture/furniture2/furniture2_1.png";
-import furniture2_2 from "img/products/furniture/furniture2/furniture2_2.png";
+import furniture2 from "img/products/furniture/furniture2/furniture2.webp";
+import furniture2_1 from "img/products/furniture/furniture2/furniture2_1.webp";
+import furniture2_2 from "img/products/furniture/furniture2/furniture2_2.webp";
 
 // kitchen IMG
 // kitchen1
-import kitchen1 from "img/products/kitchen/kitchen1/kitchen1.png";
-import kitchen1_1 from "img/products/kitchen/kitchen1/kitchen1_1.png";
-import kitchen1_2 from "img/products/kitchen/kitchen1/kitchen1_2.png";
+import kitchen1 from "img/products/kitchen/kitchen1/kitchen1.webp";
+import kitchen1_1 from "img/products/kitchen/kitchen1/kitchen1_1.webp";
+import kitchen1_2 from "img/products/kitchen/kitchen1/kitchen1_2.webp";
 // kitchen2
-import kitchen2 from "img/products/kitchen/kitchen2/kitchen2.png";
-import kitchen2_1 from "img/products/kitchen/kitchen2/kitchen2_1.png";
-import kitchen2_2 from "img/products/kitchen/kitchen2/kitchen2_2.png";
+import kitchen2 from "img/products/kitchen/kitchen2/kitchen2.webp";
+import kitchen2_1 from "img/products/kitchen/kitchen2/kitchen2_1.webp";
+import kitchen2_2 from "img/products/kitchen/kitchen2/kitchen2_2.webp";
 // kitchen3
-import kitchen3 from "img/products/kitchen/kitchen3/kitchen3.png";
-import kitchen3_1 from "img/products/kitchen/kitchen3/kitchen3_1.png";
-import kitchen3_2 from "img/products/kitchen/kitchen3/kitchen3_2.png";
+import kitchen3 from "img/products/kitchen/kitchen3/kitchen3.webp";
+import kitchen3_1 from "img/products/kitchen/kitchen3/kitchen3_1.webp";
+import kitchen3_2 from "img/products/kitchen/kitchen3/kitchen3_2.webp";
 
 // skinCare IMG
 // skinCare1
-import skinCare1 from "img/products/skinCare/skinCare1/skinCare1.png";
-import skinCare1_1 from "img/products/skinCare/skinCare1/skinCare1_1.png";
-import skinCare1_2 from "img/products/skinCare/skinCare1/skinCare1_2.png";
+import skinCare1 from "img/products/skinCare/skinCare1/skinCare1.webp";
+import skinCare1_1 from "img/products/skinCare/skinCare1/skinCare1_1.webp";
+import skinCare1_2 from "img/products/skinCare/skinCare1/skinCare1_2.webp";
 
 // skinCare2
-import skinCare2 from "img/products/skinCare/skinCare2/skinCare2.png";
-import skinCare2_1 from "img/products/skinCare/skinCare2/skinCare2_1.png";
-import skinCare2_2 from "img/products/skinCare/skinCare2/skinCare2_2.png";
+import skinCare2 from "img/products/skinCare/skinCare2/skinCare2.webp";
+import skinCare2_1 from "img/products/skinCare/skinCare2/skinCare2_1.webp";
+import skinCare2_2 from "img/products/skinCare/skinCare2/skinCare2_2.webp";
 
 // skinCare3
-import skinCare3 from "img/products/skinCare/skinCare3/skinCare3.png";
-import skinCare3_1 from "img/products/skinCare/skinCare3/skinCare3_1.png";
-import skinCare3_2 from "img/products/skinCare/skinCare3/skinCare3_2.png";
+import skinCare3 from "img/products/skinCare/skinCare3/skinCare3.webp";
+import skinCare3_1 from "img/products/skinCare/skinCare3/skinCare3_1.webp";
+import skinCare3_2 from "img/products/skinCare/skinCare3/skinCare3_2.webp";
 
 // skinCare4
-import skinCare4 from "img/products/skinCare/skinCare4/skinCare4.png";
-import skinCare4_1 from "img/products/skinCare/skinCare4/skinCare4_1.png";
-import skinCare4_2 from "img/products/skinCare/skinCare4/skinCare4_2.png";
+import skinCare4 from "img/products/skinCare/skinCare4/skinCare4.webp";
+import skinCare4_1 from "img/products/skinCare/skinCare4/skinCare4_1.webp";
+import skinCare4_2 from "img/products/skinCare/skinCare4/skinCare4_2.webp";
 
 const productList = {
   product1: {

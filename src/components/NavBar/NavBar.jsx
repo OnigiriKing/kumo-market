@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { allSvg } from "svg/allSvg";
-import logo from "img/navBar/logo.png";
+import logo from "img/navBar/logo.webp";
 import { useLocation } from "react-router-dom";
 import React from "react";
 import { handleCartClick, handleMenuClick } from "common/utils/changeClass";

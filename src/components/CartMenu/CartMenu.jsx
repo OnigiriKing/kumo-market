@@ -1,7 +1,7 @@
 import { allSvg } from "svg/allSvg";
 import { handleCartClick } from "common/utils/changeClass";
 import React from "react";
-import emptyCart from "img/navBar/emptyCart.png";
+import emptyCart from "img/navBar/emptyCart.webp";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { changeSubtotal } from "features/reducers/subtotalSlice";
