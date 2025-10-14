@@ -2,7 +2,6 @@ import { useEffect, lazy, Suspense } from "react";
 import "./dist/style.css";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "pages/homePage/HomePage";
-import ProductPage from "pages/productPage/ProductPage";
 import NavPage from "pages/navPage/navPage";
 import FooterPage from "pages/footerPage/FooterPage";
 import Overlay from "pages/overlay/Overlay";
@@ -39,12 +38,25 @@ export default function App() {
     import("pages/categoriesPage/CategoriesPage")
   );
 
+  const ProductPage = lazy(() => import("pages/productPage/ProductPage"));
 
   return (
     <div className="app">
       <Overlay />
       <NavPage />
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense
+        fallback={
+          <h3
+            style={{
+              textAlign: "center",
+              padding: "4rem",
+              marginTop: "5rem",
+            }}
+          >
+            Loading...
+          </h3>
+        }
+      >
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/categories/*" element={<CategoriesPage />} />
