@@ -1,4 +1,4 @@
-<div align='center'><img src='https://github.com/OnigiriKing/kumo-market/blob/main/src/img/navBar/logo.png'/></div>
+<div align='center'><img src='https://github.com/OnigiriKing/kumo-market/blob/main/src/img/navBar/logo.webp'/></div>
 
 <h2>About the project</h2>
 
